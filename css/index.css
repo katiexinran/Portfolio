@@ -1,57 +1,17 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
 main {
     padding: 40px;
+    background-color: #f9f9f9; /* Soft background color */
 }
 
 .projects {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    gap: 40px;
 }
 
 .project img {
@@ -60,16 +20,53 @@ main {
     border-radius: 10px;
 }
 
-footer {
-    background-color: #fff;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+.role-detail {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #333;
 }
 
-@media screen and (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+/* Bouncing animation */
+.header {
+    display: inline-flex;
+    font-size: 50px;
+    margin-bottom: 20px; /* Space between the header and the role details */
+    font-family: 'HyperBlob', sans-serif;
+    color: #FF69B4;
+    background-color: #FFD1DC;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+/* Keyframes for the bouncing animation */
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-7px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-7px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
+}
+
+/* Bouncing animation for each letter */
+.H, .e1, .l1, .l2, .o, .comma, .I, .apostraphe, .m, .K, .a, .t, .i, .e2, .exclamation {
+    animation: bounce 2s ease infinite;
+    animation-delay: calc(var(--bounce-order) * 0.1s);
+}
+
+@font-face {
+    font-family: 'HyperBlob';
+    src: url('/fonts/hyper-blob-font/HyperBlob-ZVj6l.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HyperBlobOutline';
+    src: url('/fonts/hyper-blob-font/HyperBlobOutline-OVj6o.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
