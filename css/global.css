@@ -4,17 +4,26 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    margin: 0;
+    padding: 0 40px;
+    background: linear-gradient(to right, #fecece 10%, #fce5ca 25%, #fdffce 40%, #d3fbcd 55%, #c9dbfa 80%, #ded8fe 100%);
 }
 
 footer {
-    background-color: #fff;
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,20 +55,10 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 main {
+    flex: 1;
     max-width: 1200px; /* Set a max width for larger screens */
     margin: 20px auto; /* Center the content and add margins for top, bottom, left, and right */
     padding: 0 20px; /* Add some padding on smaller screens */
-}
-
-/* Hamburger menu styles */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-.hamburger-icon {
-    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -80,8 +79,23 @@ main {
 /* Bouncing animation */
 .header {
     display: inline-flex;
-    font-size: 35px;
-    margin-bottom: 20px; /* Add a margin below the header */
+    font-size: 50px;
+    margin-bottom: 20px; /* Space between the header and the role details */
+    font-family: 'HyperBlob', sans-serif;
+    color:#A79ECD;
+    background-color:#FFF0F5;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-7px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-7px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
 }
 
 .footer-left, .footer-right {
@@ -126,3 +140,17 @@ main {
 .i { animation: bounce 2s ease infinite 1.2s; }
 .e2 { animation: bounce 2s ease infinite 1.3s; }
 .exclamation { animation: bounce 2s ease infinite 1.4s; }
+
+@font-face {
+    font-family: 'HyperBlob';
+    src: url('/fonts/hyper-blob-font/HyperBlob-ZVj6l.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HyperBlobOutline';
+    src: url('/fonts/hyper-blob-font/HyperBlobOutline-OVj6o.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

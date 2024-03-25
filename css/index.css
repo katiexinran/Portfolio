@@ -1,17 +1,59 @@
+html {
+    overflow-x: hidden;
+}
+
 main {
     padding: 40px;
-    background-color: #f9f9f9; /* Soft background color */
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px; /* Space between the intro section and the projects */
+}
+
+.intro-text {
+    margin-left: 50px; /* Space between the image and the text */
+}
+
+.cartoon-me {
+    max-width: 400px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .cartoon-me {
+        max-width: 300px;
+        margin-bottom: 20px; /* Space between the image and the text on smaller screens */
+    }
+}
+
+.project-container {
+    background-color: #f9f9f9; /* Solid white background */
+    padding: 80px 0; /* Additional white space above and below the project grid */
+    margin-left: calc(-1 * (100vw - 100%) / 2); /* Extend the background to the edges of the screen */
+    margin-right: calc(-1 * (100vw - 100%) / 2); /* Extend the background to the edges of the screen */
 }
 
 .projects {
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 900px;
+    margin: 0 auto; /* Center the project grid */
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-    gap: 40px;
+    gap: 50px;
 }
 
 .project img {
@@ -28,45 +70,8 @@ main {
     color: #333;
 }
 
-/* Bouncing animation */
-.header {
-    display: inline-flex;
-    font-size: 50px;
-    margin-bottom: 20px; /* Space between the header and the role details */
-    font-family: 'HyperBlob', sans-serif;
-    color: #FF69B4;
-    background-color: #FFD1DC;
-    padding: 2px 5px;
-    border-radius: 5px;
-}
-
-/* Keyframes for the bouncing animation */
-@keyframes bounce {
-    0%   { transform: scale(1,1) translateY(0); }
-    10%  { transform: scale(1.1,.9) translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-7px);}
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    58%  { transform: scale(1,1) translateY(-7px); }
-    65%  { transform: scale(1,1) translateY(0);}
-    100% { transform: scale(1,1) translateY(0);}
-}
-
 /* Bouncing animation for each letter */
 .H, .e1, .l1, .l2, .o, .comma, .I, .apostraphe, .m, .K, .a, .t, .i, .e2, .exclamation {
     animation: bounce 2s ease infinite;
     animation-delay: calc(var(--bounce-order) * 0.1s);
-}
-
-@font-face {
-    font-family: 'HyperBlob';
-    src: url('/fonts/hyper-blob-font/HyperBlob-ZVj6l.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'HyperBlobOutline';
-    src: url('/fonts/hyper-blob-font/HyperBlobOutline-OVj6o.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }

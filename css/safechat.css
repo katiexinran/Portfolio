@@ -1,0 +1,56 @@
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-container {
+    display: flex;
+    margin-top: 0; /* Remove the top margin */
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-column {
+    flex: 3;
+    padding: 20px;
+}
+
+.logo {
+    flex: 1;
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+.main-content {
+    /* Add styles for main content here */
+}
+
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .right-column {
+        padding: 20px;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-bottom: 10px;
+        margin-left: 0; /* Align the logo to the left */
+        margin-right: 0; /* Ensure the logo is not centered */
+    }
+
+    h2 {
+        margin-left: 20px; /* Align the header with the sidebar content */
+    }
+}

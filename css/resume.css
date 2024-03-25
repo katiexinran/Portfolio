@@ -1,0 +1,33 @@
+main {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.K, .a1, .t, .i, .e1, .H, .a2, .n, .c, .o, .c2, .k {
+    animation: bounce 2s ease infinite;
+    animation-delay: calc(var(--bounce-order) * 0.1s);
+}
+
+.resume-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    margin-top: 20px;
+}
+
+.resume-content h2 {
+    color: #A79ECD; /* Same shade of purple as the bouncing letters */
+    margin-bottom: 10px;
+}
+
+.resume-content p {
+    margin-bottom: 10px;
+}
+
+.resume-content a {
+    color: #A79ECD;
+    text-decoration: underline;
+}

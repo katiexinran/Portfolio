@@ -1,38 +1,62 @@
-.about-section {
+.intro-container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    margin-top: 120px;
+    margin-bottom: 80px; /* Space between the intro section and additional content */
 }
 
-.about-photo {
-    flex: 1;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-photo img {
-    max-width: 100%;
+.photo-of-me {
+    max-width: 400px; /* Adjusted size */
     height: auto;
-    border-radius: 50%; /* Optional: makes the photo circular */
+}
+
+.intro-text {
+    margin-left: 40px; /* Space between the image and the text */
+}
+
+.A, .b, .o, .u, .t, .M, .e, .exclamation {
+    animation: bounce 2s ease infinite;
+    animation-delay: calc(var(--bounce-order) * 0.1s);
 }
 
 .about-text {
     flex: 2;
-    padding: 0 20px;
+    font-family: 'Poppins', sans-serif; /* Use the Poppins font for a clean look */
+    font-size: 18px; /* Slightly larger font size for readability */
+    line-height: 1.6; /* Increase line spacing for better readability */
+    color: #333333; /* Dark gray color for the text */
+}
+
+.about-text p {
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+.about-text a {
+    color: #A79ECD; /* Soft lavender for links to match the header */
+    text-decoration: underline; /* Underline links for clarity */
+}
+.about-text em {
+    color: #A79ECD;
 }
 
 @media screen and (max-width: 768px) {
-    .about-section {
+    .intro-container {
         flex-direction: column;
+        text-align: center;
     }
 
-    .about-photo img {
-        max-width: 50%; /* Adjust the size of the image on smaller screens */
-        margin: 0 auto; /* Center the image */
+    .photo-of-me {
+        max-width: 300px; /* Make the image smaller on smaller screens */
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        margin-left: 0;
+        margin-top: 20px; /* Add space between the image and the text on smaller screens */
     }
 
     .about-text {
-        padding: 0 20px; /* Maintain padding/margins on smaller screens */
+        text-align: left;
     }
 }
