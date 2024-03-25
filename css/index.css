@@ -21,7 +21,7 @@ main {
     height: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 940px) {
     .intro-container {
         flex-direction: column;
         text-align: center;
