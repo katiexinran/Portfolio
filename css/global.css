@@ -104,6 +104,7 @@ main {
 
 .footer-left {
     text-align: left;
+    color: rgba(0, 0, 0, 0.62); /* Black with 62% opacity */
 }
 
 .footer-right {
