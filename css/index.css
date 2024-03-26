@@ -9,11 +9,11 @@ main {
 .intro-container {
     display: flex;
     align-items: center;
-    margin-bottom: 100px; /* Space between the intro section and the projects */
+    margin-bottom: 100px;
 }
 
 .intro-text {
-    margin-left: 50px; /* Space between the image and the text */
+    margin-left: 50px;
 }
 
 .cartoon-me {
@@ -34,13 +34,13 @@ main {
 
     .cartoon-me {
         max-width: 300px;
-        margin-bottom: 20px; /* Space between the image and the text on smaller screens */
+        margin-bottom: 20px;
     }
 }
 
 .project-container {
-    background-color: #f9f9f9; /* Solid white background */
-    padding: 80px 0; /* Additional white space above and below the project grid */
+    background-color: #f9f9f9;
+    padding: 80px 0;
     margin-left: calc(-1 * (100vw - 100%) / 2); /* Extend the background to the edges of the screen */
     margin-right: calc(-1 * (100vw - 100%) / 2); /* Extend the background to the edges of the screen */
 }

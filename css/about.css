@@ -2,11 +2,11 @@
     display: flex;
     align-items: center;
     margin-top: 120px;
-    margin-bottom: 80px; /* Space between the intro section and additional content */
+    margin-bottom: 80px;
 }
 
 .photo-of-me {
-    max-width: 400px; /* Adjusted size */
+    max-width: 400px;
     height: auto;
 }
 
@@ -21,10 +21,10 @@
 
 .about-text {
     flex: 2;
-    font-family: 'Poppins', sans-serif; /* Use the Poppins font for a clean look */
-    font-size: 18px; /* Slightly larger font size for readability */
-    line-height: 1.6; /* Increase line spacing for better readability */
-    color: #333333; /* Dark gray color for the text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
 }
 
 .about-text p {
@@ -32,8 +32,8 @@
 }
 
 .about-text a {
-    color: #A79ECD; /* Soft lavender for links to match the header */
-    text-decoration: underline; /* Underline links for clarity */
+    color: #A79ECD;
+    text-decoration: underline;
 }
 .about-text em {
     color: #A79ECD;
@@ -46,14 +46,14 @@
     }
 
     .photo-of-me {
-        max-width: 300px; /* Make the image smaller on smaller screens */
+        max-width: 300px;
         margin-top: 10px;
         margin-bottom: 20px;
     }
 
     .intro-text {
         margin-left: 0;
-        margin-top: 20px; /* Add space between the image and the text on smaller screens */
+        margin-top: 20px;
     }
 
     .about-text {

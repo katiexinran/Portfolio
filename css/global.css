@@ -56,9 +56,9 @@ nav ul li a.active, nav ul li a:hover {
 
 main {
     flex: 1;
-    max-width: 1200px; /* Set a max width for larger screens */
-    margin: 20px auto; /* Center the content and add margins for top, bottom, left, and right */
-    padding: 0 20px; /* Add some padding on smaller screens */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,7 +72,7 @@ main {
     }
 
     main {
-        padding: 0 10px; /* Reduce padding on smaller screens */
+        padding: 0 10px;
     }
 }
 
@@ -80,7 +80,7 @@ main {
 .header {
     display: inline-flex;
     font-size: 50px;
-    margin-bottom: 20px; /* Space between the header and the role details */
+    margin-bottom: 20px;
     font-family: 'HyperBlob', sans-serif;
     color:#A79ECD;
     background-color:#FFF0F5;
