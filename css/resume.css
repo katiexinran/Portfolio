@@ -18,16 +18,20 @@ main {
     margin-top: 20px;
 }
 
-.resume-content h2 {
-    color: #A79ECD; /* Same shade of purple as the bouncing letters */
-    margin-bottom: 10px;
+.resume-content h3 {
+    color: #A79ECD;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #A79ECD;
+    padding-bottom: 10px;
 }
 
 .resume-content p {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
-.resume-content a {
-    color: #A79ECD;
-    text-decoration: underline;
+.bullet-points {
+    font-size: 16px; /* Slightly smaller font size for bullet points */
+    margin-top: -15px;
+    margin-bottom: 20px;
 }

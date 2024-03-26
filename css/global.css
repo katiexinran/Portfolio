@@ -111,8 +111,18 @@ main {
 }
 
 .linkedin-logo {
-    width: 30px; /* Adjust the size of the logo as needed */
+    width: 30px;
     height: auto;
+    margin-right: 5px;
+}
+
+.gmail-logo {
+    width: 35px;
+    height: 30px;
+}
+
+.footer-right a {
+    text-decoration: none;
 }
 
 @keyframes bounce {

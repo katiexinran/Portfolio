@@ -11,32 +11,42 @@ main {
 }
 
 .project img {
-    max-width: 100%; /* Ensure the image width does not exceed the container width */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 10px; /* Optional: Add a border radius for a rounded look */
-    display: block; /* Display block to remove any extra space below the image */
-    margin: 0 auto; /* Center the image horizontally within the container */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px; /* Add some space below the image */
 }
-
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 projects per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
-/* For medium screens, display 2 projects per row */
+.project h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px; /* Add some space between the title and the description */
+}
+
+.project p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333; /* Dark gray color for the text */
+}
+
 @media screen and (max-width: 768px) {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 projects per row */
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 }
 
-/* For small screens, display 1 project per row */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .project-grid {
-        grid-template-columns: 1fr; /* 1 project per row */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 }
