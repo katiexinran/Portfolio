@@ -7,12 +7,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-h3 {
-    color: #1565C0;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
 .content-container {
     display: flex;
     margin-top: 0; /* Remove the top margin */
@@ -39,10 +33,6 @@ h3 {
     /* Add styles for main content here */
 }
 
-.sidebar-section {
-    margin-bottom: 20px; /* Adjust the spacing as needed */
-}
-
 /* User personas section */
 .persona-container {
     display: flex;
@@ -56,6 +46,7 @@ h3 {
 .persona-image {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 .persona-caption {
     margin-top: 10px;
@@ -70,6 +61,7 @@ h3 {
 .journey-map-image {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 .journey-map-caption {
     margin-top: 10px;
@@ -84,11 +76,11 @@ h3 {
 .storyboard-image {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
     margin-top: 10px;
 }
 .storyboard-caption {
     margin-top: 10px;
-    margin-bottom: 40px;
     font-weight: bold;
 }
 
@@ -100,7 +92,7 @@ h3 {
 .sketch-image {
     max-width: 100%;
     height: auto;
-
+    border-radius: 10px;
     margin-top: 10px;
 }
 .sketch-caption {
@@ -108,65 +100,24 @@ h3 {
     font-weight: bold;
 }
 
-/* Lo-Fi Wireframes */
-.wireframes-container {
-    text-align: center;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adapt number of columns based on screen size */
-    gap: 20px;
-}
-.wireframe-image {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Hi-Fi */
-.hifi-prototypes-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-.hifi-column {
-    flex: 1;
-    text-align: center;
-}
-.hifi-column h4 {
-    margin-bottom: 10px;
-    color: #333;
-}
-.hifi-image {
-    max-height: 500px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-@media screen and (max-width: 768px) {
-    .hifi-prototypes-container {
-        flex-direction: column;
-    }
-    .hifi-column {
-        margin-bottom: 20px;
-    }
-    .hifi-image {
-        max-height: 400px;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .content-container {
         flex-direction: column;
     }
-    .sidebar, .right-column {
+
+    .sidebar,
+    .right-column {
         padding: 20px;
     }
+
     .logo {
         max-width: 100px;
         margin-bottom: 10px;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0; /* Align the logo to the left */
+        margin-right: 0; /* Ensure the logo is not centered */
     }
+
     h2 {
-        margin-left: 20px;
+        margin-left: 20px; /* Align the header with the sidebar content */
     }
 }
