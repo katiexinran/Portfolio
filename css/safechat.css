@@ -1,3 +1,29 @@
+.title-container {
+    display: inline-flex;
+    font-size: 50px;
+    margin-bottom: 20px; /* Adjust as needed */
+    font-family: 'HyperBlob', sans-serif;
+    color: #1565C0; /* Your SafeChat branding color */
+    background-color: #f0f6ff; /* Choose a highlight color that matches */
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.title-container div {
+    animation: bounce 2s ease infinite;
+    animation-delay: calc(var(--bounce-order) * 0.1s);
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-10px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1) translateY(-3px); }
+    64%  { transform: scale(1,1) translateY(0); }
+    100% { transform: scale(1,1) translateY(0); }
+}
+
 main {
     padding: 20px;
 }
@@ -7,20 +33,9 @@ h2 {
     margin-bottom: 20px;
 }
 
-h3 {
-    color: #1565C0;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
 .content-container {
     display: flex;
     margin-top: 0; /* Remove the top margin */
-}
-
-.sidebar {
-    flex: 1;
-    padding: 20px;
 }
 
 .right-column {
@@ -28,15 +43,42 @@ h3 {
     padding: 20px;
 }
 
-.logo {
+/* Sidebar */
+.sidebar {
     flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.logo {
     max-width: 150px;
     height: auto;
-    display: block;
+    margin-bottom: 20px;
+}
+.sidebar-content {
+    width: 100%;
+}
+.sidebar-section {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+    .sidebar-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .sidebar-section {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
-.main-content {
-    /* Add styles for main content here */
+.main-content p {
+    margin-bottom: 10px;
 }
 
 .sidebar-section {
@@ -57,9 +99,11 @@ h3 {
     max-width: 100%;
     height: auto;
 }
-.persona-caption {
-    margin-top: 10px;
-    font-weight: bold;
+@media screen and (max-width: 968px) {
+    .persona-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* User journey map section */
@@ -70,10 +114,6 @@ h3 {
 .journey-map-image {
     max-width: 100%;
     height: auto;
-}
-.journey-map-caption {
-    margin-top: 10px;
-    font-weight: bold;
 }
 
 /* Storyboards Section */
@@ -87,9 +127,7 @@ h3 {
     margin-top: 10px;
 }
 .storyboard-caption {
-    margin-top: 10px;
     margin-bottom: 40px;
-    font-weight: bold;
 }
 
 /* Interface Sketches */
@@ -100,25 +138,14 @@ h3 {
 .sketch-image {
     max-width: 100%;
     height: auto;
-
     margin-top: 10px;
-}
-.sketch-caption {
-    margin-top: 10px;
-    font-weight: bold;
 }
 
 /* Lo-Fi Wireframes */
-.wireframes-container {
-    text-align: center;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adapt number of columns based on screen size */
-    gap: 20px;
-}
 .wireframe-image {
     max-width: 100%;
     height: auto;
+    margin-bottom: 20px;
 }
 
 /* Hi-Fi */
@@ -134,6 +161,9 @@ h3 {
 .hifi-column h4 {
     margin-bottom: 10px;
     color: #333;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
 }
 .hifi-image {
     max-height: 500px;
@@ -169,4 +199,44 @@ h3 {
     h2 {
         margin-left: 20px;
     }
+}
+
+/* Captions */
+.persona-caption,
+.journey-map-caption,
+.storyboard-caption,
+.sketch-caption {
+    margin-top: 5px;
+    font-style: italic; /* Make the text italic */
+    font-size: 14px; /* Make the font size smaller */
+}
+
+
+.main-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.main-content h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #1565C0;
+}
+
+.main-content ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.main-content li {
+    margin-bottom: 5px;
+}
+
+/* Adjust the font size and weight for subheadings if needed */
+.main-content h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #333;
 }
