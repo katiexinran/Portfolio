@@ -1,3 +1,75 @@
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    padding: 20px;
+}
+.logo {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar p {
+    margin: 0;
+    padding: 5px 0;
+}
+.sidebar-section {
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+    .sidebar-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .sidebar-content p {
+        width: calc(60% - 10px);
+        /* width: calc(33.33% - 10px); */
+        margin-bottom: 20px;
+    }
+    .sidebar-section:nth-last-child(-n+2) {
+        width: calc(50% - 10px);
+    }
+    .sidebar, .right-column {
+        width: 100%;
+        padding: 20px;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+/* Bouncing Letter Animation */
+.title-container {
+    display: inline-flex;
+    font-size: 50px;
+    margin-bottom: 20px; /* Adjust as needed */
+    font-family: 'HyperBlob', sans-serif;
+    color: #ea8175;
+    background-color: #f0dae2;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.title-container div {
+    animation: bounce 2s ease infinite;
+    animation-delay: calc(var(--bounce-order) * 0.1s);
+}
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-10px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1) translateY(-3px); }
+    64%  { transform: scale(1,1) translateY(0); }
+    100% { transform: scale(1,1) translateY(0); }
+}
+
 main {
     padding: 20px;
 }
@@ -8,12 +80,7 @@ h2 {
 
 .content-container {
     display: flex;
-    margin-top: 0; /* Remove the top margin */
-}
-
-.sidebar {
-    flex: 1;
-    padding: 20px;
+    margin-top: 0;
 }
 
 .right-column {
@@ -21,25 +88,75 @@ h2 {
     padding: 20px;
 }
 
-.logo {
-    max-width: 150px;
+/* Team Poster */
+.poster-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.poster-container img {
+    max-width: 90%; /* Adjust the maximum width as needed */
     height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+@media screen and (max-width: 768px) {
+    .poster-container img {
+        max-width: 300px; /* Adjust the size for smaller screens */
+    }
+}
+
+/* Selected Work */
+.screens-container {
+    text-align: center;
+}
+.screens-container .image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
     display: block;
 }
 
-@media screen and (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-    }
-    .sidebar,
-    .right-column {
-        padding: 20px;
-    }
-    .logo {
-        max-width: 100px;
-        margin-bottom: 10px;
-    }
-    h2 {
-        margin-left: 20px; /* Align the header with the sidebar content */
-    }
+/* Captions */
+.caption {
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic; /* Make the text italic */
+    font-size: 14px; /* Make the font size smaller */
 }
+
+/* Team Photo */
+.team-photo {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.main-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.main-content h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #DC8DAD;
+}
+
+.main-content ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.main-content li {
+    margin-bottom: 5px;
+}
+
+/* Adjust the font size and weight for subheadings if needed */
+.main-content h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #333;
+}
+
