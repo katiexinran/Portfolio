@@ -203,6 +203,7 @@ h2 {
 
 /* Captions */
 .caption {
+    text-align: center;
     margin-top: 5px;
     font-style: italic; /* Make the text italic */
     font-size: 14px; /* Make the font size smaller */
