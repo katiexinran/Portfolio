@@ -135,14 +135,86 @@ h2 {
     }
 }
 
-/* Old logo section */
-.old-logo-container {
+/* Old and new logo section */
+.logo-container {
     text-align: center;
     margin-top: 20px;
 }
-.old-logo-image {
+.logo-image {
     max-width: 60%;
     height: auto;
+}
+
+/* Logo brainstorm section */
+.brainstorm-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.brainstorm-image {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Lo-fi Screens */
+.lofi-prototypes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.lofi-column {
+    flex: 1;
+    text-align: center;
+}
+.lofi-image {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    .lofi-prototypes-container {
+        flex-direction: column;
+    }
+    .lofi-column {
+        margin-bottom: 20px;
+    }
+    .lofi-image {
+        max-height: 400px;
+    }
+}
+
+/* Hi-Fi */
+.hifi-prototypes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.hifi-column {
+    flex: 1;
+    text-align: center;
+}
+.hifi-column h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+}
+.hifi-image {
+    max-height: 500px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    .hifi-prototypes-container {
+        flex-direction: column;
+    }
+    .hifi-column {
+        margin-bottom: 20px;
+    }
+    .hifi-image {
+        max-height: 400px;
+    }
 }
 
 /* Right column for small screen */
