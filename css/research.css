@@ -37,18 +37,19 @@ main {
     color: #333;
 }
 
-/* For medium screens, 2 projects per row */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 projects per row */
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 }
 
-/* For small screens, 1 project per row */
 @media screen and (max-width: 768px) {
+    main {
+        padding: 40px 20px;
+    }
     .project-grid {
-        grid-template-columns: 1fr; /* 1 project per row */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 }

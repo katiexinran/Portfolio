@@ -21,33 +21,16 @@ main {
     height: auto;
 }
 
-@media screen and (max-width: 940px) {
-    .intro-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .intro-text {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .cartoon-me {
-        max-width: 300px;
-        margin-bottom: 20px;
-    }
-}
-
 .project-container {
     background-color: #f9f9f9;
     padding: 80px 0;
-    margin-left: calc(-1 * (100vw - 100%) / 2); /* Extend the background to the edges of the screen */
-    margin-right: calc(-1 * (100vw - 100%) / 2); /* Extend the background to the edges of the screen */
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    margin-right: calc(-1 * (100vw - 100%) / 2);
 }
 
 .projects {
-    max-width: 900px;
-    margin: 0 auto; /* Center the project grid */
+    max-width: 60%;
+    margin: 0 auto;
 }
 
 .project-grid {
@@ -74,4 +57,31 @@ main {
 .H, .e1, .l1, .l2, .o, .comma, .I, .apostraphe, .m, .K, .a, .t, .i, .e2, .exclamation {
     animation: bounce 2s ease infinite;
     animation-delay: calc(var(--bounce-order) * 0.1s);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 20px 0px;
+    }
+
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .cartoon-me {
+        max-width: 60%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
