@@ -15,7 +15,7 @@ main {
     height: auto;
     border-radius: 10px;
     display: block;
-    margin: 0 auto 20px; 
+    margin: 0 auto 20px;
 }
 
 .project-grid {
@@ -25,13 +25,13 @@ main {
 }
 
 .project h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .project p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-size: 14px;
     line-height: 1.6;
     color: #333;
