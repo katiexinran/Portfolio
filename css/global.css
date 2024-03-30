@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     margin: 0;
     padding: 0 40px;
     background: linear-gradient(to right, #fecece 10%, #fce5ca 25%, #fdffce 40%, #d3fbcd 55%, #c9dbfa 80%, #ded8fe 100%);

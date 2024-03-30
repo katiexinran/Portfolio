@@ -160,3 +160,6 @@ h2 {
     color: #333;
 }
 
+p, h3 {
+    font-family: 'Epilogue', sans-serif;
+}
