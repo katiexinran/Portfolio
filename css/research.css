@@ -11,18 +11,30 @@ main {
 }
 
 .project img {
-    max-width: 100%; /* Ensure the image width does not exceed the container width */
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
-
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 projects per row */
     gap: 40px;
+}
+
+.project h3 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* For medium screens, 2 projects per row */

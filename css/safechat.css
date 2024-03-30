@@ -2,10 +2,10 @@
 .title-container {
     display: inline-flex;
     font-size: 50px;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px;
     font-family: 'HyperBlob', sans-serif;
-    color: #1565C0; /* Your SafeChat branding color */
-    background-color: #f0f6ff; /* Choose a highlight color that matches */
+    color: #1565C0;
+    background-color: #ccd8ea;
     padding: 2px 5px;
     border-radius: 5px;
 }
