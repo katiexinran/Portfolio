@@ -100,37 +100,29 @@ h2 {
     margin-top: 10px;
 }
 
-/* Instagram Screens */
-.ig-prototypes-container {
+/* Sketches */
+.sketches-prototypes-container {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-.ig-column {
+.sketches-column {
     flex: 1;
     text-align: center;
 }
-.ig-column h4 {
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: normal;
-    font-style: italic;
-    font-size: 14px;
-}
-.ig-image {
-    max-height: 500px;
-    max-width: 100%;
+.sketches-image {
+    max-width: 90%;
     height: auto;
     margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
-    .ig-prototypes-container {
+    .sketches-prototypes-container {
         flex-direction: column;
     }
-    .ig-column {
+    .sketches-column {
         margin-bottom: 20px;
     }
-    .ig-image {
+    .sketches-image {
         max-height: 400px;
     }
 }
