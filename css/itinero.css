@@ -127,23 +127,33 @@ h2 {
     }
 }
 
-/* Old and new logo section */
-.logo-container {
+/* Words section */
+.words-container {
     text-align: center;
     margin-top: 20px;
 }
 .logo-image {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
 }
 
-/* Logo brainstorm section */
-.brainstorm-container {
+/* Logo sketches section */
+.logo-sketches-container {
     text-align: center;
     margin-top: 20px;
 }
-.brainstorm-image {
-    max-width: 70%;
+.moodboard-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Logo sketches */
+.logo-sketches-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.logo-sketches-image {
+    max-width: 25%;
     height: auto;
 }
 
