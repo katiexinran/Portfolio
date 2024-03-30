@@ -1,3 +1,28 @@
+/* Bouncing animation */
+.title-container {
+    display: inline-flex;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'HyperBlob', sans-serif;
+    color: #219EBC;
+    background-color: #c9e5ec;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.title-container div {
+    animation: bounce 2s ease infinite;
+    animation-delay: calc(var(--bounce-order) * 0.1s);
+}
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-10px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1) translateY(-3px); }
+    64%  { transform: scale(1,1) translateY(0); }
+    100% { transform: scale(1,1) translateY(0); }
+}
+
 main {
     padding: 20px;
 }
@@ -12,112 +37,237 @@ h2 {
     margin-top: 0; /* Remove the top margin */
 }
 
-.sidebar {
-    flex: 1;
-    padding: 20px;
-}
-
 .right-column {
     flex: 3;
     padding: 20px;
 }
 
-.logo {
+/* Sidebar */
+.sidebar {
     flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.logo {
     max-width: 150px;
     height: auto;
-    display: block;
+    margin-bottom: 20px;
+}
+.sidebar-content {
+    width: 100%;
+}
+.sidebar-section {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+    .sidebar-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .sidebar-section {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
-.main-content {
-    /* Add styles for main content here */
+.main-content p {
+    margin-bottom: 10px;
 }
 
-/* User personas section */
-.persona-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.sidebar-section {
+    margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+/* Affinity diagram section */
+.affinity-diagram-container {
+    text-align: center;
     margin-top: 20px;
 }
-.persona {
-    text-align: center;
-}
-.persona-image {
+.mood-board-image {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-}
-.persona-caption {
-    margin-top: 10px;
-    font-weight: bold;
 }
 
-/* User journey map section */
-.journey-map-container {
-    text-align: center;
-    margin-top: 20px;
-}
-.journey-map-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-.journey-map-caption {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Storyboards Section */
-.storyboard-container {
-    text-align: center;
-    margin-top: 20px;
-}
-.storyboard-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-.storyboard-caption {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Interface Sketches */
-.sketches-container {
-    text-align: center;
-    margin-top: 20px;
-}
 .sketch-image {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
     margin-top: 10px;
-}
-.sketch-caption {
-    margin-top: 10px;
-    font-weight: bold;
 }
 
+/* Instagram Screens */
+.ig-prototypes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.ig-column {
+    flex: 1;
+    text-align: center;
+}
+.ig-column h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+}
+.ig-image {
+    max-height: 500px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    .ig-prototypes-container {
+        flex-direction: column;
+    }
+    .ig-column {
+        margin-bottom: 20px;
+    }
+    .ig-image {
+        max-height: 400px;
+    }
+}
+
+/* Old and new logo section */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.logo-image {
+    max-width: 60%;
+    height: auto;
+}
+
+/* Logo brainstorm section */
+.brainstorm-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.brainstorm-image {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Lo-fi Screens */
+.lofi-prototypes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.lofi-column {
+    flex: 1;
+    text-align: center;
+}
+.lofi-image {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    .lofi-prototypes-container {
+        flex-direction: column;
+    }
+    .lofi-column {
+        margin-bottom: 20px;
+    }
+    .lofi-image {
+        max-height: 400px;
+    }
+}
+
+/* Hi-Fi */
+.hifi-prototypes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.hifi-column {
+    flex: 1;
+    text-align: center;
+}
+.hifi-column h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+}
+.hifi-image {
+    max-height: 500px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    .hifi-prototypes-container {
+        flex-direction: column;
+    }
+    .hifi-column {
+        margin-bottom: 20px;
+    }
+    .hifi-image {
+        max-height: 400px;
+    }
+}
+
+/* Right column for small screen */
 @media screen and (max-width: 768px) {
     .content-container {
         flex-direction: column;
     }
-
-    .sidebar,
-    .right-column {
+    .sidebar, .right-column {
         padding: 20px;
     }
-
     .logo {
         max-width: 100px;
         margin-bottom: 10px;
-        margin-left: 0; /* Align the logo to the left */
-        margin-right: 0; /* Ensure the logo is not centered */
+        margin-left: 0;
+        margin-right: 0;
     }
-
     h2 {
-        margin-left: 20px; /* Align the header with the sidebar content */
+        margin-left: 20px;
     }
+}
+
+/* Captions */
+.caption {
+    margin-top: 5px;
+    font-style: italic; /* Make the text italic */
+    font-size: 14px; /* Make the font size smaller */
+}
+
+.main-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.main-content h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #219EBC;
+}
+
+.main-content ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.main-content li {
+    margin-bottom: 5px;
+}
+
+/* Adjust the font size and weight for subheadings if needed */
+.main-content h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #333;
 }
