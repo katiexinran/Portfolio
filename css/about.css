@@ -47,8 +47,8 @@
 
     .photo-of-me {
         max-width: 300px;
-        margin-top: 10px;
         margin-bottom: 20px;
+        margin-top: -80px;
     }
 
     .intro-text {
