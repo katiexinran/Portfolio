@@ -29,27 +29,28 @@ footer {
     align-items: center;
 }
 
+/* Navbar stuff */
+.navbar-logo {
+    height: 40px;
+    float: left;
+}
 nav {
     text-align: right;
     padding-top: 20px;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline-block;
     margin: 0 20px;
 }
-
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: normal;
 }
-
 nav ul li a.active, nav ul li a:hover {
     font-weight: bold;
 }
@@ -62,9 +63,9 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-    nav ul {
+    /* .navbar-logo, nav ul {
         text-align: center;
-    }
+    } */
 
     nav ul li {
         display: block;
