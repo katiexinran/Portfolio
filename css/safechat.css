@@ -1,26 +1,13 @@
-/* Bouncing animation */
+
 .title-container {
     display: inline-flex;
     font-size: 50px;
     margin-bottom: 20px;
     font-family: 'HyperBlob', sans-serif;
     color: #1565C0;
-    background-color: #ccd8ea;
+    text-shadow: 1px 1px 2px #ffffff;
     padding: 2px 5px;
     border-radius: 5px;
-}
-.title-container div {
-    animation: bounce 2s ease infinite;
-    animation-delay: calc(var(--bounce-order) * 0.1s);
-}
-@keyframes bounce {
-    0%   { transform: scale(1,1) translateY(0); }
-    10%  { transform: scale(1.1,.9) translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-10px);}
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    57%  { transform: scale(1,1) translateY(-3px); }
-    64%  { transform: scale(1,1) translateY(0); }
-    100% { transform: scale(1,1) translateY(0); }
 }
 
 main {
@@ -34,7 +21,7 @@ h2 {
 
 .content-container {
     display: flex;
-    margin-top: 0; /* Remove the top margin */
+    margin-top: 0;
 }
 
 .right-column {
@@ -131,13 +118,25 @@ h2 {
 
 /* Interface Sketches */
 .sketches-container {
+    display: flex;
     text-align: center;
     margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
 }
 .sketch-image {
-    max-width: 100%;
+    max-height: 500px;
     height: auto;
-    margin-top: 10px;
+    padding: 10px;
+}
+@media screen and (max-width: 768px) {
+    .sketch-image {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        height: auto;
+        padding: 5px;
+    }
 }
 
 /* Lo-Fi Wireframes */

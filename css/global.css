@@ -16,7 +16,9 @@ body {
     font-family: 'Epilogue', sans-serif;
     margin: 0;
     padding: 0 40px;
-    background: linear-gradient(to right, #fecece 10%, #fce5ca 25%, #fdffce 40%, #d3fbcd 55%, #c9dbfa 80%, #ded8fe 100%);
+    /* background: linear-gradient(to right, #fde0e0 20%, #f9eceb 50%, #e7e9fb 80%); */
+    /* background: linear-gradient(to right, #fecece 10%, #fce5ca 25%, #fdffce 40%, #d3fbcd 55%, #c9dbfa 80%, #ded8fe 100%); */
+    background: linear-gradient(to right, #fde0e0 10%, #fdecd9 25%, #fafbd6 40%, #e4ffdf 55%, #c9dbfa 80%, #dfdafa 100%);
 }
 
 footer {
@@ -84,19 +86,9 @@ main {
     margin-bottom: 20px;
     font-family: 'HyperBlob', sans-serif;
     color:#A79ECD;
-    background-color:#FFF0F5;
+    text-shadow: 1px 1px 2px #ffffff;
     padding: 2px 5px;
     border-radius: 5px;
-}
-
-@keyframes bounce {
-    0%   { transform: scale(1,1) translateY(0); }
-    10%  { transform: scale(1.1,.9) translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-7px);}
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    58%  { transform: scale(1,1) translateY(-7px); }
-    65%  { transform: scale(1,1) translateY(0);}
-    100% { transform: scale(1,1) translateY(0);}
 }
 
 .footer-left, .footer-right {
@@ -127,31 +119,9 @@ main {
     text-decoration: none;
 }
 
-@keyframes bounce {
-    0%   { transform: scale(1,1) translateY(0); }
-    10%  { transform: scale(1.1,.9) translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-7px);}
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    58%  { transform: scale(1,1) translateY(-7px); }
-    65%  { transform: scale(1,1) translateY(0);}
-    100% { transform: scale(1,1) translateY(0);}
+.header {
+    font-family: 'HyperBlob', sans-serif;
 }
-
-.H { animation: bounce 2s ease infinite; }
-.e1 { animation: bounce 2s ease infinite .1s; }
-.l1 { animation: bounce 2s ease infinite .2s; }
-.l2 { animation: bounce 2s ease infinite .3s; }
-.o { animation: bounce 2s ease infinite .4s; }
-.comma { animation: bounce 2s ease infinite .5s; }
-.I { animation: bounce 2s ease infinite .6s; }
-.apostraphe { animation: bounce 2s ease infinite .7s; }
-.m { animation: bounce 2s ease infinite .8s; }
-.K { animation: bounce 2s ease infinite .9s; }
-.a { animation: bounce 2s ease infinite 1s; }
-.t { animation: bounce 2s ease infinite 1.1s; }
-.i { animation: bounce 2s ease infinite 1.2s; }
-.e2 { animation: bounce 2s ease infinite 1.3s; }
-.exclamation { animation: bounce 2s ease infinite 1.4s; }
 
 @font-face {
     font-family: 'HyperBlob';
@@ -166,3 +136,11 @@ main {
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Migae';
+    src: url('../fonts/migae-font/MigaeSemibold-3zd2M.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+

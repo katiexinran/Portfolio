@@ -53,48 +53,36 @@ main {
     color: #333;
 }
 
-/* Bouncing animation for each letter */
-.H, .e1, .l1, .l2, .o, .comma, .I, .apostraphe, .m, .K, .a, .t, .i, .e2, .exclamation {
-    animation: bounce 2s ease infinite;
-    animation-delay: calc(var(--bounce-order) * 0.1s);
-}
-
 @media screen and (max-width: 768px) {
     main {
-        padding: 20px 0px;
+        padding: 10px 0px;
     }
-
     body {
         padding: 0;
     }
-
     .intro-container {
         flex-direction: column;
         text-align: center;
     }
-
-    .intro-text {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
     .cartoon-me {
         max-width: 60%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
-
     .project-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
     #navbar-container {
         padding: 0 40px;
     }
-
     .role-detail {
         padding: 0 40px;
+        font-size: 14px;
+    }
+    .header {
+        font-size: 34px;
+        margin-bottom: 5px;
     }
 }
 

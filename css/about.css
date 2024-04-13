@@ -14,11 +14,6 @@
     margin-left: 40px; /* Space between the image and the text */
 }
 
-.A, .b, .o, .u, .t, .M, .e, .exclamation {
-    animation: bounce 2s ease infinite;
-    animation-delay: calc(var(--bounce-order) * 0.1s);
-}
-
 .about-text {
     flex: 2;
     font-family: 'Epilogue', sans-serif;
@@ -33,10 +28,12 @@
 
 .about-text a {
     color: #A79ECD;
+    text-shadow: 1px 1px 2px #ffffff;
     text-decoration: underline;
 }
 .about-text em {
     color: #A79ECD;
+    text-shadow: 1px 1px 2px #ffffff;
 }
 
 @media screen and (max-width: 768px) {

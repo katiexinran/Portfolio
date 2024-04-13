@@ -19,6 +19,7 @@
 .sidebar-section {
     margin-bottom: 10px;
 }
+
 @media screen and (max-width: 768px) {
     .content-container {
         flex-direction: column;
@@ -28,46 +29,31 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .sidebar-content p {
-        width: calc(60% - 10px);
-        /* width: calc(33.33% - 10px); */
-        margin-bottom: 20px;
+    .poster-container img, .team-photo {
+        max-width: 100%;
     }
     .sidebar-section:nth-last-child(-n+2) {
         width: calc(50% - 10px);
-    }
-    .sidebar, .right-column {
-        width: 100%;
-        padding: 20px;
     }
     .logo {
         display: none;
     }
 }
 
-/* Bouncing Letter Animation */
+/* Adjust the font size for smaller screens */
+.main-content p, .caption, .sidebar-section p {
+    font-size: 14px;
+}
+
 .title-container {
     display: inline-flex;
     font-size: 50px;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px;
     font-family: 'HyperBlob', sans-serif;
-    color: #ea8175;
-    background-color: #f0dae2;
+    color: #DC8DAD;
+    text-shadow: 1px 1px 2px #ffffff;
     padding: 2px 5px;
     border-radius: 5px;
-}
-.title-container div {
-    animation: bounce 2s ease infinite;
-    animation-delay: calc(var(--bounce-order) * 0.1s);
-}
-@keyframes bounce {
-    0%   { transform: scale(1,1) translateY(0); }
-    10%  { transform: scale(1.1,.9) translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-10px);}
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    57%  { transform: scale(1,1) translateY(-3px); }
-    64%  { transform: scale(1,1) translateY(0); }
-    100% { transform: scale(1,1) translateY(0); }
 }
 
 main {
@@ -94,14 +80,9 @@ h2 {
     margin-top: 20px;
 }
 .poster-container img {
-    max-width: 90%; /* Adjust the maximum width as needed */
+    max-width: 90%;
     height: auto;
-    border-radius: 10px; /* Optional: Adds rounded corners */
-}
-@media screen and (max-width: 768px) {
-    .poster-container img {
-        max-width: 300px; /* Adjust the size for smaller screens */
-    }
+    border-radius: 10px;
 }
 
 /* Selected Work */
@@ -119,8 +100,8 @@ h2 {
 .caption {
     text-align: center;
     margin-top: 5px;
-    font-style: italic; /* Make the text italic */
-    font-size: 14px; /* Make the font size smaller */
+    font-style: italic;
+    font-size: 14px;
 }
 
 /* Team Photo */
@@ -152,7 +133,6 @@ h2 {
     margin-bottom: 5px;
 }
 
-/* Adjust the font size and weight for subheadings if needed */
 .main-content h4 {
     margin-top: 30px;
     margin-bottom: 10px;
