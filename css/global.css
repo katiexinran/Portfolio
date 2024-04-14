@@ -113,6 +113,7 @@ footer {
 .footer-right a {
     text-decoration: none;
 }
+/* Make the footer compress on small screens */
 @media screen and (max-width: 768px) {
     footer {
         flex-direction: column-reverse;
