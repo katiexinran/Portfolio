@@ -63,7 +63,7 @@ main {
         text-align: center;
     }
     .cartoon-me {
-        max-width: 60%;
+        max-width: 100%;
         height: auto;
         margin-bottom: 25px;
     }
@@ -75,11 +75,11 @@ main {
         padding: 0 40px;
     }
     .role-detail {
-        padding: 0 40px;
-        font-size: 16px;
+        font-size: 18px;
     }
     .header {
-        font-size: 38px;
+        align-items: left;
+        font-size: 48px;
         margin-bottom: 5px;
     }
 }

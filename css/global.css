@@ -6,6 +6,9 @@
 
 html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,7 +17,6 @@ body {
     min-height: 100vh;
     font-family: "owners-text", sans-serif;
     font-weight: 400;
-    margin: 0;
     /* background: linear-gradient(to right, #fde0e0 10%, #fdecd9 25%, #fafbd6 40%, #e4ffdf 55%, #c9dbfa 80%, #dfdafa 100%); */
     background: linear-gradient(to bottom right, #fef6f3 10%, #ece5f8 20%, #c9dbfa 40%, #dae9fd 50%, #dfdafa 100%);
     /* background: linear-gradient(to bottom right, #fef6f3 10%, #ece5f8 20%, #dae9fd 30%, #d5ece0 100%); */
@@ -59,8 +61,8 @@ main {
         display: block;
         margin: 10px 0;
     }
-    main {
-        padding: 0 10px;
+    main, body {
+        padding: 0 50px;
     }
 }
 
@@ -90,19 +92,19 @@ footer {
 .footer-left {
     text-align: left;
     color: rgba(0, 0, 0, 0.62); /* Black with 62% opacity */
-    font-size: 14px;
+    font-size: 12px;
 }
 .footer-right {
     text-align: right;
 }
 .linkedin-logo {
-    width: 30px;
+    width: 20px;
     height: auto;
     margin-right: 5px;
 }
 .gmail-logo {
-    width: 35px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 .footer-right a {
     text-decoration: none;
@@ -111,17 +113,18 @@ footer {
 @media screen and (max-width: 768px) {
     footer {
         flex-direction: column-reverse;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .footer-left, .footer-right {
         text-align: center;
         flex: none;
         width: 100%;
-        font-size: 12px;
     }
     .footer-right {
         margin-bottom: 20px;
     }
-    .linkedin-logo, .gmail-logo {
+    .gmail-logo {
         margin-right: 20px;
     }
 }
