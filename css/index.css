@@ -76,10 +76,10 @@ main {
     }
     .role-detail {
         padding: 0 40px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .header {
-        font-size: 34px;
+        font-size: 38px;
         margin-bottom: 5px;
     }
 }
