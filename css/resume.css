@@ -5,24 +5,24 @@ main {
     padding-right: 150px;
 }
 
-.K, .a1, .t, .i, .e1, .H, .a2, .n, .c, .o, .c2, .k {
-    animation: bounce 2s ease infinite;
-    animation-delay: calc(var(--bounce-order) * 0.1s);
-}
-
 .resume-content {
-    font-family: 'Epilogue', sans-serif;
+    font-family: "owners-text", sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
-    color: #333333;
+    color: #1c2b33;
     margin-top: 20px;
 }
 
 .resume-content h3 {
-    color: #A79ECD;
+    color: #827ba0;
     margin-bottom: 20px;
-    border-bottom: 2px solid #A79ECD;
+    border-bottom: 2px solid #827ba0;
     padding-bottom: 10px;
+    font-family: "pain-de-mie", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 28px;
 }
 
 .resume-content p {

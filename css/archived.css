@@ -20,16 +20,20 @@ main {
 }
 
 .project h3 {
-    font-family: 'Epilogue', sans-serif;
-    font-size: 18px;
+    /* font-family: "owners-text", sans-serif; */
+    font-family: "pain-de-mie", sans-serif;
+    font-size: 26px;
+    font-weight: 200;
+    color: #827ba0;
     margin-bottom: 10px;
 }
 
 .project p {
-    font-family: 'Epilogue', sans-serif;
+    font-family: "owners-text", sans-serif;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.6;
-    color: #333;
+    color: #1c2b33;
 }
 
 @media screen and (max-width: 968px) {

@@ -5,7 +5,6 @@
 }
 
 html, body {
-    height: 100%;
     margin: 0;
 }
 
@@ -13,12 +12,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Epilogue', sans-serif;
+    font-family: "owners-text", sans-serif;
+    font-weight: 400;
     margin: 0;
-    padding: 0 40px;
-    /* background: linear-gradient(to right, #fde0e0 20%, #f9eceb 50%, #e7e9fb 80%); */
-    /* background: linear-gradient(to right, #fecece 10%, #fce5ca 25%, #fdffce 40%, #d3fbcd 55%, #c9dbfa 80%, #ded8fe 100%); */
-    background: linear-gradient(to right, #fde0e0 10%, #fdecd9 25%, #fafbd6 40%, #e4ffdf 55%, #c9dbfa 80%, #dfdafa 100%);
+    /* background: linear-gradient(to right, #fde0e0 10%, #fdecd9 25%, #fafbd6 40%, #e4ffdf 55%, #c9dbfa 80%, #dfdafa 100%); */
+    background: linear-gradient(to bottom right, #fef6f3 10%, #ece5f8 20%, #c9dbfa 40%, #dae9fd 50%, #dfdafa 100%);
+    /* background: linear-gradient(to bottom right, #fef6f3 10%, #ece5f8 20%, #dae9fd 30%, #d5ece0 100%); */
 }
 
 /* Navbar stuff */
@@ -28,7 +27,8 @@ body {
 }
 nav {
     text-align: right;
-    padding-top: 20px;
+    padding: 0 40px;
+    padding-top: 30px;
 }
 nav ul {
     list-style-type: none;
@@ -40,11 +40,11 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: normal;
+    color: #1c2b33;
+    font-style: italic;
 }
 nav ul li a.active, nav ul li a:hover {
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 main {
@@ -55,28 +55,21 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-    /* .navbar-logo, nav ul {
-        text-align: center;
-    } */
-
     nav ul li {
         display: block;
         margin: 10px 0;
     }
-
     main {
         padding: 0 10px;
     }
 }
 
-/* Bouncing animation */
+/* Titles */
 .header {
     display: inline-flex;
     font-size: 50px;
     margin-bottom: 20px;
-    font-family: 'HyperBlob', sans-serif;
-    color:#A79ECD;
-    text-shadow: 1px 1px 2px #ffffff;
+    color:#827ba0;
     padding: 2px 5px;
     border-radius: 5px;
 }
@@ -85,8 +78,8 @@ main {
 footer {
     text-align: center;
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 290px;
+    padding-right: 295px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,6 +90,7 @@ footer {
 .footer-left {
     text-align: left;
     color: rgba(0, 0, 0, 0.62); /* Black with 62% opacity */
+    font-size: 14px;
 }
 .footer-right {
     text-align: right;
@@ -133,27 +127,7 @@ footer {
 }
 
 .header {
-    font-family: 'HyperBlob', sans-serif;
-}
-
-@font-face {
-    font-family: 'HyperBlob';
-    src: url('../fonts/hyper-blob-font/HyperBlob-ZVj6l.ttf') format('truetype');
-    font-weight: normal;
+    font-family: "pain-de-mie", sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'HyperBlobOutline';
-    src: url('../fonts/hyper-blob-font/HyperBlobOutline-OVj6o.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Migae';
-    src: url('../fonts/migae-font/MigaeSemibold-3zd2M.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-

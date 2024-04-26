@@ -11,15 +11,16 @@
 }
 
 .intro-text {
-    margin-left: 40px; /* Space between the image and the text */
+    margin-left: 40px;
 }
 
 .about-text {
     flex: 2;
-    font-family: 'Epilogue', sans-serif;
+    font-family: "owners-text", sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
-    color: #333333;
+    color: #1c2b33;
 }
 
 .about-text p {
@@ -27,13 +28,11 @@
 }
 
 .about-text a {
-    color: #886dc3;
-    text-shadow: 1px 1px 2px #ffffff;
+    color: #827ba0;
     text-decoration: underline;
 }
 .about-text em {
-    color: #886dc3;
-    text-shadow: 1px 1px 2px #ffffff;
+    color: #827ba0;
 }
 
 @media screen and (max-width: 768px) {
