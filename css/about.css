@@ -35,7 +35,8 @@
     color: #827ba0;
 }
 
-.icons {
+/* Causing the nav bar to format weird */
+.about-text .icons {
     height: 20px;
 }
 
