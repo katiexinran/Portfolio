@@ -18,7 +18,7 @@ body {
     font-family: "owners-text", sans-serif;
     font-weight: 400;
     /* background: linear-gradient(to right, #fde0e0 10%, #fdecd9 25%, #fafbd6 40%, #e4ffdf 55%, #c9dbfa 80%, #dfdafa 100%); */
-    background: linear-gradient(to bottom right, #fef6f3 10%, #ece5f8 20%, #c9dbfa 40%, #dae9fd 50%, #dfdafa 100%);
+    background: linear-gradient(to bottom right, #f4e4ea 10%, #ece5f8 20%, #c9dbfa 40%, #dae9fd 50%, #dfdafa 100%);
     /* background: linear-gradient(to bottom right, #fef6f3 10%, #ece5f8 20%, #dae9fd 30%, #d5ece0 100%); */
 }
 
