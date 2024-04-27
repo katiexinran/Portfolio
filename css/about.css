@@ -1,3 +1,7 @@
+html {
+    overflow-y:scroll;
+}
+
 .intro-container {
     display: flex;
     align-items: center;
@@ -35,8 +39,7 @@
     color: #827ba0;
 }
 
-/* Causing the nav bar to format weird */
-.about-text .icons {
+.icons {
     height: 20px;
 }
 
