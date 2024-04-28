@@ -58,28 +58,38 @@ main {
     body {
         padding: 0;
     }
+    .intro-text {
+        margin-left: 0px;
+    }
     .intro-container {
         flex-direction: column;
-        text-align: center;
+        margin-right: 50px;
+        margin-left: 50px;
     }
     .cartoon-me {
         max-width: 100%;
         height: auto;
         margin-bottom: 25px;
     }
+    .project-container {
+        padding: 40px 0;
+    }
     .project-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .projects {
+        max-width: 80%;
+    }
     #navbar-container {
-        padding: 0 40px;
+        padding: 0 20px;
     }
     .role-detail {
-        font-size: 18px;
+        font-size: 16px;
     }
     .header {
-        align-items: left;
-        font-size: 48px;
+        font-size: 44px;
+        margin-left: 0px;
         margin-bottom: 5px;
     }
 }
