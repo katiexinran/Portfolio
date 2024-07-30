@@ -12,10 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: "owners-text", sans-serif;
+    font-family: "Inter";
     font-weight: 400;
-    /* background: linear-gradient(to right, #fde0e0 10%, #fdecd9 25%, #fafbd6 40%, #e4ffdf 55%, #c9dbfa 80%, #dfdafa 100%); */
-    /* background: linear-gradient(to bottom right, #fef6f3 10%, #ece5f8 20%, #dae9fd 30%, #d5ece0 100%); */
     background: linear-gradient(to bottom right, #f4e4ea 10%, #ece5f8 20%, #c9dbfa 40%, #dae9fd 50%, #dfdafa 100%);
 }
 
@@ -35,15 +33,21 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 5px;
 }
 nav ul li a {
     text-decoration: none;
-    color: #1c2b33;
-    font-style: italic;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #8079a0;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
 nav ul li a.active, nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #635d7c;
+}
+nav ul li a .star {
+    margin-right: 8px; /* Add some space between the star and text */
 }
 
 main {
@@ -53,10 +57,10 @@ main {
     padding: 0 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
     nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 25px 0;
     }
     main, body {
         padding: 0 20px;
@@ -68,7 +72,7 @@ main {
     display: inline-flex;
     font-size: 50px;
     margin-bottom: 20px;
-    color:#827ba0;
+    color: #8079a0;
     padding: 2px 5px;
     border-radius: 5px;
 }
@@ -107,7 +111,7 @@ footer {
     text-decoration: none;
 }
 /* Make the footer compress on small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
     footer {
         flex-direction: column-reverse;
         padding-left: 0px;

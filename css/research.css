@@ -26,7 +26,6 @@ main {
 }
 
 .project h3 {
-    /* font-family: "owners-text", sans-serif; */
     font-family: "pain-de-mie", sans-serif;
     font-size: 26px;
     font-weight: 200;
@@ -36,7 +35,7 @@ main {
 }
 
 .project p {
-    font-family: "owners-text", sans-serif;
+    font-family: 'Inter';
     font-weight: 400;
     font-size: 14px;
     line-height: 1.6;
