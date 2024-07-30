@@ -25,18 +25,15 @@ main {
     width: 100%;
     margin-bottom: 40px;
 }
-
 .projects {
     max-width: 60%;
     margin: 0 auto;
 }
-
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
 }
-
 .project img {
     max-width: 100%;
     height: auto;
@@ -51,7 +48,7 @@ main {
     color: #333;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
     main {
         padding: 0px 0px;
     }

@@ -33,11 +33,12 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 2px;
 }
 nav ul li a {
     text-decoration: none;
     color: #fff;
+    font-size: 14px;
     padding: 10px 20px;
     background-color: #8079a0;
     border-radius: 20px;
@@ -57,7 +58,7 @@ main {
     padding: 0 20px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
     nav ul li {
         display: block;
         margin: 25px 0;
@@ -81,8 +82,8 @@ main {
 footer {
     text-align: center;
     padding-bottom: 20px;
-    padding-left: 290px;
-    padding-right: 295px;
+    padding-left: 40px;
+    padding-right: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,7 +112,7 @@ footer {
     text-decoration: none;
 }
 /* Make the footer compress on small screens */
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
     footer {
         flex-direction: column-reverse;
         padding-left: 0px;
