@@ -117,3 +117,22 @@ main {
         gap: 20px;
     }
 }
+
+/* Ensure the overlay is hidden by default on mobile */
+@media screen and (max-width: 768px) {
+    .project-overlay::after {
+        opacity: 0;
+    }
+
+    .overlay-button {
+        opacity: 0;
+        pointer-events: none; /* Prevents buttons from being clicked when hidden */
+    }
+
+    .project-overlay.active .overlay-button,
+    .project-overlay.active::after {
+        opacity: 1;
+        pointer-events: all; /* Allows buttons to be clicked when visible */
+    }
+}
+

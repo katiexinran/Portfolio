@@ -36,3 +36,29 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error loading the footer:', error));
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projects = document.querySelectorAll('.project-overlay');
+
+    projects.forEach(project => {
+        project.addEventListener('click', function() {
+            // Remove 'active' class from all projects except the one clicked
+            projects.forEach(p => {
+                if (p !== project) {
+                    p.classList.remove('active');
+                }
+            });
+
+            // Toggle the 'active' class on the clicked project
+            project.classList.toggle('active');
+        });
+    });
+
+    // Close the overlay if clicking outside the project (optional)
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.project-overlay')) {
+            projects.forEach(p => p.classList.remove('active'));
+        }
+    });
+});
