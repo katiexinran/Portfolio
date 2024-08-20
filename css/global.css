@@ -166,6 +166,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-radius: inherit;
 }
 .project-overlay:hover img {
     transform: scale(1.1);
@@ -173,9 +174,6 @@ footer {
 .project-overlay:hover .project-description {
     opacity: 1;
 }
-/* .project-description h4 {
-    margin-bottom: 10px;
-} */
 .project-description p {
     font-size: 14px;
     margin-bottom: 8px;
