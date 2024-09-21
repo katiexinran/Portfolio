@@ -36,6 +36,53 @@ main {
     color: #1c2b33;
 }
 
+.project-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay color */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+.project-overlay:hover::after {
+    opacity: 1;
+}
+
+/* Project Overlay Buttons */
+.overlay-button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+.hover-button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #8079a0;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.hover-button:hover {
+    background-color: #635d7c;
+}
+.project-overlay:hover .overlay-button {
+    opacity: 1;
+}
+
 @media screen and (max-width: 968px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -50,5 +97,23 @@ main {
     .project-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+
+/* Ensure the overlay is hidden by default on mobile */
+@media screen and (max-width: 768px) {
+    .project-overlay::after {
+        opacity: 0;
+    }
+
+    .overlay-button {
+        opacity: 0;
+        pointer-events: none; /* Prevents buttons from being clicked when hidden */
+    }
+
+    .project-overlay.active .overlay-button,
+    .project-overlay.active::after {
+        opacity: 1;
+        pointer-events: all; /* Allows buttons to be clicked when visible */
     }
 }
