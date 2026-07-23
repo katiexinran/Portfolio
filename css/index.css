@@ -12,16 +12,6 @@ main {
     max-width: 680px;
 }
 
-.hero-title {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    font-size: 13.5px;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    color: #5b5474;
-    margin-bottom: 10px;
-}
-
 .hero-heading {
     font-size: 36px;
     line-height: 1.3;
