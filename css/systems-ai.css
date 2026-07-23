@@ -1,0 +1,49 @@
+main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.page-section {
+    margin-bottom: 70px;
+}
+.page-section:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+}
+
+.experience-block h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700;
+    font-size: 15.5px;
+    color: #5b5474;
+    margin-top: 22px;
+    margin-bottom: 6px;
+}
+.experience-block h4:first-of-type {
+    margin-top: 20px;
+}
+
+.additional-experience {
+    margin-top: -4px;
+}
+.additional-experience .compact-card p:first-of-type {
+    margin-bottom: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0 20px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    body {
+        padding: 0;
+    }
+    .page-section {
+        margin-bottom: 48px;
+    }
+}

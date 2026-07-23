@@ -3,7 +3,7 @@
     display: inline-flex;
     font-size: 50px;
     margin-bottom: 20px;
-    font-family: "pain-de-mie", sans-serif;
+    font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #219EBC;
@@ -12,7 +12,8 @@
 }
 
 main {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 h2 {
@@ -209,7 +210,7 @@ h2 {
 }
 
 .main-content h3 {
-    font-family: "pain-de-mie", sans-serif;
+    font-family: "Bricolage Grotesque", sans-serif;
     font-style: normal;
     font-size: 26px;
     font-weight: 200;
@@ -255,6 +256,7 @@ strong {
     gap: 30px;
 }
 .project-description h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
     font-size: 14px;
     color: #fff;
     font-weight: bold;

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems &amp; AI - Katie Hancock</title>
+    <meta name="description" content="Software engineering experience at Google and T-Mobile, plus selected technical projects spanning AI systems, backend engineering, and human-AI interaction.">
+    <link rel="icon" type="image/png" href="images/global/logocompressed.png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/systems-ai.css">
+
+    <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <div class="section-header">
+            <h1 class="header">Systems &amp; AI</h1>
+            <p class="section-intro">Software engineering experience at Google and T-Mobile, and selected technical projects spanning AI systems, backend engineering, and human-AI interaction.</p>
+        </div>
+
+        <section class="page-section" id="experience">
+            <h2 class="header subsection-title">Professional Engineering Experience</h2>
+
+            <div class="experience-block" id="google">
+                <div class="experience-header">
+                    <span class="experience-org">Google</span>
+                    <span class="experience-meta">May 2026 &ndash; Present &middot; Kirkland, WA</span>
+                </div>
+                <div class="experience-role">Software Engineer Intern, Display &amp; Video 360 Infrastructure</div>
+                <p>Built and improved <em>internal AI systems</em> that automate software issue triage, support collaborative debugging, organize recurring user feedback, and streamline engineering maintenance workflows.</p>
+
+                <h4>Multi-Agent Issue Triage</h4>
+                <p>Built a Python and Go multi-agent bug-triage system that generated issue summaries, investigation plans, duplicate-ticket suggestions, and relevant technical context for newly filed issues.</p>
+
+                <h4>Durable and Shareable AI Sessions</h4>
+                <p>Implemented durable, shareable AI sessions that preserved context across service restarts, supported long-running investigations, and let one engineer hand an investigation off to another without losing prior conversational context.</p>
+
+                <h4>Continuous User-Feedback Analysis</h4>
+                <p>During an internal BuildAI hackathon, designed and built an <em>LLM-powered feedback analysis pipeline</em> to address a recurring problem: engineers manually reading many repetitive user reports to identify common themes and actionable product issues. The pipeline organized unstructured user feedback into stable issue themes, incrementally assigned newly arriving feedback to existing clusters rather than spawning duplicate or renamed clusters, and supported re-clustering and splitting when reports had been grouped incorrectly. This made recurring feedback easier for product and engineering teams to interpret and surfaced clearer, more actionable patterns. Supporting capabilities included screenshot analysis, technical-log investigation, and dynamic issue prioritization.</p>
+
+                <h4>Additional Contribution</h4>
+                <p>After completing the original internship milestones ahead of schedule, I modernized Java backend code, migrated legacy AI workflows into reusable standardized skills, and added automated regression tests to validate outputs and reduce maintenance.</p>
+
+                <div class="tag-row">
+                    <span class="tag">Python</span>
+                    <span class="tag">Go</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Multi-Agent Systems</span>
+                    <span class="tag">LLM Applications</span>
+                    <span class="tag">Backend Engineering</span>
+                    <span class="tag">Session Persistence</span>
+                    <span class="tag">Automated Testing</span>
+                </div>
+                <p class="confidential-note">Specific implementation details are omitted because this work is proprietary.</p>
+            </div>
+
+            <div class="experience-block compact">
+                <div class="experience-header">
+                    <span class="experience-org">T-Mobile</span>
+                    <span class="experience-meta">June 2022 &ndash; September 2022 &middot; Bellevue, WA</span>
+                </div>
+                <div class="experience-role">Software Engineer Intern</div>
+                <p>Built an internal project-management and reporting tool using Power Apps, Power Automate, and Power BI for more than 50 project managers.</p>
+                <div class="tag-row">
+                    <span class="tag">Internal Tools</span>
+                    <span class="tag">Workflow Automation</span>
+                    <span class="tag">Data Reporting</span>
+                </div>
+            </div>
+
+            <div class="compact-card-grid additional-experience">
+                <div class="compact-card">
+                    <h4>University of Washington</h4>
+                    <p><strong>Teaching Assistant, Interactive Systems Design &amp; Technology</strong><br>
+                    January &ndash; March 2023 &middot; Seattle, WA</p>
+                    <p>Taught Python programming and led biweekly office hours for more than 40 students.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2 class="header subsection-title">Selected Technical Projects</h2>
+            <div class="card-grid">
+                <a href="llm-debugging.html" class="info-card">
+                    <h3>LLM-Assisted Debugging for Novice Programmers</h3>
+                    <p>Built and evaluated a Python-based LLM assistant that helped novice programmers interpret errors, debug code, and understand generated explanations.</p>
+                    <div class="tag-row">
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Human-AI Interaction</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Usability Research</span>
+                    </div>
+                    <span class="card-link">Read case study &rarr;</span>
+                </a>
+
+                <a href="capstone.html" class="info-card">
+                    <h3>Happy to Be Included</h3>
+                    <p>Inclusive job-recruitment platform built with Included.ai. Built the candidate search and filtering system and translated stakeholder research into product requirements. Brave Award, UW HCDE Capstone Showcase.</p>
+                    <div class="tag-row">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">pyodbc</span>
+                    </div>
+                    <span class="card-link">Read case study &rarr;</span>
+                </a>
+
+                <div class="info-card">
+                    <h3>AI Pacman</h3>
+                    <p>Implemented Pacman agents using DFS, BFS, A*, minimax, and Q-learning for graph search, adversarial decision-making, and reinforcement learning.</p>
+                    <div class="tag-row">
+                        <span class="tag">Search Algorithms</span>
+                        <span class="tag">Adversarial Search</span>
+                        <span class="tag">Reinforcement Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="loadContent.js"></script>
+</body>
+</html>

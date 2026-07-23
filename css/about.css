@@ -2,11 +2,15 @@ html {
     overflow-y:scroll;
 }
 
+main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .intro-container {
     display: flex;
     align-items: center;
-    margin-top: 120px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .photo-of-me {
@@ -16,11 +20,12 @@ html {
 
 .intro-text {
     margin-left: 40px;
+    flex: 1;
+    min-width: 0;
 }
 
 .about-text {
-    flex: 2;
-    font-family: 'Inter';
+    font-family: 'Manrope';
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
@@ -32,27 +37,94 @@ html {
 }
 
 .about-text a {
-    color: #827ba0;
+    color: #5b5474;
     text-decoration: underline;
 }
-.about-text em {
-    color: #827ba0;
+.archive-pointer {
+    font-size: 14.5px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .icons {
     height: 20px;
 }
 
+.page-section {
+    margin-bottom: 56px;
+}
+.page-section .section-intro {
+    max-width: none;
+}
+.page-section:last-child {
+    margin-bottom: 0;
+}
+.subsection-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.journey-text p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #1c2b33;
+    margin-bottom: 16px;
+}
+
+.toolkit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+.toolkit-category h4 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #5b5474;
+    margin-bottom: 10px;
+}
+
+.resume-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0 28px;
+}
+
+.resume-preview {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.resume-embed {
+    width: 100%;
+    height: 75vh;
+    border: none;
+    border-radius: 12px;
+    display: block;
+}
+
 @media screen and (max-width: 768px) {
+    main {
+        padding: 0 20px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    body {
+        padding: 0;
+    }
     .intro-container {
         flex-direction: column;
         text-align: center;
+        margin-bottom: 40px;
     }
 
     .photo-of-me {
         max-width: 300px;
         margin-bottom: 20px;
-        margin-top: -80px;
     }
 
     .intro-text {
@@ -62,5 +134,13 @@ html {
 
     .about-text {
         text-align: left;
+    }
+
+    .page-section {
+        margin-bottom: 40px;
+    }
+
+    .resume-embed {
+        height: 55vh;
     }
 }

@@ -3,104 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katie's Portfolio - Design</title>
+    <title>Katie Hancock - Software Engineer & Emerging AI Researcher</title>
+    <meta name="description" content="Katie Hancock is a software engineer and emerging AI researcher building reliable AI systems and studying how they affect people.">
     <link rel="icon" type="image/png" href="images/global/logocompressed.png">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://use.typekit.net/your-project-id.css">
 
-    <!-- Pain de Mie font -->
-    <link rel="stylesheet" href="https://use.typekit.net/suk1jet.css">
-
-    <!-- Inter font -->
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-container"></div>
     <main>
-        <div class="intro-container">
-            <img src="images/index/cartoonme.png" alt="Cartoon Katie" class="cartoon-me">
-            <div class="intro-text">
-                <div class="header">
-                    Hello, I'm Katie!
+        <section class="hero">
+            <div class="hero-text">
+                <span class="eyebrow"><span class="eyebrow-typed">Hi, I'm Katie</span><span class="eyebrow-caret" aria-hidden="true"></span></span>
+                <h1 class="header hero-heading">Building reliable AI systems and studying how they affect people.</h1>
+                <p class="hero-subtext">I'm an M.S. student in Computer Science at USC, currently interning in software engineering at Google. With a background in <em>Human-Centered Design &amp; Engineering</em> from the University of Washington, I'm interested in building AI systems that are <em>reliable, thoughtfully evaluated, and grounded in how people actually use them</em>.</p>
+                <div class="hero-social">
+                    <a href="https://github.com/katiexinran" target="_blank" class="social-link">GitHub</a>
+                    <span class="social-divider">&middot;</span>
+                    <a href="https://www.linkedin.com/in/katiexinran" target="_blank" class="social-link">LinkedIn</a>
+                    <span class="social-divider">&middot;</span>
+                    <a href="mailto:katiexinran@gmail.com" target="_blank" class="social-link">Email</a>
                 </div>
-                <div class="role-detail">I'm currently completing my Master's in Computer Science at the University of Southern California.</div>
             </div>
-        </div>
-    </main>
-</body>
-        <div class="project-container">
-            <section class="projects">
-                <div class="project-grid">
+        </section>
 
-                    <div class="project">
-                        <a href="isoftstone.html">
-                            <div class="project-overlay">
-                                <img src="images/index/isoftstone.png" alt="iSoftStone">
-                                <div class="project-description">
-                                    <h4>iSoftStone</h4>
-                                    <p>Design System, Nuxeo DAM Demo, AI Reverse Image Search tool</p>
-                                    <p>Key skills: <em>UI/UX Design, Interaction Design, Prototyping, Responsive Design.</em></p>
-                                </div>
-                            </div>
-                        </a>
+        <section class="home-section">
+            <div class="section-header">
+                <h2 class="header section-title">Featured Work</h2>
+            </div>
+            <div class="card-grid">
+                <a href="systems-ai.html#google" class="info-card featured">
+                    <h3>AI Systems at Google</h3>
+                    <p>Built internal AI systems for software issue triage, shareable investigation sessions, continuous user-feedback analysis, and developer workflow automation.</p>
+                    <div class="tag-row">
+                        <span class="tag">Production AI</span>
+                        <span class="tag">Multi-Agent Systems</span>
+                        <span class="tag">Backend</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Go</span>
                     </div>
+                    <span class="card-link">See experience summary &rarr;</span>
+                </a>
 
-                    <div class="project">
-                        <a href="safechat.html">
-                            <div class="project-overlay">
-                                <img src="images/index/safechat.png" alt="SafeChat">
-                                <div class="project-description">
-                                    <h4>SafeChat</h4>
-                                    <p>Mobile app for on-demand mental health support.</p>
-                                    <p>Key skills: <em>User Research, Prototyping, Usability Testing, Mobile UI Design.</em></p>
-                                </div>
-                            </div>
-                        </a>
+                <a href="dialect-bias.html" class="info-card featured">
+                    <h3>Mitigating Dialect Bias in Toxicity Detection</h3>
+                    <p>Evaluated vector scaling and adversarial debiasing for a toxicity classifier that disproportionately flagged African American English.</p>
+                    <div class="card-stat">
+                        <span class="card-stat-value">95%</span>
+                        <span class="card-stat-label">reduction in the AAE&ndash;SAE false-positive-rate gap</span>
                     </div>
+                    <div class="tag-row">
+                        <span class="tag">Responsible AI</span>
+                        <span class="tag">ML Fairness</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Model Evaluation</span>
+                    </div>
+                    <span class="card-link">Read case study &rarr;</span>
+                </a>
 
-                    <div class="project">
-                        <a href="itinero.html">
-                            <div class="project-overlay">
-                                <img src="images/index/itinero.png" alt="Itinero">
-                                <div class="project-description">
-                                    <h4>Itinero</h4>
-                                    <p>Travel planning app balancing exploration and organization.</p>
-                                    <p>Key skills: <em>User Research, Affinity Diagram, Prototyping.</em></p>
-                                </div>
-                            </div>
-                        </a>
+                <a href="llm-debugging.html" class="info-card featured">
+                    <h3>LLM-Assisted Debugging for Novice Programmers</h3>
+                    <p>Built and evaluated an LLM assistant that helped novice programmers interpret errors and act on debugging guidance.</p>
+                    <div class="tag-row">
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Human-AI Interaction</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Usability Research</span>
                     </div>
+                    <span class="card-link">Read case study &rarr;</span>
+                </a>
+            </div>
+        </section>
 
-                    <!-- <div class="project">
-                        <a href="capstone.html">
-                            <div class="project-overlay">
-                                <img src="images/index/capstone.png" alt="Capstone">
-                                <div class="project-description">
-                                    <h4>Happy to be included</h4>
-                                    <p>Matching hiring needs to qualified, diverse candidates.</p>
-                                    <p>Key skills: <em>User Interviews, Design Ideation, Back-end Programming, Interface Redesign.</em></p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-                    
-                    <div class="project">
-                        <a href="islandwood.html">
-                            <div class="project-overlay">
-                                <img src="images/index/islandwood.png" alt="IslandWood">
-                                <div class="project-description">
-                                    <h4>IslandWood</h4>
-                                    <p>Redesigning IslandWood's visual identity.</p>
-                                    <p>Key skills: <em>Logo Design, Brand Alignment, Prototyping.</em></p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+        <section class="home-section">
+            <div class="section-header">
+                <h2 class="header section-title">Currently</h2>
+                <p class="section-intro">Working across software engineering and academic research, with a focus on reliable AI systems and human-AI interaction.</p>
+            </div>
+            <div class="compact-card-grid">
+                <div class="compact-card">
+                    <h4>Google</h4>
+                    <p>Software Engineer Intern, Display &amp; Video 360 Infrastructure &mdash; building internal AI systems for developer workflows.</p>
+                    <a href="systems-ai.html#google" class="card-link">See summary &rarr;</a>
                 </div>
-            </section>
-        </div>
-
+                <div class="compact-card">
+                    <h4>University of Southern California</h4>
+                    <p>Completing an M.S. in Computer Science, with coursework and projects in AI and machine learning.</p>
+                    <a href="about.html" class="card-link">More about me &rarr;</a>
+                </div>
+                <div class="compact-card">
+                    <h4>Research</h4>
+                    <p>Contributing to early-stage research on persona inference and relational behavior in conversational AI.</p>
+                    <a href="research.html#current-research" class="card-link">Research in progress &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
     <div id="footer-container"></div>
     <script src="loadContent.js"></script>
 </body>

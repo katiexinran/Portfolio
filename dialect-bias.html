@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitigating Dialect Bias in Toxicity Detection - Katie Hancock</title>
+    <meta name="description" content="Fairness evaluation and bias mitigation for toxicity classification models, reducing the AAE-SAE false-positive-rate gap by 95%.">
+    <link rel="icon" type="image/png" href="images/global/logocompressed.png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/case-study.css">
+
+    <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <div class="content-container">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <div class="sidebar-section">
+                        <p><strong>Type</strong><br>Research Project</p>
+                    </div>
+                    <div class="sidebar-section">
+                        <p><strong>Duration</strong><br>February &ndash; May 2026</p>
+                    </div>
+                    <div class="sidebar-section">
+                        <p><strong>My Role</strong><br>Contributor &mdash; Modeling &amp; Evaluation</p>
+                    </div>
+                    <div class="sidebar-section">
+                        <p><strong>Datasets</strong><br>Davidson<br>TwitterAAE</p>
+                    </div>
+                    <div class="sidebar-section">
+                        <p><strong>Methods</strong><br>BERT Embeddings<br>XGBoost<br>Vector Scaling<br>Reweighting<br>Adversarial Debiasing</p>
+                    </div>
+                    <div class="sidebar-section">
+                        <p><strong>Metrics</strong><br>Accuracy<br>F1 Score<br>Subgroup FPR / FNR<br>Disparate Impact</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="title-container">Mitigating Dialect Bias in Toxicity Detection</div>
+                <p class="case-study-subtitle">Fairness evaluation and bias mitigation for toxicity classification models</p>
+                <div class="main-content">
+
+                    <h3>Research Question</h3>
+                    <p>Do toxicity classification models disproportionately flag African American English (AAE) as toxic compared to Standard American English (SAE), and can this disparity be reduced without significantly harming overall model performance?</p>
+
+                    <h3>Motivation</h3>
+                    <p>Automated toxicity detection is increasingly used to moderate online content, but prior research has shown these systems can encode <em>racial and dialectal bias</em>. Misclassifying AAE as toxic at higher rates can silence and disproportionately penalize Black social media users. This project investigated the scope of that bias and evaluated whether established fairness interventions could meaningfully reduce it.</p>
+
+                    <h3>Dataset</h3>
+                    <p>We used the Davidson hate speech and offensive language dataset alongside the TwitterAAE corpus, which provides dialect-probability labels for tweets, to evaluate model behavior across AAE- and SAE-associated text.</p>
+
+                    <h3>My Contribution</h3>
+                    <p>This was a group research project. I implemented and evaluated the XGBoost and vector-scaling mitigation approaches, contributed to the adversarial-debiasing experiments, and analyzed subgroup fairness and performance tradeoffs across all methods.</p>
+
+                    <h3>Methods</h3>
+                    <ul>
+                        <li><strong>BERT embeddings</strong> for text representation</li>
+                        <li><strong>XGBoost</strong> classification baseline</li>
+                        <li><strong>Vector scaling</strong> &mdash; post-hoc calibration to equalize subgroup score distributions</li>
+                        <li><strong>Reweighting</strong> &mdash; adjusting training sample weights across dialect subgroups</li>
+                        <li><strong>Adversarial debiasing</strong> &mdash; an adversarial network trained to remove dialect signal from learned representations</li>
+                    </ul>
+
+                    <h3>Evaluation Framework</h3>
+                    <p>Model performance and fairness were evaluated using accuracy, F1 score, subgroup false-positive rate (FPR) and false-negative rate (FNR), and disparate impact, comparing outcomes for AAE-associated and SAE-associated text.</p>
+
+                    <h3>Results</h3>
+                    <div class="stat-highlight-row">
+                        <div class="stat-highlight">
+                            <span class="stat-value">0.233 &rarr; 0.011</span>
+                            <span class="stat-label">AAE&ndash;SAE false-positive-rate gap</span>
+                        </div>
+                        <div class="stat-highlight">
+                            <span class="stat-value">95%</span>
+                            <span class="stat-label">Reduction in FPR gap</span>
+                        </div>
+                    </div>
+                    <p>Across the mitigation methods evaluated, <em>vector scaling and adversarial debiasing</em> produced the largest reductions in the AAE&ndash;SAE false-positive-rate gap, without a significant loss in overall classification accuracy or F1 score.</p>
+
+                    <h3>Fairness&ndash;Performance Tradeoffs</h3>
+                    <p>Reducing subgroup disparities in FPR required tradeoffs against raw classification accuracy in some configurations. The strongest bias-mitigation methods did not universally dominate on every metric, underscoring that fairness interventions typically involve <em>balancing multiple, sometimes competing, objectives</em> rather than a single optimal solution.</p>
+
+                    <h3>Limitations</h3>
+                    <p>This evaluation was limited to two datasets and a specific set of mitigation techniques, and dialect was approximated using probabilistic labels rather than self-reported speaker identity. Results may not generalize to other toxicity classifiers, languages, or dialect groups without further evaluation.</p>
+
+                    <h3>Future Work</h3>
+                    <p>Future work could extend this evaluation to additional model architectures, incorporate more representative dialect-labeled datasets, and explore fairness interventions that generalize across multiple protected attributes simultaneously.</p>
+
+                    <h3>Links</h3>
+                    <ul class="links-list">
+                        <li><a href="https://github.com/Noman-Vadsariya/Mitigating-Dialect-Bias-Toxicity-Detection" target="_blank">GitHub Code</a></li>
+                    </ul>
+                    <p>This was a team repository; a full written report is available upon request.</p>
+
+                    <div class="related-projects">
+                        <h3>Related Work</h3>
+                        <div class="card-grid">
+                            <a href="llm-debugging.html" class="info-card">
+                                <h3>LLM-Assisted Debugging for Novice Programmers</h3>
+                                <p>Human-AI interaction and trust in an LLM-powered debugging assistant.</p>
+                                <span class="card-link">Read case study &rarr;</span>
+                            </a>
+                            <a href="research.html" class="info-card">
+                                <h3>Research</h3>
+                                <p>See all research interests and current directions.</p>
+                                <span class="card-link">Back to Research &rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer-container"></div>
+    <script src="loadContent.js"></script>
+</body>
+</html>

@@ -3,33 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About &amp; CV - Katie Hancock</title>
+    <meta name="description" content="Software engineer and emerging AI researcher with a background in Human-Centered Design & Engineering — journey, toolkit, and resume.">
     <link rel="icon" type="image/png" href="images/global/logocompressed.png">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/about.css">
 
-    <!-- Pain de Mie font -->
-    <link rel="stylesheet" href="https://use.typekit.net/suk1jet.css">
-
-    <!-- Inter font -->
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-container"></div>
     <main>
         <div class="intro-container">
-            <img src="images/about/aboutmetransparent.png" alt="Katie" class="photo-of-me">
+            <img src="images/about/professional.jpeg" alt="Katie Hancock" class="photo-of-me">
             <div class="intro-text">
                 <div class="header">About Me</div>
                 <div class="about-text">
-                    <p>Hello! I'm Katie, a <em>Computer Science (AI)</em> master's student at the University of Southern California with a foundation in HCI from the University of Washington <img src="images/icons/seattle.png" alt="City" class="icons">.
-                    </p>
-                    <p>I’m moving from UX into software engineering and applied AI, and I care about building systems that are <em>reliable</em>, <em>understandable</em>, and <em>accessible</em>. My design background keeps me focused on real users; my CS work lets me turn those insights into working products.</p>
-                    <p>When I'm not working, you can find me lifting or doing yoga in the gym, reading a good book, or exploring the outdoors.</p>
-                    <p>Connect with me on <a href="https://www.linkedin.com/in/katiexinran">LinkedIn</a> or email me at <a href="mailto:katiexinran@gmail.com">katiexinran@gmail.com</a> with job inquiries!</p>
+                    <p>Hi, I'm Katie! I'm currently pursuing my <em>M.S. in Computer Science</em> at USC and spending this summer interning at Google. I'm especially interested in how <em>AI systems</em> work, how they fail, and what those failures mean for the people who use them.</p>
+                    <p>Outside of school and work, I enjoy weightlifting, hiking, reading, long drives, and exploring new places.</p>
                 </div>
-                </div>
+            </div>
         </div>
+
+        <section class="page-section">
+            <h2 class="header subsection-title">How I Got Here</h2>
+            <div class="about-text journey-text">
+                <p>My path into computer science started with human-centered design. I studied <em>Human-Centered Design &amp; Engineering</em> at the University of Washington, where I learned how to conduct user research, design accessible systems, and think carefully about the ways technology shapes people's experiences.</p>
+                <p>After graduating, I worked in UX design, but I gradually became more interested in the problems happening underneath the interface. A thoughtful design can make a product easier to use, but it cannot fix a biased model, an unreliable AI system, or a backend that does not work as intended. I wanted to understand and work on those deeper technical layers, which led me to pursue an M.S. in Computer Science at USC.</p>
+                <p>Since then, I've been building a stronger foundation in software engineering and machine learning. At Google, I've worked on internal AI systems for software issue triage, collaborative debugging, user-feedback analysis, and developer workflow automation. In my academic work, I've explored <em>fairness in toxicity detection</em> and how people interpret and respond to AI-generated debugging guidance. I'm also beginning to contribute to research involving conversational AI, persona inference, and the safety of increasingly social and emotionally significant AI systems.</p>
+                <p>My HCI background still shapes how I approach technical work. I care about whether a system performs well, but I also want to understand who it works for, how it fails, and how those failures affect real people. Going forward, I hope to keep developing both the technical and research skills needed to build AI systems that are <em>reliable, responsible, and genuinely useful</em>.</p>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2 class="header subsection-title">Technical Toolkit</h2>
+            <div class="toolkit-grid">
+                <div class="toolkit-category">
+                    <h4>Languages</h4>
+                    <div class="tag-row">
+                        <span class="tag">Python</span>
+                        <span class="tag">Go</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+                <div class="toolkit-category">
+                    <h4>ML &amp; AI</h4>
+                    <div class="tag-row">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">BERT</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">Agent Development Kit</span>
+                    </div>
+                </div>
+                <div class="toolkit-category">
+                    <h4>Tools &amp; Systems</h4>
+                    <div class="tag-row">
+                        <span class="tag">Flask</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Linux / Bash</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Relational Databases</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="resume">
+            <h2 class="header subsection-title">Resume / CV</h2>
+            <p class="section-intro">The sections above cover the story; the PDF below has the full detail recruiters and collaborators typically need.</p>
+
+            <!--
+                TODO (action required): add the current resume PDF to /pdfs/resume.pdf.
+                No resume PDF exists in this repository yet — this button will 404
+                until that file is added. See the final implementation report for details.
+            -->
+            <div class="resume-cta">
+                <a href="pdfs/resume.pdf" class="btn btn-primary" target="_blank">View Resume PDF</a>
+                <a href="pdfs/resume.pdf" class="btn btn-secondary" download>Download PDF</a>
+            </div>
+
+            <div class="resume-preview">
+                <embed src="pdfs/resume.pdf" type="application/pdf" class="resume-embed" aria-label="Embedded preview of Katie Hancock's resume PDF">
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2 class="header subsection-title">Contact</h2>
+            <p class="section-intro">I'm always happy to connect about research, responsible AI, software engineering, or any shared interests! Find me on <a href="https://www.linkedin.com/in/katiexinran">LinkedIn</a> or email me at <a href="mailto:katiexinran@gmail.com">katiexinran@gmail.com</a>.</p>
+            <p class="archive-pointer">You can also see my earlier UX and design work in the <a href="design-archive.html">HCI &amp; Design Archive</a>.</p>
+        </section>
     </main>
     <div id="footer-container"></div>
     <script src="loadContent.js"></script>

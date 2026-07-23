@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
 
-            // Default the "Design" tab to active if no active tab is found
+            // Default the "Home" tab to active if no active tab is found
             if (!activeFound) {
-                const designLink = document.querySelector('nav ul li a[href="index.html"]');
-                if (designLink) {
-                    designLink.classList.add('active');
-                    designLink.querySelector('.star').textContent = '★';
+                const homeLink = document.querySelector('nav ul li a[href="index.html"]');
+                if (homeLink) {
+                    homeLink.classList.add('active');
+                    homeLink.querySelector('.star').textContent = '★';
                 }
             }
         })
