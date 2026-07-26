@@ -42,7 +42,7 @@ em {
     float: left;
 }
 nav {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
     text-align: right;
     padding: 0 40px;
@@ -99,7 +99,7 @@ nav ul li a:not(.active):hover .star {
 main {
     flex: 1;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 20px auto;
     padding: 0 40px;
     box-sizing: border-box;
@@ -160,7 +160,7 @@ main {
 
 /* Footer Stuff */
 footer {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 20px;

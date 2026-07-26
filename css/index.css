@@ -17,24 +17,25 @@ main {
 .hero-photo {
     flex: 0 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
+    justify-content: center;
 }
 
 .profile-photo {
     display: block;
-    width: 250px;
-    height: 250px;
+    width: 310px;
+    height: 310px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center 68%;
 }
 
+/* Sits under the bio so the actions follow the reading order rather than
+   stranding them in the photo column on the far right. */
 .hero-social {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-top: 26px;
 }
 .hero-social .social-icon {
     width: 40px;
@@ -100,14 +101,10 @@ main {
         gap: 28px;
         margin-bottom: 46px;
     }
-    /* Photo + icons center; the paragraph stays left-aligned for readability. */
-    .hero-photo {
-        align-items: center;
-        gap: 18px;
-    }
+    /* Photo centers on its own; text and icons stay left-aligned together. */
     .profile-photo {
-        width: 170px;
-        height: 170px;
+        width: 190px;
+        height: 190px;
     }
     .hero-heading {
         font-size: 28px;

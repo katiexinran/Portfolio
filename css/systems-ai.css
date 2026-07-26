@@ -27,6 +27,21 @@ main {
     margin-top: 20px;
 }
 
+/* Only iSoftStone has a dedicated case study page to link out to. */
+.experience-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #5b5474;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.experience-link:hover {
+    color: #3d3350;
+}
+
 .additional-experience {
     margin-top: -4px;
 }
