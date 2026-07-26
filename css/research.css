@@ -19,36 +19,48 @@ main {
     margin-bottom: 24px;
 }
 
-.prior-research-label {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    color: #5b5474;
-    margin-top: 32px;
-    margin-bottom: 16px;
-}
-
-.research-in-progress {
-    background-color: rgba(255, 255, 255, 0.55);
-    border-radius: 20px;
-    padding: 28px 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    max-width: 720px;
-}
 .in-progress-badge {
+    align-self: flex-start;
     background-color: rgba(220, 141, 173, 0.22);
     color: #8f3f5f;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
-.research-in-progress p {
-    font-size: 15.5px;
-    line-height: 1.65;
-    color: #333;
-    margin-bottom: 10px;
+
+/* Small mono metadata line under each completed project title. */
+.info-card .project-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.2px;
+    color: #5b5474;
+    margin-bottom: 12px;
 }
+
+/* Cards here hold several destinations, so they are not a single link. */
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+    padding-top: 14px;
+    font-size: 13.5px;
+    font-weight: 700;
+}
+.card-actions a {
+    color: #5b5474;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.card-actions a:hover {
+    color: #3d3350;
+}
+.action-sep {
+    color: rgba(91, 84, 116, 0.45);
+    font-weight: 400;
+}
+
 .section-note {
+    margin-top: 18px;
     font-size: 13.5px;
     font-style: italic;
     color: rgba(0, 0, 0, 0.55);

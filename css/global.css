@@ -38,7 +38,7 @@ em {
 
 /* Navbar stuff */
 .navbar-logo {
-    height: 40px;
+    height: 47px;
     float: left;
 }
 nav {
@@ -77,22 +77,23 @@ nav ul li a.active {
     color: #3d3350;
     text-shadow: -0.2px 0 currentColor, 0.2px 0 currentColor;
 }
+/* The star stays in the DOM on every tab so its width is always reserved.
+   Hiding it with opacity rather than display keeps the row from reflowing
+   as the active page changes. Only the current page paints a filled star;
+   hovering an inactive tab previews its outline. */
 nav ul li a .star {
-    position: relative;
     display: inline-block;
-}
-nav ul li a:not(.active):hover .star {
-    color: transparent;
-}
-nav ul li a:not(.active):hover .star::after {
-    content: "★";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #3d3350;
-}
-nav ul li a .star {
     margin-right: 7px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+nav ul li a.active .star {
+    opacity: 1;
+}
+/* Full opacity so the star's faux-bold matches the text's; the outline vs
+   filled glyph is what distinguishes hover from active, not weight. */
+nav ul li a:not(.active):hover .star {
+    opacity: 1;
 }
 
 main {
@@ -108,14 +109,40 @@ main {
     nav {
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 22px;
+        text-align: center;
+    }
+    /* Logo on its own line, then the tabs wrap horizontally beneath it.
+       Stacking 5 tabs vertically cost ~470px of screen before any content.
+       Centered so a wrapped last row reads as intentional, not orphaned. */
+    .navbar-logo {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
     }
     nav ul {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 18px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
     }
     main, body {
         padding: 0 20px;
+    }
+}
+
+/* Narrow phones can't fit 4 tabs on one line (needs ~394px, has ~335px).
+   A 2-column grid gives a deterministic, balanced 2+2 instead of a 3+1 orphan. */
+@media screen and (max-width: 480px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 14px 22px;
+    }
+    nav ul li {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -164,7 +191,7 @@ footer {
     align-items: center;
     gap: 16px;
 }
-/* Shared monochrome icon-link treatment — footer socials, hero socials, etc. */
+/* Shared monochrome icon-link treatment — footer socials */
 .social-icon {
     display: inline-flex;
     color: #4b4566;
@@ -173,21 +200,6 @@ footer {
 }
 .social-icon:hover {
     color: #3d3350;
-}
-/* Text-link variant — hero social row */
-.social-link {
-    color: #4b4566;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-.social-link:hover {
-    color: #3d3350;
-}
-.social-divider {
-    color: #4b4566;
 }
 /* Make the footer compress on small screens */
 @media screen and (max-width: 768px) {
@@ -213,7 +225,7 @@ footer {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
     font-style: normal;
-    font-size: 17px;
+    font-size: 22px;
     letter-spacing: 0.3px;
     color: #96496d;
     margin-bottom: 15px;
@@ -378,20 +390,18 @@ footer {
     flex-direction: column;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.55);
-    border-radius: 20px;
-    border: 1px solid transparent;
+    border-radius: 16px;
+    border: 1px solid rgba(91, 84, 116, 0.18);
     padding: 28px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
     text-decoration: none;
     color: inherit;
 }
 a.info-card:hover,
 a.info-card:focus-visible {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
-    background-color: rgba(255, 255, 255, 0.8);
-    border-color: rgba(130, 123, 160, 0.35);
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.82);
+    border-color: rgba(91, 84, 116, 0.42);
 }
 .info-card h3 {
     font-family: "Bricolage Grotesque", sans-serif;
@@ -406,19 +416,9 @@ a.info-card:focus-visible {
     color: #333;
     margin-bottom: 6px;
 }
-.info-card .card-link {
-    display: inline-block;
+.info-card .tag-row {
     margin-top: auto;
     padding-top: 14px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #5b5474;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-a.info-card:hover .card-link,
-a.info-card:focus-visible .card-link {
-    transform: translateX(4px);
-    color: #4b4566;
 }
 .info-card.featured {
     border-color: rgba(220, 141, 173, 0.4);
@@ -445,10 +445,10 @@ a.info-card:focus-visible .card-link {
 /* Experience blocks (Google, T-Mobile, TA, etc.) */
 .experience-block {
     background-color: rgba(255, 255, 255, 0.55);
-    border-radius: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(91, 84, 116, 0.18);
     padding: 30px;
     margin-bottom: 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 .experience-block.compact {
     padding: 22px 28px;
@@ -511,8 +511,8 @@ a.info-card:focus-visible .card-link {
 .compact-card {
     background-color: rgba(255, 255, 255, 0.45);
     border-radius: 16px;
+    border: 1px solid rgba(91, 84, 116, 0.16);
     padding: 18px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 .compact-card h4 {
     font-family: "Bricolage Grotesque", sans-serif;

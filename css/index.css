@@ -4,12 +4,55 @@ main {
 }
 
 /* Hero */
+/* row-reverse puts the text first visually (left) while keeping the photo
+   first in the DOM, so the mobile stack still leads with the photo. */
 .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 56px;
     margin-bottom: 68px;
 }
 
+.hero-photo {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.profile-photo {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 68%;
+}
+
+.hero-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.hero-social .social-icon {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(91, 84, 116, 0.3);
+    border-radius: 50%;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.hero-social .social-icon:hover {
+    border-color: rgba(91, 84, 116, 0.7);
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
 .hero-text {
-    max-width: 680px;
+    flex: 1;
+    min-width: 0;
 }
 
 .hero-heading {
@@ -22,14 +65,14 @@ main {
     font-size: 17px;
     line-height: 1.65;
     color: #333;
-    max-width: 620px;
 }
 
-.hero-social {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 22px;
+/* Pulled out of the bio paragraph so the strongest credential is scannable. */
+.hero-status {
+    margin-top: 14px;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #5b5474;
 }
 
 /* Sections */
@@ -52,13 +95,22 @@ main {
         padding: 0;
     }
     .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
         margin-bottom: 46px;
+    }
+    /* Photo + icons center; the paragraph stays left-aligned for readability. */
+    .hero-photo {
+        align-items: center;
+        gap: 18px;
+    }
+    .profile-photo {
+        width: 170px;
+        height: 170px;
     }
     .hero-heading {
         font-size: 28px;
-    }
-    .hero-subtext {
-        max-width: 100%;
     }
     .home-section {
         margin-bottom: 38px;

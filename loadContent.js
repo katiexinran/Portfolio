@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 const star = link.querySelector('.star');
                 if (link.getAttribute('href') === currentPath) {
                     link.classList.add('active');
-                    star.textContent = '★'; // Full star for the active page
+                    if (star) star.textContent = '★'; // Full star for the active page
                     activeFound = true;
-                } else {
+                } else if (star) {
                     star.textContent = '☆'; // Empty star for other pages
                 }
             });

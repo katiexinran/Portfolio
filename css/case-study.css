@@ -123,8 +123,8 @@ main {
     max-width: 100%;
     height: auto;
     border-radius: 16px;
+    border: 1px solid rgba(91, 84, 116, 0.14);
     margin-bottom: 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Stat highlight (used for quantitative results, only real reported numbers) */
@@ -137,8 +137,8 @@ main {
 .stat-highlight {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 16px;
+    border: 1px solid rgba(91, 84, 116, 0.18);
     padding: 18px 24px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     min-width: 160px;
 }
 .stat-value {
