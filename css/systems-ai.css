@@ -42,12 +42,6 @@ main {
     color: #3d3350;
 }
 
-.additional-experience {
-    margin-top: -4px;
-}
-.additional-experience .compact-card p:first-of-type {
-    margin-bottom: 6px;
-}
 
 @media screen and (max-width: 768px) {
     main {

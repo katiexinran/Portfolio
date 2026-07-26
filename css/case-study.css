@@ -73,6 +73,39 @@ main {
     font-weight: 500;
 }
 
+/* Primary artifacts sit under the title so they aren't buried at page bottom. */
+.artifact-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    margin-top: -16px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.artifact-links a {
+    color: #5b5474;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.artifact-links a:hover {
+    color: #3d3350;
+}
+.artifact-sep {
+    color: rgba(91, 84, 116, 0.45);
+    font-weight: 400;
+}
+/* Caveat that belongs with the link above it, not stranded at page bottom. */
+.artifact-note {
+    margin-top: -22px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.55);
+}
+
 .main-content p {
     margin-bottom: 15px;
     line-height: 1.65;
@@ -107,8 +140,84 @@ main {
     color: #1c2b33;
 }
 
+/* Dark plum, not pink — these are emphasised terms, not links. Pink is
+   reserved for actual links and status accents. */
 .main-content strong {
-    color: #DC8DAD;
+    color: #3d3350;
+}
+
+/* Compact before/after bars for the headline fairness result. */
+.result-chart {
+    margin: 6px 0 24px;
+    padding: 20px 22px 16px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(91, 84, 116, 0.18);
+    border-radius: 16px;
+}
+.result-row {
+    display: grid;
+    grid-template-columns: 152px 1fr 52px 40px;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+.result-head {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+.result-head .result-value,
+.result-head .result-f1 {
+    font-size: 11px;
+    font-weight: 500;
+    color: #5b5474;
+}
+.result-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: #5b5474;
+}
+.result-f1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+.result-track {
+    height: 13px;
+    background-color: rgba(91, 84, 116, 0.1);
+    border-radius: 7px;
+    overflow: hidden;
+}
+.result-fill {
+    display: block;
+    height: 100%;
+    min-width: 4px;
+    border-radius: 7px;
+    background-color: rgba(91, 84, 116, 0.5);
+}
+.result-value {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3d3350;
+    text-align: right;
+}
+/* The winning configuration carries the accent so it reads at a glance. */
+.result-row.is-best .result-fill {
+    background-color: #96496d;
+}
+.result-row.is-best .result-value,
+.result-row.is-best .result-label {
+    color: #96496d;
+}
+.result-caption {
+    margin: 14px 0 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.55);
 }
 
 .caption {
@@ -153,23 +262,6 @@ main {
     font-size: 13px;
     color: #333;
     margin-top: 4px;
-}
-
-.links-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 15px;
-}
-.links-list li {
-    margin-bottom: 8px;
-}
-.links-list a {
-    color: #5b5474;
-    font-weight: 600;
-    text-decoration: underline;
-}
-.links-list a:hover {
-    color: #4b4566;
 }
 
 .related-projects {

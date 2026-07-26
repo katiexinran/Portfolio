@@ -26,11 +26,14 @@ main {
     min-width: 0;
 }
 
+/* Container stays wide; the narrative itself is capped so lines stay
+   readable instead of running the full page width. */
 .about-text {
+    max-width: 860px;
     font-family: 'Manrope';
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #1c2b33;
 }
 
@@ -50,6 +53,29 @@ main {
     color: #5b5474;
     margin-bottom: 0;
 }
+/* Wide cinematic break between the intro and the longer narrative.
+   object-position sits above centre to keep the lavender sky and the
+   horizon glow, and to crop away most of the dark driftwood foreground. */
+.about-visual {
+    margin: 0 0 56px;
+}
+.about-visual img {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: 340px;
+    object-fit: cover;
+    object-position: center 42%;
+    border-radius: 16px;
+    border: 1px solid rgba(91, 84, 116, 0.18);
+}
+.about-visual figcaption {
+    max-width: 1100px;
+    margin-top: 10px;
+    font-size: 13.5px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
 .archive-pointer {
     font-size: 14.5px;
     color: rgba(0, 0, 0, 0.6);
@@ -75,9 +101,62 @@ main {
 
 .journey-text p {
     font-size: 16px;
-    line-height: 1.65;
+    line-height: 1.7;
     color: #1c2b33;
     margin-bottom: 16px;
+}
+/* Chapter markers that break the narrative into scannable stages. */
+.journey-step {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #96496d;
+    margin-top: 32px;
+    margin-bottom: 10px;
+}
+.journey-step:first-child {
+    margin-top: 0;
+}
+
+/* Compact contact block — one line plus its links, instead of a paragraph. */
+.contact-card {
+    max-width: 720px;
+    padding: 22px 26px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(91, 84, 116, 0.18);
+    border-radius: 16px;
+}
+.contact-line {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1c2b33;
+    margin-bottom: 14px;
+}
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.contact-links a {
+    color: #5b5474;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.contact-links a:hover {
+    color: #3d3350;
+}
+.contact-sep {
+    color: rgba(91, 84, 116, 0.45);
+    font-weight: 400;
+}
+.archive-pointer {
+    margin-top: 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -102,5 +181,11 @@ main {
 
     .page-section {
         margin-bottom: 40px;
+    }
+    .about-visual {
+        margin-bottom: 40px;
+    }
+    .about-visual img {
+        height: 200px;
     }
 }

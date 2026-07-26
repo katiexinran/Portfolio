@@ -22,8 +22,8 @@ main {
 
 .profile-photo {
     display: block;
-    width: 310px;
-    height: 310px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center 68%;
@@ -62,7 +62,11 @@ main {
     margin-bottom: 18px;
 }
 
+/* Capped independently of the column: the wider container is what makes the
+   page feel full, but without this the bio wraps to 3 lines at ~87 chars.
+   Nothing aligns to this edge — the portrait owns the content's right edge. */
 .hero-subtext {
+    max-width: 660px;
     font-size: 17px;
     line-height: 1.65;
     color: #333;

@@ -43,6 +43,12 @@
             <div class="right-column">
                 <div class="title-container">Mitigating Dialect Bias in Toxicity Detection</div>
                 <p class="case-study-subtitle">Fairness evaluation and bias mitigation for toxicity classification models</p>
+                <div class="artifact-links">
+                    <a href="pdfs/DialectBiasReport.pdf" target="_blank">Read report</a>
+                    <span class="artifact-sep">&middot;</span>
+                    <a href="https://github.com/Noman-Vadsariya/Mitigating-Dialect-Bias-Toxicity-Detection" target="_blank">GitHub Code</a>
+                </div>
+                <p class="artifact-note">Team research project; the repository is hosted under a collaborator's account.</p>
                 <div class="main-content">
 
                     <h3>Research Question</h3>
@@ -80,7 +86,42 @@
                             <span class="stat-label">Reduction in FPR gap</span>
                         </div>
                     </div>
-                    <p>Across the mitigation methods evaluated, <em>vector scaling and adversarial debiasing</em> produced the largest reductions in the AAE&ndash;SAE false-positive-rate gap, without a significant loss in overall classification accuracy or F1 score.</p>
+
+                    <div class="result-chart" role="img" aria-label="AAE–SAE false-positive-rate gap by method on TwitterAAE. XGBoost baseline 0.233 at F1 0.84; re-weighting 0.06 at F1 0.81; adversarial debiasing 0.03 at F1 0.82; vector scaling 0.011 at F1 0.83.">
+                        <div class="result-row result-head">
+                            <span class="result-label">Method</span>
+                            <span></span>
+                            <span class="result-value">Gap</span>
+                            <span class="result-f1">F1</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">XGBoost baseline</span>
+                            <span class="result-track"><span class="result-fill" style="width:100%"></span></span>
+                            <span class="result-value">0.233</span>
+                            <span class="result-f1">0.84</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Re-weighting</span>
+                            <span class="result-track"><span class="result-fill" style="width:25.8%"></span></span>
+                            <span class="result-value">0.06</span>
+                            <span class="result-f1">0.81</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Adversarial debiasing</span>
+                            <span class="result-track"><span class="result-fill" style="width:12.9%"></span></span>
+                            <span class="result-value">0.03</span>
+                            <span class="result-f1">0.82</span>
+                        </div>
+                        <div class="result-row is-best">
+                            <span class="result-label">Vector scaling</span>
+                            <span class="result-track"><span class="result-fill" style="width:4.7%"></span></span>
+                            <span class="result-value">0.011</span>
+                            <span class="result-f1">0.83</span>
+                        </div>
+                        <p class="result-caption">AAE&ndash;SAE false-positive-rate gap on TwitterAAE, with overall F1 alongside. Vector scaling gave the smallest gap while keeping F1 closest to the 0.84 baseline.</p>
+                    </div>
+
+                    <p>Across the mitigation methods evaluated, <em>vector scaling and adversarial debiasing</em> produced the largest reductions in the AAE&ndash;SAE false-positive-rate gap, while maintaining similar overall accuracy and F1 score.</p>
 
                     <h3>Fairness&ndash;Performance Tradeoffs</h3>
                     <p>Reducing subgroup disparities in FPR required tradeoffs against raw classification accuracy in some configurations. The strongest bias-mitigation methods did not universally dominate on every metric, underscoring that fairness interventions typically involve <em>balancing multiple, sometimes competing, objectives</em> rather than a single optimal solution.</p>
@@ -90,12 +131,6 @@
 
                     <h3>Future Work</h3>
                     <p>Future work could extend this evaluation to additional model architectures, incorporate more representative dialect-labeled datasets, and explore fairness interventions that generalize across multiple protected attributes simultaneously.</p>
-
-                    <h3>Links</h3>
-                    <ul class="links-list">
-                        <li><a href="https://github.com/Noman-Vadsariya/Mitigating-Dialect-Bias-Toxicity-Detection" target="_blank">GitHub Code</a></li>
-                    </ul>
-                    <p>This was a team repository; a full written report is available upon request.</p>
 
                     <div class="related-projects">
                         <h3>Related Work</h3>

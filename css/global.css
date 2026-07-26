@@ -42,7 +42,7 @@ em {
     float: left;
 }
 nav {
-    max-width: 1120px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: right;
     padding: 0 40px;
@@ -99,7 +99,7 @@ nav ul li a:not(.active):hover .star {
 main {
     flex: 1;
     width: 100%;
-    max-width: 1120px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 0 40px;
     box-sizing: border-box;
@@ -160,7 +160,7 @@ main {
 
 /* Footer Stuff */
 footer {
-    max-width: 1120px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 20px;
@@ -416,6 +416,26 @@ a.info-card:focus-visible {
     color: #333;
     margin-bottom: 6px;
 }
+/* Footer pinned to the card bottom, so the outcome line and tags sit on the
+   same baseline across cards regardless of how long each description runs. */
+.info-card .card-footer {
+    margin-top: auto;
+    padding-top: 16px;
+}
+/* min-height reserves two lines so the outcome lines start on the same
+   baseline across cards even when one of them wraps. */
+.info-card .card-outcome {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    color: #96496d;
+    margin-bottom: 0;
+    min-height: 3em;
+}
+.info-card .card-footer .tag-row {
+    margin-top: 12px;
+}
 .info-card .tag-row {
     margin-top: auto;
     padding-top: 14px;
@@ -424,30 +444,13 @@ a.info-card:focus-visible {
     border-color: rgba(220, 141, 173, 0.4);
 }
 
-/* Compact stat callout used inside a card (e.g. a headline research result) */
-.card-stat {
-    margin: 2px 0 12px;
-}
-.card-stat-value {
-    display: block;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 700;
-    font-size: 28px;
-    color: #4b4566;
-}
-.card-stat-label {
-    display: block;
-    font-size: 12.5px;
-    color: #333;
-    margin-top: 2px;
-}
-
 /* Experience blocks (Google, T-Mobile, TA, etc.) */
 .experience-block {
     background-color: rgba(255, 255, 255, 0.55);
     border-radius: 16px;
     border: 1px solid rgba(91, 84, 116, 0.18);
-    padding: 30px;
+    /* horizontal padding matches .compact so every date lines up */
+    padding: 30px 28px;
     margin-bottom: 24px;
 }
 .experience-block.compact {
