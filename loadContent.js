@@ -92,3 +92,31 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 2500);
     }
 });
+
+// Floating "Back to Top" Scroll Handler
+document.addEventListener("DOMContentLoaded", function() {
+    let topBtn = document.getElementById('back-to-top');
+    if (!topBtn) {
+        topBtn = document.createElement('button');
+        topBtn.id = 'back-to-top';
+        topBtn.setAttribute('aria-label', 'Back to top');
+        topBtn.title = 'Back to top';
+        topBtn.innerHTML = '↑';
+        document.body.appendChild(topBtn);
+    }
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            topBtn.classList.add('show');
+        } else {
+            topBtn.classList.remove('show');
+        }
+    });
+
+    topBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
