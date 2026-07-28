@@ -588,3 +588,28 @@ nav ul li a:focus-visible {
         align-items: flex-start;
     }
 }
+
+/* Toast Notification for 1-Click Email Copy */
+#copy-toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background-color: #3d3350;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#copy-toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
