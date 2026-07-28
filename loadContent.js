@@ -62,3 +62,33 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// 1-Click Copy Email Handler
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener('click', function(e) {
+        const copyBtn = e.target.closest('.copy-email');
+        if (copyBtn) {
+            e.preventDefault();
+            const email = 'katiexinran@gmail.com';
+            navigator.clipboard.writeText(email).then(function() {
+                showToast('✓ Copied katiexinran@gmail.com to clipboard!');
+            }).catch(function() {
+                window.location.href = 'mailto:' + email;
+            });
+        }
+    });
+
+    function showToast(message) {
+        let toast = document.getElementById('copy-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'copy-toast';
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 2500);
+    }
+});
