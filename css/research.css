@@ -3,12 +3,8 @@ main {
     padding-bottom: 60px;
 }
 
-.secondary-intro {
-    margin-top: 12px;
-}
-
 .page-section {
-    margin-bottom: 64px;
+    margin-bottom: 54px;
 }
 .page-section:last-child {
     margin-bottom: 0;
@@ -19,52 +15,75 @@ main {
     margin-bottom: 24px;
 }
 
-.in-progress-badge {
-    align-self: flex-start;
-    background-color: rgba(220, 141, 173, 0.22);
-    color: #8f3f5f;
-    margin-bottom: 12px;
+/* Stanford ILIAD Style Research Catalog List */
+.research-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Small mono metadata line under each completed project title. */
-.info-card .project-meta {
+.research-item {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 16px;
+    border: 1px solid rgba(91, 84, 116, 0.18);
+    padding: 24px 28px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.research-item:hover {
+    background-color: rgba(255, 255, 255, 0.82);
+    border-color: rgba(91, 84, 116, 0.35);
+}
+
+.research-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.research-title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c2b33;
+    margin-bottom: 4px;
+}
+
+.research-meta {
     font-family: "IBM Plex Mono", monospace;
     font-size: 12.5px;
-    letter-spacing: 0.2px;
     color: #5b5474;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-/* Cards here hold several destinations, so they are not a single link. */
-.card-actions {
+.research-summary {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* Action Pills Row */
+.research-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 4px 10px;
-    padding-top: 14px;
-    font-size: 13.5px;
-    font-weight: 700;
-}
-.card-actions a {
-    color: #5b5474;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s ease;
-}
-.card-actions a:hover {
-    color: #3d3350;
-}
-.action-sep {
-    color: rgba(91, 84, 116, 0.45);
-    font-weight: 400;
+    gap: 10px;
 }
 
-.section-note {
-    margin-top: 18px;
-    font-size: 13.5px;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0.55);
-    margin-bottom: 0;
+.btn-sm {
+    padding: 6px 16px;
+    font-size: 13px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+}
+
+.in-progress-badge {
+    background-color: rgba(220, 141, 173, 0.22);
+    color: #8f3f5f;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -73,10 +92,10 @@ main {
         padding-top: 20px;
         padding-bottom: 40px;
     }
-    body {
-        padding: 0;
-    }
     .page-section {
-        margin-bottom: 44px;
+        margin-bottom: 40px;
+    }
+    .research-item {
+        padding: 20px;
     }
 }
