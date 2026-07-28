@@ -15,7 +15,6 @@ main {
     margin-bottom: 24px;
 }
 
-/* Stanford ILIAD Style Research Catalog List */
 .research-list {
     display: flex;
     flex-direction: column;
