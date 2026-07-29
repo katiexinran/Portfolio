@@ -17,13 +17,13 @@ main {
 
 .subsection-title {
     font-size: 22px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     color: #3d3350;
     border-bottom: 1.5px solid rgba(91, 84, 116, 0.15);
     padding-bottom: 8px;
 }
 
-/* Unboxed Experience List (Matches Research Layout) */
+/* Unboxed Experience List */
 .experience-list {
     display: flex;
     flex-direction: column;
@@ -31,74 +31,80 @@ main {
 }
 
 .experience-item {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
+    background: transparent !important;
+    border: none !important;
+    padding-bottom: 28px !important;
+    border-bottom: 1px solid rgba(91, 84, 116, 0.12) !important;
+}
+
+.experience-item:last-child {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
 }
 
 .experience-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    margin-bottom: 2px;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    flex-wrap: wrap !important;
+    gap: 6px 16px !important;
+    margin-bottom: 4px !important;
 }
 
 .experience-title {
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-size: 19px;
-    font-weight: 700;
-    color: #1c2b33;
-    line-height: 1.35;
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #1c2b33 !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0 !important;
 }
 
 .experience-date {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12.5px;
-    color: #5b5474;
-    font-weight: 500;
-    white-space: nowrap;
+    font-family: "IBM Plex Mono", monospace !important;
+    font-size: 12.5px !important;
+    color: #5b5474 !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
 }
 
 .experience-meta {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12.5px;
-    font-style: italic;
-    color: #96496d;
-    margin-bottom: 8px;
+    font-family: "IBM Plex Mono", monospace !important;
+    font-size: 13px !important;
+    font-style: italic !important;
+    color: #96496d !important;
+    margin-bottom: 10px !important;
 }
 
 .experience-summary {
-    font-size: 15px;
-    line-height: 1.65;
-    color: #333;
-    margin-bottom: 10px;
-    max-width: 920px;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #333 !important;
+    margin-bottom: 10px !important;
+    max-width: 920px !important;
 }
 
 .experience-summary p {
-    margin-bottom: 8px;
+    margin-bottom: 10px !important;
 }
 .experience-summary p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 .confidential-note {
-    font-size: 12.5px;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0.55);
-    margin-top: 6px;
+    font-size: 12.5px !important;
+    font-style: italic !important;
+    color: rgba(0, 0, 0, 0.55) !important;
+    margin-top: 8px !important;
 }
 
 /* Compact Filled Badge Buttons */
 .experience-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-    margin-top: 10px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 10px !important;
 }
 
 .btn-badge {
@@ -143,14 +149,14 @@ main {
         margin-bottom: 36px;
     }
     .experience-list {
-        gap: 26px;
+        gap: 24px;
     }
     .experience-item-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2px !important;
     }
     .experience-date {
-        white-space: normal;
+        white-space: normal !important;
     }
 }
