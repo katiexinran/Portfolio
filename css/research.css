@@ -45,7 +45,15 @@ main {
     font-size: 12.5px;
     font-style: italic;
     color: #5b5474;
+    margin-bottom: 6px;
+}
+
+.research-summary {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: #333;
     margin-bottom: 8px;
+    max-width: 800px;
 }
 
 .research-actions {
@@ -55,30 +63,36 @@ main {
     gap: 6px;
 }
 
-.btn-iliad {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background-color: #776f93;
-    color: #ffffff;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 11.5px;
-    font-weight: 600;
-    padding: 3px 9px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
+.btn-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background-color: #776f93 !important;
+    color: #ffffff !important;
+    font-family: "IBM Plex Mono", monospace !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+    transition: background-color 0.2s ease !important;
 }
 
-.btn-iliad:hover {
-    background-color: #635d7c;
-    color: #ffffff;
+.btn-badge:hover {
+    background-color: #635d7c !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 
-.btn-iliad svg {
-    width: 12px;
-    height: 12px;
-    fill: currentColor;
+.btn-badge svg {
+    width: 13px !important;
+    height: 13px !important;
+    min-width: 13px !important;
+    min-height: 13px !important;
+    fill: currentColor !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
 }
 
 @media screen and (max-width: 768px) {
