@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience - Katie Hancock</title>
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Experience - Katie Hancock">
     <meta property="og:description" content="Professional experience at Google, iSoftStone, and T-Mobile, spanning AI systems engineering, backend development, and product design.">
@@ -12,6 +13,7 @@
     <meta property="og:image" content="https://katiexinran.com/images/about/professional.jpeg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="description" content="Professional experience at Google, iSoftStone, and T-Mobile, spanning AI systems engineering, backend development, and product design.">
+
     <link rel="icon" type="image/png" href="images/global/logocompressed.png">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/systems-ai.css">
@@ -32,78 +34,63 @@
         <section class="page-section" id="experience">
             <h2 class="header subsection-title">Professional Experience</h2>
 
-            <div class="experience-block" id="google">
-                <div class="experience-header">
-                    <span class="experience-org">Google</span>
-                    <span class="experience-meta">May 2026 &ndash; Present &middot; Kirkland, WA</span>
+            <div class="experience-list">
+                <div class="experience-item" id="google">
+                    <div class="experience-item-header">
+                        <h3 class="experience-title">Google</h3>
+                        <span class="experience-date">May 2026 &ndash; Present &middot; Kirkland, WA</span>
+                    </div>
+                    <p class="experience-meta">Software Engineer Intern &middot; Ads Infrastructure (Display &amp; Video 360)</p>
+                    <div class="experience-summary">
+                        <p>Built and improved <em>internal AI systems</em> that automate software issue triage, support collaborative debugging, organize recurring user feedback, and streamline engineering maintenance workflows.</p>
+                        <p><strong>Multi-Agent Issue Triage:</strong> Built a Python and Go multi-agent bug-triage system that generated issue summaries, investigation plans, duplicate-ticket suggestions, and relevant technical context for newly filed issues.</p>
+                        <p><strong>Durable and Shareable AI Sessions:</strong> Implemented durable, shareable AI sessions that preserved context across service restarts, supported long-running investigations, and let one engineer hand an investigation off to another without losing prior conversational context.</p>
+                        <p><strong>Continuous User-Feedback Analysis:</strong> Designed and built an LLM-powered feedback analysis pipeline to organize unstructured user feedback into stable issue themes, incrementally assigning newly arriving feedback to existing clusters and surfacing clear, actionable patterns.</p>
+                        <p><strong>Backend Modernization &amp; Skill Testing:</strong> Modernized Java backend code, migrated legacy AI workflows into reusable standardized skills, and added automated regression tests to validate outputs and reduce maintenance.</p>
+                    </div>
+                    <p class="confidential-note">Specific implementation details are omitted because this work is proprietary.</p>
                 </div>
-                <div class="experience-role">Software Engineer Intern, Ads &ndash; Display &amp; Video 360 Infrastructure</div>
-                <p>Built and improved <em>internal AI systems</em> that automate software issue triage, support collaborative debugging, organize recurring user feedback, and streamline engineering maintenance workflows.</p>
 
-                <h4>Multi-Agent Issue Triage</h4>
-                <p>Built a Python and Go multi-agent bug-triage system that generated issue summaries, investigation plans, duplicate-ticket suggestions, and relevant technical context for newly filed issues.</p>
-
-                <h4>Durable and Shareable AI Sessions</h4>
-                <p>Implemented durable, shareable AI sessions that preserved context across service restarts, supported long-running investigations, and let one engineer hand an investigation off to another without losing prior conversational context.</p>
-
-                <h4>Continuous User-Feedback Analysis</h4>
-                <p>During an internal BuildAI hackathon, designed and built an <em>LLM-powered feedback analysis pipeline</em> to address a recurring problem: engineers manually reading many repetitive user reports to identify common themes and actionable product issues. The pipeline organized unstructured user feedback into stable issue themes, incrementally assigned newly arriving feedback to existing clusters rather than spawning duplicate or renamed clusters, and supported re-clustering and splitting when reports had been grouped incorrectly. This made recurring feedback easier for product and engineering teams to interpret and surfaced clearer, more actionable patterns. Supporting capabilities included screenshot analysis, technical-log investigation, and dynamic issue prioritization.</p>
-
-                <h4>Additional Contribution</h4>
-                <p>After completing the original internship milestones ahead of schedule, I modernized Java backend code, migrated legacy AI workflows into reusable standardized skills, and added automated regression tests to validate outputs and reduce maintenance.</p>
-
-                <div class="tag-row">
-                    <span class="tag">Python</span>
-                    <span class="tag">Go</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">Multi-Agent Systems</span>
-                    <span class="tag">LLM Applications</span>
-                    <span class="tag">Backend Engineering</span>
-                    <span class="tag">Session Persistence</span>
-                    <span class="tag">Automated Testing</span>
+                <div class="experience-item" id="isoftstone">
+                    <div class="experience-item-header">
+                        <h3 class="experience-title">iSoftStone</h3>
+                        <span class="experience-date">Feb 2024 &ndash; Jan 2025 &middot; Bellevue, WA</span>
+                    </div>
+                    <p class="experience-meta">UI/UX Designer &amp; Systems Consultant</p>
+                    <div class="experience-summary">
+                        <p>Sole designer on the product demo team. Designed an AI-powered reverse image search workflow for a digital asset management platform, rebuilt the Nuxeo DAM demo as a fully responsive interface, and created the company's design system from scratch with 40+ reusable components.</p>
+                    </div>
+                    <div class="experience-actions">
+                        <a href="isoftstone.html" class="btn-badge">
+                            <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M14 4.5V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h7.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1.5H3v13h10V4.5h-2.5z"/></svg>
+                            Case Study
+                        </a>
+                    </div>
                 </div>
-                <p class="confidential-note">Specific implementation details are omitted because this work is proprietary.</p>
-            </div>
 
-            <div class="experience-block compact">
-                <div class="experience-header">
-                    <span class="experience-org">iSoftStone</span>
-                    <span class="experience-meta">February 2024 &ndash; January 2025 &middot; Bellevue, WA</span>
+                <div class="experience-item" id="tmobile">
+                    <div class="experience-item-header">
+                        <h3 class="experience-title">T-Mobile</h3>
+                        <span class="experience-date">Jun 2022 &ndash; Sep 2022 &middot; Bellevue, WA</span>
+                    </div>
+                    <p class="experience-meta">Software Engineer Intern</p>
+                    <div class="experience-summary">
+                        <p>Built an internal project-management and reporting tool using Power Apps, Power Automate, and Power BI for more than 50 project managers.</p>
+                    </div>
                 </div>
-                <div class="experience-role">UI/UX Designer</div>
-                <p>Sole designer on the product demo team. Designed an <em>AI-powered reverse image search</em> workflow for a digital asset management platform, rebuilt the Nuxeo DAM demo as a fully responsive interface, and created the company's design system from scratch with 40+ reusable components.</p>
-                <div class="tag-row">
-                    <span class="tag">Design Systems</span>
-                    <span class="tag">Responsive Design</span>
-                </div>
-                <a href="isoftstone.html" class="experience-link">View case study &rarr;</a>
-            </div>
 
-            <div class="experience-block compact">
-                <div class="experience-header">
-                    <span class="experience-org">University of Washington</span>
-                    <span class="experience-meta">January &ndash; March 2023 &middot; Seattle, WA</span>
-                </div>
-                <div class="experience-role">Teaching Assistant, Interactive Systems Design &amp; Technology</div>
-                <p>Taught Python programming and led biweekly office hours for more than 40 students.</p>
-            </div>
-
-            <div class="experience-block compact">
-                <div class="experience-header">
-                    <span class="experience-org">T-Mobile</span>
-                    <span class="experience-meta">June 2022 &ndash; September 2022 &middot; Bellevue, WA</span>
-                </div>
-                <div class="experience-role">Software Engineer Intern</div>
-                <p>Built an internal project-management and reporting tool using Power Apps, Power Automate, and Power BI for more than 50 project managers.</p>
-                <div class="tag-row">
-                    <span class="tag">Internal Tools</span>
-                    <span class="tag">Workflow Automation</span>
-                    <span class="tag">Data Reporting</span>
+                <div class="experience-item" id="uw-ta">
+                    <div class="experience-item-header">
+                        <h3 class="experience-title">University of Washington</h3>
+                        <span class="experience-date">Jan 2023 &ndash; Mar 2023 &middot; Seattle, WA</span>
+                    </div>
+                    <p class="experience-meta">Teaching Assistant &middot; Interactive Systems Design &amp; Technology</p>
+                    <div class="experience-summary">
+                        <p>Taught Python programming, led biweekly office hours, and evaluated student technical projects for more than 40 undergraduate students.</p>
+                    </div>
                 </div>
             </div>
-
         </section>
-
     </main>
     <div id="footer-container"></div>
     <script src="loadContent.js"></script>
