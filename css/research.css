@@ -1,10 +1,15 @@
 main {
     padding-top: 50px;
     padding-bottom: 60px;
+    max-width: 960px;
+}
+
+.section-intro {
+    max-width: 920px;
 }
 
 .page-section {
-    margin-bottom: 44px;
+    margin-bottom: 48px;
 }
 .page-section:last-child {
     margin-bottom: 0;
@@ -12,16 +17,17 @@ main {
 
 .subsection-title {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     color: #3d3350;
-    border-bottom: none;
-    padding-bottom: 0;
+    border-bottom: 1.5px solid rgba(91, 84, 116, 0.15);
+    padding-bottom: 8px;
 }
 
+/* Balanced Desktop / Responsive Mobile Research List */
 .research-list {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 28px;
 }
 
 .research-item {
@@ -31,31 +37,48 @@ main {
     margin: 0;
 }
 
+.research-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-bottom: 2px;
+}
+
 .research-title {
     font-family: "Bricolage Grotesque", sans-serif;
-    font-size: 17.5px;
+    font-size: 18px;
     font-weight: 700;
     color: #1c2b33;
     line-height: 1.35;
-    margin-bottom: 2px;
+}
+
+.research-date {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: #5b5474;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 .research-meta {
     font-family: "IBM Plex Mono", monospace;
     font-size: 12.5px;
     font-style: italic;
-    color: #5b5474;
+    color: #96496d;
     margin-bottom: 6px;
 }
 
 .research-summary {
-    font-size: 14.5px;
-    line-height: 1.55;
+    font-size: 15px;
+    line-height: 1.6;
     color: #333;
-    margin-bottom: 8px;
-    max-width: 800px;
+    margin-bottom: 10px;
+    max-width: 920px;
 }
 
+/* Compact Filled Badge Buttons */
 .research-actions {
     display: flex;
     flex-wrap: wrap;
@@ -102,9 +125,17 @@ main {
         padding-bottom: 40px;
     }
     .page-section {
-        margin-bottom: 32px;
+        margin-bottom: 36px;
     }
     .research-list {
-        gap: 20px;
+        gap: 24px;
+    }
+    .research-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    .research-date {
+        white-space: normal;
     }
 }
