@@ -79,7 +79,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px 12px;
-    margin-top: -16px;
+    margin-top: 0;
     margin-bottom: 28px;
 }
 .artifact-links a {
@@ -102,14 +102,14 @@ main {
 .artifact-links a::after {
     content: "\2197";
     font-size: 13px;
-    color: var(--accent-pink);
+    color: currentColor;
     opacity: 0.85;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .artifact-links a:hover {
     color: #3d3350;
-    background: rgba(150, 73, 109, 0.09);
-    border-color: var(--accent-pink);
+    background: rgba(75, 69, 102, 0.09);
+    border-color: #4b4566;
     box-shadow: 0 3px 8px rgba(61, 51, 80, 0.1);
     transform: translateY(-2px);
 }
@@ -118,7 +118,7 @@ main {
     transform: translate(2px, -2px);
 }
 .artifact-links a:focus-visible {
-    outline: 2px solid var(--accent-pink);
+    outline: 2px solid #4b4566;
     outline-offset: 4px;
 }
 /* Caveat that belongs with the link above it, not stranded at page bottom. */
