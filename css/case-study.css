@@ -1,7 +1,7 @@
 /* Shared layout for current-portfolio case-study pages:
    dialect-bias.html, llm-debugging.html, capstone.html.
-   (The four HCI & Design Archive project pages keep their own per-page CSS
-   and their original Fredoka headings as a deliberate nostalgic accent.) */
+   (Legacy design case-study pages keep their own per-page CSS and their
+   original Fredoka headings as a deliberate nostalgic accent.) */
 
 html {
     overflow-y: scroll;
