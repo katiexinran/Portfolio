@@ -587,94 +587,221 @@ main {
     color: rgba(0, 0, 0, 0.55);
 }
 
-/* Multi-tiered agent topology used on the Google case study. */
-.agent-graph-topology {
+/* Public-facing multi-agent architecture on the Google case study. */
+.architecture-diagram {
+    margin: 10px 0 32px;
+    padding: 26px 0 18px;
+    border-top: 1px solid rgba(91, 84, 116, 0.18);
+    border-bottom: 1px solid rgba(91, 84, 116, 0.18);
+}
+
+.architecture-orchestrator {
+    position: relative;
+    width: min(100%, 430px);
+    margin: 0 auto;
+    padding: 14px 17px 15px;
+    background: rgba(255, 255, 255, 0.26);
+    border-left: 3px solid var(--accent-pink);
+}
+
+.architecture-orchestrator::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: 33px;
+    background: rgba(91, 84, 116, 0.28);
+}
+
+.architecture-kicker,
+.architecture-agent-number {
+    color: var(--accent-pink);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+}
+
+.architecture-orchestrator-title {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 16px;
-    padding: 4px 0;
+    gap: 8px;
+    margin: 4px 0 5px;
 }
 
-.graph-layer.root-layer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.architecture-orchestrator-title svg {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: #776f93;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
 }
 
-.graph-node {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 14px;
-    background: rgba(255, 255, 255, 0.58);
-    border: 1px solid rgba(91, 84, 116, 0.18);
-    border-radius: 12px;
-}
-
-.graph-node.root {
-    align-items: center;
-    padding: 14px 28px;
-    background: rgba(255, 255, 255, 0.72);
-    border-color: rgba(150, 73, 109, 0.35);
-    text-align: center;
-}
-
-.graph-node.root strong {
+.architecture-orchestrator-title strong {
+    color: #3d3350;
     font-family: "Bricolage Grotesque", sans-serif;
-    font-size: 16px;
-    color: #1c2b33;
+    font-size: 17px;
+    font-weight: 700;
 }
 
-.graph-connector-vertical {
-    width: 2px;
-    height: 20px;
-    background: linear-gradient(180deg, rgba(150, 73, 109, 0.4) 0%, rgba(119, 111, 147, 0.4) 100%);
+.main-content .architecture-orchestrator p {
+    margin: 0;
+    color: #333;
+    font-size: 12.5px;
+    line-height: 1.5;
 }
 
-.graph-layer.cluster-layer {
+.architecture-agents {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 10px;
-    width: 100%;
+    margin-top: 32px;
 }
 
-.graph-node.specialist {
+.architecture-agents::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: rgba(91, 84, 116, 0.28);
+}
+
+.architecture-agent {
+    position: relative;
     min-width: 0;
-    padding: 10px 12px;
+    padding: 15px 12px 13px;
+    background: rgba(255, 255, 255, 0.24);
+    border: 1px solid rgba(91, 84, 116, 0.17);
+    border-radius: 6px;
 }
 
-.graph-node.specialist strong {
+.architecture-agent::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 1px;
+    height: 15px;
+    background: rgba(91, 84, 116, 0.28);
+}
+
+.architecture-agent-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.architecture-agent-heading svg {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    fill: none;
+    stroke: #776f93;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.55;
+}
+
+.architecture-agent-number {
+    display: block;
     margin-bottom: 2px;
-    font-size: 12.5px;
-    font-weight: 700;
-    line-height: 1.4;
-    color: #1c2b33;
+    font-size: 9px;
 }
 
-.graph-node.specialist p {
+.architecture-agent h4 {
     margin: 0;
-    font-size: 11px;
-    line-height: 1.35;
-    color: #5b5474;
+    color: #3d3350;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
-.graph-tools-bar {
-    width: 100%;
-    margin-top: 4px;
-    padding: 10px 16px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.32);
-    border: 1px dashed rgba(91, 84, 116, 0.28);
-    border-radius: 10px;
-}
-
-.graph-tools-bar p {
-    margin: 4px 0 0;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 11.5px;
+.main-content .architecture-agent > p {
+    min-height: 51px;
+    margin: 0 0 9px;
+    color: #414047;
+    font-size: 11.25px;
     line-height: 1.45;
+}
+
+.main-content .architecture-agent ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-content .architecture-agent li {
+    position: relative;
+    margin: 0;
+    padding: 6px 0 6px 10px;
+    border-top: 1px solid rgba(91, 84, 116, 0.11);
     color: #5b5474;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9.7px;
+    line-height: 1.35;
+}
+
+.main-content .architecture-agent li::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 1px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--accent-pink);
+}
+
+.architecture-capabilities {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 20px;
+    padding-top: 13px;
+    border-top: 1px solid rgba(91, 84, 116, 0.18);
+}
+
+.architecture-capabilities > .architecture-kicker {
+    flex: 0 0 auto;
+    padding-top: 6px;
+}
+
+.main-content .architecture-capabilities ul {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-content .architecture-capabilities li {
+    margin: 0;
+    padding: 5px 7px;
+    background: rgba(130, 123, 160, 0.08);
+    border-left: 2px solid rgba(119, 111, 147, 0.46);
+    color: #5b5474;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9.75px;
+    line-height: 1.35;
+}
+
+.architecture-diagram figcaption {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 12.5px;
+    line-height: 1.5;
 }
 
 /* Feedback-to-theme pipeline used on the Google case study. */
@@ -738,8 +865,23 @@ main {
 }
 
 @media screen and (max-width: 900px) {
-    .graph-layer.cluster-layer {
+    .architecture-agents {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .architecture-agents::before,
+    .architecture-agent::before,
+    .architecture-orchestrator::after {
+        display: none;
+    }
+
+    .architecture-agent:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .main-content .architecture-agent > p {
+        min-height: 0;
     }
 
     .clustering-example-flow {
@@ -758,7 +900,26 @@ main {
         padding: 18px 16px 14px;
     }
 
-    .graph-layer.cluster-layer {
+    .architecture-diagram {
+        padding-top: 20px;
+    }
+
+    .architecture-agents {
         grid-template-columns: 1fr;
+        margin-top: 18px;
+    }
+
+    .architecture-agent:last-child {
+        grid-column: auto;
+    }
+
+    .architecture-capabilities {
+        display: block;
+    }
+
+    .architecture-capabilities > .architecture-kicker {
+        display: block;
+        margin-bottom: 9px;
+        padding-top: 0;
     }
 }
