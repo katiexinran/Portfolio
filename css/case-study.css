@@ -73,19 +73,6 @@ main {
     font-weight: 500;
 }
 
-/* Compact, visible actions directly beneath the project description. */
-.project-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 30px;
-}
-.project-actions .btn {
-    padding: 9px 18px;
-    font-size: 14px;
-}
-
 /* Primary artifacts sit under the title so they aren't buried at page bottom. */
 .artifact-links {
     display: flex;
@@ -118,10 +105,6 @@ main {
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.55);
 }
-.project-actions + .artifact-note {
-    margin-top: -18px;
-}
-
 .main-content p {
     margin-bottom: 15px;
     line-height: 1.65;
@@ -510,14 +493,6 @@ main {
 @media screen and (max-width: 560px) {
     .sidebar-section {
         width: 100%;
-    }
-    .project-actions {
-        gap: 10px;
-    }
-    .project-actions .btn {
-        flex: 1;
-        min-width: 130px;
-        text-align: center;
     }
     .system-flow {
         padding: 18px 16px 14px;
