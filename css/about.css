@@ -49,7 +49,7 @@ main {
 .about-text .personal-line {
     font-size: 15px;
     line-height: 1.6;
-    color: var(--accent-pink);
+    color: #5b5474;
     margin-bottom: 0;
 }
 /* Wide cinematic break between the intro and the longer narrative.
