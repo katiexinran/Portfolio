@@ -119,13 +119,9 @@ main {
     margin-top: 0;
 }
 
-/* Compact contact block — one line plus its links, instead of a paragraph. */
+/* Full-width contact content, aligned with the rest of the page. */
 .contact-card {
-    max-width: 720px;
-    padding: 22px 26px;
-    background-color: rgba(255, 255, 255, 0.55);
-    border: 1px solid rgba(91, 84, 116, 0.18);
-    border-radius: 16px;
+    max-width: none;
 }
 .contact-line {
     font-size: 16px;
