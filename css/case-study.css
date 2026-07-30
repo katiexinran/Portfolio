@@ -386,8 +386,66 @@ main {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 700;
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     color: #4b4566;
+    border-bottom: 1.5px solid rgba(91, 84, 116, 0.15);
+    padding-bottom: 8px;
+}
+
+.related-project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.related-project {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.related-project h3 {
+    margin: 0 0 6px;
+    color: #1c2b33;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.main-content .related-project p {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.related-project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.related-project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: #776f93;
+    color: #fff;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.related-project-link:hover,
+.related-project-link:focus-visible {
+    background-color: #635d7c;
+    color: #fff;
 }
 
 @media screen and (max-width: 768px) {
