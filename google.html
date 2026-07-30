@@ -65,6 +65,29 @@
 
                     <h3>Multi-Agent Issue Triage Architecture</h3>
                     <p>In large-scale production infrastructure, significant engineering overhead is spent manually inspecting newly filed bug tickets, parsing raw system logs, searching for duplicate reports, and drafting initial investigation plans.</p>
+
+                    <figure class="system-flow" aria-labelledby="triage-flow-caption">
+                        <ol>
+                            <li>
+                                <span class="flow-label">Input</span>
+                                <strong>Incoming Issue Filed</strong>
+                            </li>
+                            <li>
+                                <span class="flow-label">Summarize</span>
+                                <strong>Symptom Summarizer Agent</strong>
+                            </li>
+                            <li>
+                                <span class="flow-label">Match</span>
+                                <strong>Duplicate Matching Agent</strong>
+                            </li>
+                            <li>
+                                <span class="flow-label">Plan</span>
+                                <strong>Investigation Planning Agent</strong>
+                            </li>
+                        </ol>
+                        <figcaption id="triage-flow-caption">Simplified conceptual workflow: Concurrent multi-agent issue triage architecture.</figcaption>
+                    </figure>
+
                     <p>To streamline this workflow, I developed a <strong>multi-agent triage pipeline</strong> built in Python and Go. When a new software issue is filed, specialized subagents process the incoming ticket concurrently:</p>
                     <ul>
                         <li><strong>Symptom Summarizer Agent:</strong> Parses raw stack traces and log outputs to generate concise technical summaries of the failure mode.</li>
@@ -75,7 +98,30 @@
 
                     <h3>Durable &amp; Shareable AI Sessions</h3>
                     <p>Standard LLM interaction workflows are often ephemeral. When a complex engineering investigation spans multiple days, or when backend service instances redeploy, conversational debugging context can be lost.</p>
-                    <p>I designed and implemented a <strong>durable session persistence layer</strong>. Key architecture features included:</p>
+
+                    <figure class="system-flow" aria-labelledby="session-flow-caption">
+                        <ol>
+                            <li>
+                                <span class="flow-label">Active</span>
+                                <strong>Engineer Begins Investigation</strong>
+                            </li>
+                            <li>
+                                <span class="flow-label">Persist</span>
+                                <strong>Session State Serialized</strong>
+                            </li>
+                            <li>
+                                <span class="flow-label">Event</span>
+                                <strong>Service Restart / Handoff</strong>
+                            </li>
+                            <li>
+                                <span class="flow-label">Restored</span>
+                                <strong>Full Context &amp; History Restored</strong>
+                            </li>
+                        </ol>
+                        <figcaption id="session-flow-caption">Simplified conceptual workflow: Durable session state lifecycle across restarts and handoffs.</figcaption>
+                    </figure>
+
+                    <p>Key architecture features of the durable session persistence layer included:</p>
                     <ul>
                         <li><strong>State Serialization:</strong> Serializing active agent state, context windows, and tool execution history into a persistent storage layer.</li>
                         <li><strong>Cross-Restart Continuity:</strong> Automatically restoring investigation state after backend service restarts or instance migrations.</li>
@@ -107,30 +153,21 @@
                         <li><strong>Automated Testing Protects AI Quality:</strong> Robust regression testing is just as necessary for prompt-driven workflows as it is for traditional backend code.</li>
                     </ul>
 
+                    <h3>Other Projects</h3>
                     <div class="related-projects">
-                        <h3>Other Projects</h3>
-                        <div class="related-project-list">
-                            <div class="related-project">
+                        <div class="card-grid">
+                            <a href="dialect-bias.html" class="info-card">
                                 <h3>Mitigating Dialect Bias in Toxicity Detection</h3>
                                 <p>Applied NLP research evaluating vector scaling and debiasing to achieve a 95% reduction in false-positive-rate gaps.</p>
-                                <div class="related-project-actions">
-                                    <a href="dialect-bias.html" class="related-project-link">Case Study</a>
-                                </div>
-                            </div>
-                            <div class="related-project">
+                            </a>
+                            <a href="llm-debugging.html" class="info-card">
                                 <h3>LLM-Assisted Debugging for Novice Programmers</h3>
                                 <p>Empirical study evaluating how beginner programmers trust and act on AI-generated error explanations in a REPL environment.</p>
-                                <div class="related-project-actions">
-                                    <a href="llm-debugging.html" class="related-project-link">Case Study</a>
-                                </div>
-                            </div>
-                            <div class="related-project">
+                            </a>
+                            <a href="isoftstone.html" class="info-card">
                                 <h3>iSoftStone Digital Asset Management</h3>
                                 <p>Redesigned Nuxeo DAM platform, built a company-wide design system, and created an AI reverse image search tool.</p>
-                                <div class="related-project-actions">
-                                    <a href="isoftstone.html" class="related-project-link">Case Study</a>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
