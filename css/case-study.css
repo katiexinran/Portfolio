@@ -42,7 +42,7 @@ main {
 }
 .sidebar-section strong {
     font-family: "IBM Plex Mono", monospace;
-    color: #5b5474;
+    color: var(--accent-pink);
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
@@ -68,7 +68,7 @@ main {
 .case-study-subtitle {
     font-family: "IBM Plex Mono", monospace;
     font-size: 13.5px;
-    color: #5b5474;
+    color: var(--accent-pink);
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -196,14 +196,14 @@ main {
     top: 50%;
     right: -24px;
     transform: translateY(-50%);
-    color: #96496d;
+    color: var(--accent-pink);
     font-family: "IBM Plex Mono", monospace;
     font-size: 18px;
     font-weight: 700;
 }
 .system-flow .flow-label {
     margin-bottom: 7px;
-    color: #96496d;
+    color: var(--accent-pink);
     font-family: "IBM Plex Mono", monospace;
     font-size: 10.5px;
     font-weight: 700;
@@ -241,7 +241,7 @@ main {
 }
 .study-details dt {
     margin-bottom: 7px;
-    color: #5b5474;
+    color: var(--accent-pink);
     font-family: "IBM Plex Mono", monospace;
     font-size: 11px;
     font-weight: 700;
@@ -327,11 +327,11 @@ main {
 }
 /* The winning configuration carries the accent so it reads at a glance. */
 .result-row.is-best .result-fill {
-    background-color: #96496d;
+    background-color: var(--accent-pink);
 }
 .result-row.is-best .result-value,
 .result-row.is-best .result-label {
-    color: #96496d;
+    color: var(--accent-pink);
 }
 
 .caption {
