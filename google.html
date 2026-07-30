@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Ads Infrastructure - Katie Hancock</title>
+    <title>AI-Assisted Engineering Workflows at Google - Katie Hancock</title>
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Google Ads Infrastructure - Katie Hancock">
-    <meta property="og:description" content="AI systems engineering at Google Ads Infrastructure: Multi-agent issue triage, durable session architecture, and feedback analysis pipelines.">
+    <meta property="og:title" content="AI-Assisted Engineering Workflows at Google - Katie Hancock">
+    <meta property="og:description" content="A public-facing overview of AI-assisted engineering workflows, feedback analysis, reliability, and evaluation work at Google.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://katiexinran.com/google.html">
     <meta property="og:image" content="https://katiexinran.com/images/about/professional.jpeg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="description" content="AI systems engineering at Google Ads Infrastructure: Multi-agent issue triage, durable session architecture, and feedback analysis pipelines.">
+    <meta name="description" content="A public-facing overview of AI-assisted engineering workflows, feedback analysis, reliability, and evaluation work at Google.">
 
     <link rel="icon" type="image/png" href="images/global/logocompressed.png">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/case-study.css?v=20260730-architecture">
+    <link rel="stylesheet" href="css/case-study.css?v=20260730-feedback-workflow">
 
     <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
                         <p><strong>Company</strong><br>Google</p>
                     </div>
                     <div class="sidebar-section">
-                        <p><strong>Team</strong><br>Ads Infrastructure<br>(Display &amp; Video 360)</p>
+                        <p><strong>Team</strong><br>Infrastructure Engineering</p>
                     </div>
                     <div class="sidebar-section">
                         <p><strong>Role</strong><br>Software Engineer Intern</p>
@@ -42,29 +42,30 @@
                         <p><strong>Duration</strong><br>May 2026 &ndash; Present</p>
                     </div>
                     <div class="sidebar-section">
-                        <p><strong>Key Focus Areas</strong><br>Multi-Agent Triage<br>Stateful AI Sessions<br>Feedback Pipelines<br>Java Modernization<br>Automated Testing</p>
+                        <p><strong>Key Focus Areas</strong><br>AI-Assisted Workflows<br>Collaborative Investigation<br>Feedback Analysis<br>Software Reliability<br>Automated Evaluation</p>
                     </div>
                     <div class="sidebar-section">
-                        <p><strong>Tech Stack</strong><br>Python<br>Go<br>Java<br>Multi-Agent Systems<br>LLM Evaluation<br>Automated Testing</p>
+                        <p><strong>Skills</strong><br>Systems Design<br>Applied AI<br>Backend Engineering<br>Data Pipelines<br>Human-in-the-Loop Design</p>
                     </div>
                 </div>
             </div>
             <div class="right-column">
-                <div class="title-container">Google Ads Infrastructure</div>
-                <p class="case-study-subtitle">Internal AI Systems &middot; Multi-Agent Issue Triage &middot; Durable Session Architecture</p>
+                <div class="title-container">AI-Assisted Engineering Workflows</div>
+                <p class="case-study-subtitle">Developer Tooling &middot; Reliable AI Workflows &middot; Feedback Analysis</p>
 
                 <div class="main-content">
-                    <p>During my Software Engineering Internship at Google Ads Infrastructure (Display &amp; Video 360), I designed and built <em>internal AI systems</em> to automate software issue triage, enable durable collaborative debugging, organize recurring user feedback, and streamline engineering maintenance workflows.</p>
-                    <p>Working on large-scale infrastructure required balancing automated intelligence with system reliability, state durability, and developer trust. Key milestones included:</p>
+                    <p>During my Software Engineering Internship at Google, I worked on AI-assisted engineering workflows that helped teams organize technical reports, preserve context during collaborative investigations, analyze recurring user feedback, and improve software quality.</p>
+                    <p>This case study focuses on the problems, design principles, and lessons behind the work. The diagrams are conceptual, the examples are fictional, and implementation details have been intentionally generalized.</p>
+                    <p>Key contributions included:</p>
                     <ul>
-                        <li>Building a multi-agent Python and Go issue-triage system to automate symptom summarization and duplicate detection.</li>
-                        <li>Implementing durable, shareable AI session state that preserves investigation context across service restarts and engineer handoffs.</li>
-                        <li>Designing an LLM-powered feedback analysis pipeline to organize unstructured user feedback into stable, actionable issue clusters.</li>
-                        <li>Modernizing legacy Java backend services, migrating AI workflows into reusable skills, and adding automated regression tests.</li>
+                        <li>Prototyping a coordinated AI workflow that turns unstructured technical reports into clearer context for engineers.</li>
+                        <li>Improving continuity and collaboration for investigations that span multiple people or work sessions.</li>
+                        <li>Designing a two-stage feedback analysis process that establishes stable themes before matching newly arriving reports.</li>
+                        <li>Contributing maintainability improvements and automated quality checks for AI-assisted workflows.</li>
                     </ul>
 
-                    <h3>Multi-Agent Issue Triage Architecture</h3>
-                    <p>In large-scale production infrastructure, significant engineering overhead is spent manually inspecting newly filed bug tickets, parsing raw system logs, searching for duplicate reports, and drafting initial investigation plans.</p>
+                    <h3>Coordinated AI-Assisted Triage</h3>
+                    <p>Large engineering organizations receive complex technical reports that must be understood, connected to relevant context, and translated into a useful starting point for investigation. I explored a modular approach that divides this work across focused responsibilities while keeping an engineer in control of the final decision.</p>
 
                     <figure class="architecture-diagram" aria-labelledby="topology-caption">
                         <div class="architecture-orchestrator">
@@ -198,79 +199,225 @@
                         <figcaption id="topology-caption">Conceptual view of how one orchestrator coordinates specialized agents through shared retrieval, memory, and execution capabilities.</figcaption>
                     </figure>
 
-                    <p>To streamline this workflow, I developed a <strong>multi-agent triage pipeline</strong> built in Python and Go. When a new software issue is filed, specialized subagents process the incoming ticket concurrently:</p>
+                    <p>The conceptual workflow coordinates specialized components before presenting a concise handoff for human review:</p>
                     <ul>
-                        <li><strong>Symptom Summarizer Agent:</strong> Parses raw stack traces and log outputs to generate concise technical summaries of the failure mode.</li>
-                        <li><strong>Duplicate Matching Agent:</strong> Queries existing issue databases to identify related or duplicate tickets, preventing redundant investigations.</li>
-                        <li><strong>Investigation Planning Agent:</strong> Drafts initial hypotheses, pinpoints relevant service components, and suggests immediate diagnostic steps for the on-call engineer.</li>
+                        <li><strong>Context Framing:</strong> Organizes the reported symptoms and the most relevant supporting information.</li>
+                        <li><strong>Evidence Organization:</strong> Connects related signals and highlights where further investigation may be useful.</li>
+                        <li><strong>Human Handoff:</strong> Produces a structured summary that an engineer can verify, refine, or redirect.</li>
                     </ul>
-                    <p>This multi-agent approach significantly reduced initial triage latency and provided engineers with instant, actionable context upon ticket assignment.</p>
+                    <p>This separation of responsibilities made the workflow easier to reason about, evaluate, and improve without treating AI output as the final authority.</p>
 
-                    <h3>Durable &amp; Shareable AI Sessions</h3>
-                    <p>Standard LLM interaction workflows are often ephemeral. When a complex engineering investigation spans multiple days, or when backend service instances redeploy, conversational debugging context can be lost.</p>
-                    <p>I designed and implemented a <strong>durable session persistence layer</strong>. Key architecture features included:</p>
+                    <h3>Continuity &amp; Collaboration</h3>
+                    <p>Engineering investigations often span interruptions, work sessions, and team handoffs. Losing the accumulated context forces people to reconstruct earlier decisions and evidence.</p>
+                    <p>I focused on interaction patterns that make longer-running AI-assisted work more dependable:</p>
                     <ul>
-                        <li><strong>State Serialization:</strong> Serializing active agent state, context windows, and tool execution history into a persistent storage layer.</li>
-                        <li><strong>Cross-Restart Continuity:</strong> Automatically restoring investigation state after backend service restarts or instance migrations.</li>
-                        <li><strong>Seamless Engineer Handoff:</strong> Enabling one engineer to share a live investigation session link with another team member, allowing them to inspect prior reasoning and take over without losing context.</li>
+                        <li><strong>Context Continuity:</strong> Preserve the useful history of an investigation so work can resume without starting over.</li>
+                        <li><strong>Structured Handoff:</strong> Make prior evidence, open questions, and decisions easy for another engineer to understand.</li>
+                        <li><strong>Human Control:</strong> Keep AI suggestions inspectable and editable throughout the workflow.</li>
                     </ul>
 
-                    <h3>Continuous User-Feedback Analysis Pipeline</h3>
-                    <p>During an internal BuildAI hackathon, I tackled a recurring product challenge: product and engineering teams receiving high volumes of unstructured user feedback, making manual theme identification tedious and inefficient.</p>
+                    <h3>Recurring User-Feedback Analysis</h3>
+                    <p>I also explored a recurring product challenge: high volumes of unstructured feedback make manual theme identification slow and inconsistent. The proposed workflow first clusters a historical backlog into a stable theme set, then compares only newly arriving reports against those themes during each recurring run. A new theme is created only when the incoming feedback does not fit an existing one.</p>
                     
-                    <figure class="diagram-wrapper" aria-labelledby="feedback-pipeline-caption">
-                        <div class="clustering-example-flow">
-                            <div class="cluster-col">
-                                <span class="flow-label">Raw User Reports</span>
-                                <div class="data-badge">&ldquo;App crashes on checkout modal&rdquo;</div>
-                                <div class="data-badge">&ldquo;Checkout button freezes screen&rdquo;</div>
-                            </div>
-
-                            <div class="cluster-arrow-col">&rarr;</div>
-
-                            <div class="cluster-col">
-                                <span class="flow-label">Semantic Embedding</span>
-                                <div class="data-box">
-                                    <strong>Vector Similarity Analysis</strong>
-                                    <p>Cosine similarity &gt; 0.88</p>
+                    <figure class="feedback-workflow" aria-labelledby="feedback-pipeline-caption">
+                        <section class="feedback-phase">
+                            <div class="feedback-phase-heading">
+                                <span class="feedback-phase-number">01</span>
+                                <div>
+                                    <h4>Initial Theme Discovery</h4>
+                                    <p>One-time or periodic batch</p>
                                 </div>
                             </div>
 
-                            <div class="cluster-arrow-col">&rarr;</div>
+                            <div class="feedback-initial-flow">
+                                <div class="feedback-node">
+                                    <div class="feedback-node-heading">
+                                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                                            <path d="M5 7h16v11H10l-5 4V7Z"></path>
+                                            <path d="M12 13h15v11H17l-5 4V13Z"></path>
+                                        </svg>
+                                        <strong>Existing Unclustered Feedback</strong>
+                                    </div>
+                                    <span class="feedback-node-copy">Historical reports</span>
+                                    <div class="feedback-quotes">
+                                        <q>Uploads stall at 99%.</q>
+                                        <q>Large files never finish.</q>
+                                        <q>Password reset keeps looping.</q>
+                                    </div>
+                                </div>
 
-                            <div class="cluster-col">
-                                <span class="flow-label">Dynamic Theme Clustering</span>
-                                <div class="data-box theme-matched">
-                                    <span class="theme-tag">Cluster #104</span>
-                                    <strong>Checkout UI &amp; Payment Freezes</strong>
-                                    <p>2 reports assigned &middot; 0 duplicates created</p>
+                                <span class="feedback-flow-arrow" aria-hidden="true">&rarr;</span>
+
+                                <div class="feedback-node feedback-node-process">
+                                    <div class="feedback-node-heading">
+                                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                                            <circle cx="7" cy="9" r="2"></circle>
+                                            <circle cx="10" cy="17" r="2"></circle>
+                                            <circle cx="6" cy="24" r="2"></circle>
+                                            <path d="M14 16h5"></path>
+                                            <circle cx="24" cy="10" r="4"></circle>
+                                            <circle cx="25" cy="23" r="4"></circle>
+                                        </svg>
+                                        <strong>ML Clustering</strong>
+                                    </div>
+                                    <span class="feedback-node-copy">Discover themes and group similar reports</span>
+                                </div>
+
+                                <span class="feedback-flow-arrow" aria-hidden="true">&rarr;</span>
+
+                                <div class="feedback-node">
+                                    <div class="feedback-node-heading">
+                                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                                            <circle cx="7" cy="7" r="2"></circle>
+                                            <path d="M12 7h14M5 13h21"></path>
+                                            <circle cx="7" cy="19" r="2"></circle>
+                                            <path d="M12 19h14M5 25h21"></path>
+                                        </svg>
+                                        <strong>Initial Theme Set</strong>
+                                    </div>
+                                    <span class="feedback-node-copy">Stable clusters become shared context</span>
+                                    <div class="feedback-clusters">
+                                        <div>
+                                            <strong>File Upload Reliability</strong>
+                                            <span>Uploads stall &middot; Large files fail</span>
+                                        </div>
+                                        <div>
+                                            <strong>Account Access</strong>
+                                            <span>Password reset loops</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </section>
+
+                        <div class="feedback-theme-bridge">
+                            <span>Existing themes</span>
+                            <span aria-hidden="true">&darr;</span>
                         </div>
-                        <figcaption id="feedback-pipeline-caption">Conceptual Architecture: Semantic clustering of unstructured user feedback into stable issue themes.</figcaption>
+
+                        <section class="feedback-phase feedback-phase-daily">
+                            <div class="feedback-phase-heading">
+                                <span class="feedback-phase-number">02</span>
+                                <div>
+                                    <h4>Daily Incremental Triage</h4>
+                                    <p>Runs each morning</p>
+                                </div>
+                            </div>
+
+                            <div class="feedback-daily-flow">
+                                <div class="feedback-node">
+                                    <div class="feedback-node-heading">
+                                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                                            <path d="M4 8h17v12H10l-6 5V8Z"></path>
+                                            <path d="M23 8V4m5 6 3-1m-9-5 2-3"></path>
+                                        </svg>
+                                        <strong>New Daily Feedback</strong>
+                                    </div>
+                                    <span class="feedback-node-copy">Only newly arrived reports</span>
+                                    <div class="feedback-quotes">
+                                        <q>My upload never completes.</q>
+                                        <q>Search filters keep resetting.</q>
+                                    </div>
+                                </div>
+
+                                <span class="feedback-flow-arrow" aria-hidden="true">&rarr;</span>
+
+                                <div class="feedback-node feedback-node-process">
+                                    <div class="feedback-node-heading">
+                                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                                            <circle cx="13" cy="13" r="7"></circle>
+                                            <circle cx="20" cy="13" r="7"></circle>
+                                            <path d="m8 23-4 5"></path>
+                                        </svg>
+                                        <strong>Semantic Match</strong>
+                                    </div>
+                                    <span class="feedback-node-copy">Compare against the existing theme set</span>
+                                </div>
+
+                                <span class="feedback-flow-arrow" aria-hidden="true">&rarr;</span>
+
+                                <div class="feedback-outcomes">
+                                    <div class="feedback-outcome">
+                                        <span class="feedback-branch-label">Strong match</span>
+                                        <q>My upload never completes.</q>
+                                        <strong>Append to Existing Cluster</strong>
+                                        <span>File Upload Reliability</span>
+                                        <small>Add report &middot; Refresh priority</small>
+                                    </div>
+                                    <div class="feedback-outcome">
+                                        <span class="feedback-branch-label">No clear match</span>
+                                        <q>Search filters keep resetting.</q>
+                                        <strong>Create New Cluster</strong>
+                                        <span>Search &amp; Filter State</span>
+                                        <small>Only when no existing theme fits</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feedback-engineering-label">
+                                <span>Both paths feed the engineering workflow</span>
+                                <span aria-hidden="true">&darr;</span>
+                            </div>
+
+                            <div class="feedback-engineering-flow">
+                                <div class="feedback-engineering-node">
+                                    <span class="feedback-node-index">01</span>
+                                    <strong>Engineering Queue</strong>
+                                </div>
+                                <span class="feedback-flow-arrow" aria-hidden="true">&rarr;</span>
+                                <div class="feedback-engineering-node">
+                                    <span class="feedback-node-index">02</span>
+                                    <strong>Human Review</strong>
+                                </div>
+                                <span class="feedback-flow-arrow" aria-hidden="true">&rarr;</span>
+                                <div class="feedback-engineering-node">
+                                    <span class="feedback-node-index">03</span>
+                                    <strong>Investigation Summary</strong>
+                                </div>
+                                <span class="feedback-flow-arrow" aria-hidden="true">&rarr;</span>
+                                <div class="feedback-engineering-node feedback-learning-node">
+                                    <span class="feedback-node-index">04</span>
+                                    <strong>Continuous Learning</strong>
+                                    <ul>
+                                        <li>Status &amp; volume signals</li>
+                                        <li>Re-cluster or split</li>
+                                        <li>Update priority</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="feedback-loop-note">
+                                <span aria-hidden="true">&cularr;</span>
+                                <span>New evidence updates the initial theme set</span>
+                            </div>
+                        </section>
+
+                        <figcaption id="feedback-pipeline-caption">An initial batch establishes stable themes; recurring runs reuse those themes, creating a new cluster only when incoming feedback does not fit the existing set.</figcaption>
                     </figure>
 
-                    <p>I designed and built an <strong>LLM-powered feedback processing pipeline</strong> that:</p>
+                    <p>The design emphasizes a stable taxonomy, incremental processing, and human oversight:</p>
                     <ul>
-                        <li><strong>Incremental Clustering:</strong> Automatically maps newly arriving user reports into stable, semantic issue clusters without creating duplicate or renamed themes.</li>
-                        <li><strong>Dynamic Re-Clustering &amp; Splitting:</strong> Detects when reports have been grouped incorrectly and automatically splits or merges clusters as new feedback arrives.</li>
-                        <li><strong>Multimodal &amp; Log Analysis:</strong> Integrates screenshot analysis and system log inspection to surface clearer, more actionable product feedback for engineering teams.</li>
+                        <li><strong>Stable Baseline:</strong> Establish an initial set of themes from the historical feedback backlog.</li>
+                        <li><strong>Incremental Matching:</strong> Compare new reports with existing themes before creating anything new.</li>
+                        <li><strong>Human-Guided Correction:</strong> Let reviewers re-cluster or split themes when the grouping no longer reflects the underlying feedback.</li>
+                        <li><strong>Priority Signals:</strong> Reassess attention as report volume and status signals change over time.</li>
                     </ul>
 
-                    <h3>Backend Modernization &amp; Skill Testing</h3>
-                    <p>After completing my core internship milestones ahead of schedule, I took on additional technical contributions focused on code health and long-term maintainability:</p>
+                    <h3>Maintainability &amp; Evaluation</h3>
+                    <p>I also contributed to code health and long-term reliability:</p>
                     <ul>
-                        <li><strong>Java Refactoring:</strong> Refactored legacy Java backend services to align with modern design patterns and improve code readability.</li>
-                        <li><strong>Standardized Skill Migration:</strong> Migrated legacy AI workflows into modular, reusable skill specifications for consistent agent execution.</li>
-                        <li><strong>Automated Regression Testing:</strong> Added automated regression test suites to validate LLM outputs, ensuring reliability across model updates.</li>
+                        <li><strong>Code Quality:</strong> Simplified existing components and improved readability and maintainability.</li>
+                        <li><strong>Reusable Patterns:</strong> Organized repeated workflow behavior into clearer, more consistent building blocks.</li>
+                        <li><strong>Automated Evaluation:</strong> Added repeatable checks to catch unintended changes in AI-assisted behavior.</li>
                     </ul>
 
                     <h3>Reflection &amp; Systems Insights</h3>
-                    <p>Building AI infrastructure inside Google Ads Infrastructure highlighted several essential lessons for developer tooling:</p>
+                    <p>This work reinforced several lessons for building trustworthy AI-assisted engineering tools:</p>
                     <ul>
-                        <li><strong>Durability is Essential for Trust:</strong> AI assistants are only as useful as their state persistence. Preserving context across restarts is critical for long-running engineering workflows.</li>
-                        <li><strong>Multi-Agent Specialization Wins:</strong> Dividing complex triage into specialized, single-responsibility agents yields far more predictable and accurate outputs than single-prompt LLMs.</li>
-                        <li><strong>Automated Testing Protects AI Quality:</strong> Robust regression testing is just as necessary for prompt-driven workflows as it is for traditional backend code.</li>
+                        <li><strong>Continuity Builds Trust:</strong> Preserving useful context matters when work unfolds over time or moves between people.</li>
+                        <li><strong>Clear Responsibilities Improve Reliability:</strong> Smaller, well-defined components are easier to evaluate and refine.</li>
+                        <li><strong>Human Oversight Is Part of the System:</strong> Review, correction, and escalation paths should be designed into the workflow.</li>
+                        <li><strong>Evaluation Protects Quality:</strong> Repeatable checks are essential when AI behavior can change as the surrounding system evolves.</li>
                     </ul>
 
                     <div class="related-projects">

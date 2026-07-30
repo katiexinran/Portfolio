@@ -804,64 +804,333 @@ main {
     line-height: 1.5;
 }
 
-/* Feedback-to-theme pipeline used on the Google case study. */
-.clustering-example-flow {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 0.9fr) auto minmax(0, 1.15fr);
-    align-items: center;
-    gap: 14px;
+/* Two-phase customer-feedback triage workflow on the Google case study. */
+.feedback-workflow {
+    margin: 10px 0 32px;
+    padding: 24px 0 18px;
+    border-top: 1px solid rgba(91, 84, 116, 0.18);
+    border-bottom: 1px solid rgba(91, 84, 116, 0.18);
 }
 
-.cluster-col {
+.feedback-phase-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.feedback-phase-number,
+.feedback-node-index,
+.feedback-branch-label {
+    color: var(--accent-pink);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+.feedback-phase-number {
+    padding-top: 3px;
+}
+
+.feedback-phase-heading h4 {
+    margin: 0 0 1px;
+    color: #3d3350;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.main-content .feedback-phase-heading p {
+    margin: 0;
+    color: #5b5474;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.feedback-initial-flow,
+.feedback-daily-flow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18px minmax(0, 0.82fr) 18px minmax(0, 1.1fr);
+    align-items: stretch;
+    gap: 8px;
+}
+
+.feedback-node,
+.feedback-outcome,
+.feedback-engineering-node {
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(91, 84, 116, 0.17);
+    border-radius: 6px;
+}
+
+.feedback-node {
+    padding: 12px;
+}
+
+.feedback-node-process {
+    align-self: center;
+}
+
+.feedback-node-heading {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 4px;
+}
+
+.feedback-node-heading svg {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    fill: none;
+    stroke: #776f93;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.55;
+}
+
+.feedback-node-heading strong {
+    color: #3d3350;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 13.25px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.feedback-node-copy {
+    display: block;
+    color: #5b5474;
+    font-size: 10.5px;
+    line-height: 1.4;
+}
+
+.feedback-quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 9px;
+}
+
+.feedback-quotes q,
+.feedback-outcome q {
+    quotes: none;
+    color: #414047;
+    font-size: 9.75px;
+    line-height: 1.4;
+}
+
+.feedback-quotes q {
+    padding: 5px 6px;
+    background: rgba(130, 123, 160, 0.07);
+    border-left: 2px solid rgba(150, 73, 109, 0.48);
+}
+
+.feedback-quotes q::before,
+.feedback-quotes q::after,
+.feedback-outcome q::before,
+.feedback-outcome q::after {
+    content: none;
+}
+
+.feedback-clusters {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 9px;
+}
+
+.feedback-clusters > div {
+    padding-top: 6px;
+    border-top: 1px solid rgba(91, 84, 116, 0.11);
+}
+
+.feedback-clusters strong {
+    display: block;
+    color: #3d3350;
+    font-size: 10.5px;
+    line-height: 1.35;
+}
+
+.feedback-clusters span {
+    display: block;
+    margin-top: 1px;
+    color: #5b5474;
+    font-size: 9.25px;
+    line-height: 1.35;
+}
+
+.feedback-flow-arrow {
+    align-self: center;
+    justify-self: center;
+    color: #776f93;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.feedback-theme-bridge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 12px 0;
+    color: #776f93;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9.5px;
+    font-weight: 600;
+}
+
+.feedback-theme-bridge span:first-child {
+    padding: 4px 7px;
+    background: rgba(130, 123, 160, 0.08);
+    border-left: 2px solid rgba(119, 111, 147, 0.46);
+}
+
+.feedback-outcomes {
     display: flex;
     min-width: 0;
     flex-direction: column;
     gap: 8px;
 }
 
-.cluster-arrow-col {
+.feedback-outcome {
+    position: relative;
+    padding: 11px 12px 10px;
+}
+
+.feedback-branch-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 8.75px;
+}
+
+.feedback-outcome q {
+    display: block;
+    margin-bottom: 5px;
+    color: #5b5474;
+    font-style: italic;
+}
+
+.feedback-outcome > strong,
+.feedback-outcome > span,
+.feedback-outcome > small {
+    display: block;
+}
+
+.feedback-outcome > strong {
+    color: #3d3350;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 12.25px;
+    line-height: 1.3;
+}
+
+.feedback-outcome > span {
+    margin-top: 2px;
+    color: #1c2b33;
+    font-size: 10.25px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.feedback-outcome > small {
+    margin-top: 3px;
+    color: #5b5474;
+    font-size: 9.25px;
+    line-height: 1.35;
+}
+
+.feedback-engineering-flow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr) 18px) minmax(0, 1.12fr);
+    align-items: stretch;
+    gap: 7px;
+    margin-top: 8px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(91, 84, 116, 0.13);
+}
+
+.feedback-engineering-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 11px;
     color: #776f93;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 20px;
+    font-size: 9.25px;
     font-weight: 600;
 }
 
-.data-badge,
-.data-box {
-    padding: 11px 12px;
-    background: rgba(130, 123, 160, 0.1);
-    border: 1px solid rgba(91, 84, 116, 0.17);
-    border-radius: 10px;
-    color: #1c2b33;
-    font-size: 12px;
-    line-height: 1.45;
+.feedback-engineering-node {
+    padding: 11px 10px;
 }
 
-.data-box strong {
+.feedback-node-index {
     display: block;
-    font-size: 12.5px;
-    line-height: 1.4;
+    margin-bottom: 3px;
+    font-size: 8.5px;
 }
 
-.data-box p {
-    margin: 5px 0 0;
+.feedback-engineering-node > strong {
+    color: #3d3350;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 11.75px;
+    line-height: 1.3;
+}
+
+.main-content .feedback-learning-node ul {
+    margin: 7px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-content .feedback-learning-node li {
+    position: relative;
+    margin: 0;
+    padding: 3px 0 0 8px;
     color: #5b5474;
-    font-size: 11px;
-    line-height: 1.4;
+    font-size: 8.75px;
+    line-height: 1.3;
 }
 
-.data-box.theme-matched {
-    background: rgba(150, 73, 109, 0.07);
-    border-color: rgba(150, 73, 109, 0.3);
+.main-content .feedback-learning-node li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--accent-pink);
 }
 
-.theme-tag {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--accent-pink);
+.feedback-loop-note {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 10px;
+    color: #776f93;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 10.5px;
-    font-weight: 700;
+    font-size: 9.5px;
+    font-weight: 600;
+}
+
+.feedback-loop-note span:first-child {
+    color: var(--accent-pink);
+    font-size: 16px;
+}
+
+.feedback-workflow figcaption {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 12.5px;
+    line-height: 1.5;
 }
 
 @media screen and (max-width: 900px) {
@@ -884,14 +1153,24 @@ main {
         min-height: 0;
     }
 
-    .clustering-example-flow {
+    .feedback-initial-flow,
+    .feedback-daily-flow,
+    .feedback-engineering-flow {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 8px;
     }
 
-    .cluster-arrow-col {
+    .feedback-flow-arrow {
         justify-self: center;
         transform: rotate(90deg);
+    }
+
+    .feedback-engineering-node {
+        text-align: center;
+    }
+
+    .feedback-loop-note {
+        justify-content: center;
     }
 }
 
@@ -921,5 +1200,13 @@ main {
         display: block;
         margin-bottom: 9px;
         padding-top: 0;
+    }
+
+    .feedback-workflow {
+        padding-top: 20px;
+    }
+
+    .feedback-phase-heading h4 {
+        font-size: 15.5px;
     }
 }
