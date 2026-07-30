@@ -26,10 +26,9 @@ main {
     min-width: 0;
 }
 
-/* Container stays wide; the narrative itself is capped so lines stay
-   readable instead of running the full page width. */
+/* Match the full content width shared by the navigation and page frame. */
 .about-text {
-    max-width: 860px;
+    max-width: none;
     font-family: 'Manrope';
     font-weight: 400;
     font-size: 18px;
