@@ -1,202 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Ads Infrastructure - Katie Hancock</title>
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Google Ads Infrastructure - Katie Hancock">
-    <meta property="og:description" content="AI systems engineering at Google Ads Infrastructure: Multi-agent issue triage, durable session architecture, and feedback analysis pipelines.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://katiexinran.com/google.html">
-    <meta property="og:image" content="https://katiexinran.com/images/about/professional.jpeg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="description" content="AI systems engineering at Google Ads Infrastructure: Multi-agent issue triage, durable session architecture, and feedback analysis pipelines.">
-
-    <link rel="icon" type="image/png" href="images/global/logocompressed.png">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/case-study.css">
-
-    <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="navbar-container"></div>
-    <main>
-        <div class="content-container">
-            <div class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-section">
-                        <p><strong>Company</strong><br>Google</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <p><strong>Team</strong><br>Ads Infrastructure<br>(Display &amp; Video 360)</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <p><strong>Role</strong><br>Software Engineer Intern</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <p><strong>Duration</strong><br>May 2026 &ndash; Present</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <p><strong>Key Focus Areas</strong><br>Multi-Agent Triage<br>Stateful AI Sessions<br>Feedback Pipelines<br>Java Modernization<br>Automated Testing</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <p><strong>Tech Stack</strong><br>Python<br>Go<br>Java<br>Multi-Agent Systems<br>LLM Evaluation<br>Automated Testing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="right-column">
-                <div class="title-container">Google Ads Infrastructure</div>
-                <p class="case-study-subtitle">Internal AI Systems &middot; Multi-Agent Issue Triage &middot; Durable Session Architecture</p>
-
-                <div class="main-content">
-                    <p>During my Software Engineering Internship at Google Ads Infrastructure (Display &amp; Video 360), I designed and built <em>internal AI systems</em> to automate software issue triage, enable durable collaborative debugging, organize recurring user feedback, and streamline engineering maintenance workflows.</p>
-                    <p>Working on large-scale infrastructure required balancing automated intelligence with system reliability, state durability, and developer trust. Key milestones included:</p>
-                    <ul>
-                        <li>Building a multi-agent Python and Go issue-triage system to automate symptom summarization and duplicate detection.</li>
-                        <li>Implementing durable, shareable AI session state that preserves investigation context across service restarts and engineer handoffs.</li>
-                        <li>Designing an LLM-powered feedback analysis pipeline to organize unstructured user feedback into stable, actionable issue clusters.</li>
-                        <li>Modernizing legacy Java backend services, migrating AI workflows into reusable skills, and adding automated regression tests.</li>
-                    </ul>
-
-                    <h3>Multi-Agent Issue Triage Architecture</h3>
-                    <p>In large-scale production infrastructure, significant engineering overhead is spent manually inspecting newly filed bug tickets, parsing raw system logs, searching for duplicate reports, and drafting initial investigation plans.</p>
-
-                    <figure class="system-flow" aria-labelledby="triage-flow-caption">
-                        <ol>
-                            <li>
-                                <span class="flow-node">01</span>
-                                <span class="flow-label">Input</span>
-                                <strong>Incoming Issue Filed</strong>
-                            </li>
-                            <li>
-                                <span class="flow-node">02</span>
-                                <span class="flow-label">Summarize</span>
-                                <strong>Symptom Summarizer Agent</strong>
-                            </li>
-                            <li>
-                                <span class="flow-node">03</span>
-                                <span class="flow-label">Match</span>
-                                <strong>Duplicate Matching Agent</strong>
-                            </li>
-                            <li>
-                                <span class="flow-node">04</span>
-                                <span class="flow-label">Plan</span>
-                                <strong>Investigation Planning Agent</strong>
-                            </li>
-                        </ol>
-                        <figcaption id="triage-flow-caption">Simplified conceptual workflow: Concurrent multi-agent issue triage architecture.</figcaption>
-                    </figure>
-
-                    <p>To streamline this workflow, I developed a <strong>multi-agent triage pipeline</strong> built in Python and Go. When a new software issue is filed, specialized subagents process the incoming ticket concurrently:</p>
-                    <ul>
-                        <li><strong>Symptom Summarizer Agent:</strong> Parses raw stack traces and log outputs to generate concise technical summaries of the failure mode.</li>
-                        <li><strong>Duplicate Matching Agent:</strong> Queries existing issue databases to identify related or duplicate tickets, preventing redundant investigations.</li>
-                        <li><strong>Investigation Planning Agent:</strong> Drafts initial hypotheses, pinpoints relevant service components, and suggests immediate diagnostic steps for the on-call engineer.</li>
-                    </ul>
-                    <p>This multi-agent approach significantly reduced initial triage latency and provided engineers with instant, actionable context upon ticket assignment.</p>
-
-                    <h3>Durable &amp; Shareable AI Sessions</h3>
-                    <p>Standard LLM interaction workflows are often ephemeral. When a complex engineering investigation spans multiple days, or when backend service instances redeploy, conversational debugging context can be lost.</p>
-
-                    <figure class="system-flow" aria-labelledby="session-flow-caption">
-                        <ol>
-                            <li>
-                                <span class="flow-node">01</span>
-                                <span class="flow-label">Active</span>
-                                <strong>Engineer Begins Investigation</strong>
-                            </li>
-                            <li>
-                                <span class="flow-node">02</span>
-                                <span class="flow-label">Persist</span>
-                                <strong>Session State Serialized</strong>
-                            </li>
-                            <li>
-                                <span class="flow-node">03</span>
-                                <span class="flow-label">Event</span>
-                                <strong>Service Restart / Handoff</strong>
-                            </li>
-                            <li>
-                                <span class="flow-node">04</span>
-                                <span class="flow-label">Restored</span>
-                                <strong>Full Context &amp; History Restored</strong>
-                            </li>
-                        </ol>
-                        <figcaption id="session-flow-caption">Simplified conceptual workflow: Durable session state lifecycle across restarts and handoffs.</figcaption>
-                    </figure>
-
-                    <p>Key architecture features of the durable session persistence layer included:</p>
-                    <ul>
-                        <li><strong>State Serialization:</strong> Serializing active agent state, context windows, and tool execution history into a persistent storage layer.</li>
-                        <li><strong>Cross-Restart Continuity:</strong> Automatically restoring investigation state after backend service restarts or instance migrations.</li>
-                        <li><strong>Seamless Engineer Handoff:</strong> Enabling one engineer to share a live investigation session link with another team member, allowing them to inspect prior reasoning and take over without losing context.</li>
-                    </ul>
-
-                    <h3>Continuous User-Feedback Analysis Pipeline</h3>
-                    <p>During an internal BuildAI hackathon, I tackled a recurring product challenge: product and engineering teams receiving high volumes of unstructured user feedback, making manual theme identification tedious and inefficient.</p>
-                    <p>I designed and built an <strong>LLM-powered feedback processing pipeline</strong> that:</p>
-                    <ul>
-                        <li><strong>Incremental Clustering:</strong> Automatically maps newly arriving user reports into stable, semantic issue clusters without creating duplicate or renamed themes.</li>
-                        <li><strong>Dynamic Re-Clustering &amp; Splitting:</strong> Detects when reports have been grouped incorrectly and automatically splits or merges clusters as new feedback arrives.</li>
-                        <li><strong>Multimodal &amp; Log Analysis:</strong> Integrates screenshot analysis and system log inspection to surface clearer, more actionable product feedback for engineering teams.</li>
-                    </ul>
-
-                    <h3>Backend Modernization &amp; Skill Testing</h3>
-                    <p>After completing my core internship milestones ahead of schedule, I took on additional technical contributions focused on code health and long-term maintainability:</p>
-                    <ul>
-                        <li><strong>Java Refactoring:</strong> Refactored legacy Java backend services to align with modern design patterns and improve code readability.</li>
-                        <li><strong>Standardized Skill Migration:</strong> Migrated legacy AI workflows into modular, reusable skill specifications for consistent agent execution.</li>
-                        <li><strong>Automated Regression Testing:</strong> Added automated regression test suites to validate LLM outputs, ensuring reliability across model updates.</li>
-                    </ul>
-
-                    <h3>Reflection &amp; Systems Insights</h3>
-                    <p>Building AI infrastructure inside Google Ads Infrastructure highlighted several essential lessons for developer tooling:</p>
-                    <ul>
-                        <li><strong>Durability is Essential for Trust:</strong> AI assistants are only as useful as their state persistence. Preserving context across restarts is critical for long-running engineering workflows.</li>
-                        <li><strong>Multi-Agent Specialization Wins:</strong> Dividing complex triage into specialized, single-responsibility agents yields far more predictable and accurate outputs than single-prompt LLMs.</li>
-                        <li><strong>Automated Testing Protects AI Quality:</strong> Robust regression testing is just as necessary for prompt-driven workflows as it is for traditional backend code.</li>
-                    </ul>
-
-                    <div class="related-projects">
-                        <h3>Related Work</h3>
-                        <div class="related-list">
-                            <div class="related-item">
-                                <div class="related-item-header">
-                                    <a href="dialect-bias.html" class="related-title">Mitigating Dialect Bias in Toxicity Detection</a>
-                                    <span class="related-date">Feb 2026 &ndash; May 2026</span>
-                                </div>
-                                <p class="related-meta">USC CSCI 567 (Machine Learning)</p>
-                                <p class="related-summary">Evaluated vector scaling and adversarial debiasing for a toxicity classifier that disproportionately flagged African American English, achieving a 95% reduction in the false-positive-rate gap.</p>
-                            </div>
-
-                            <div class="related-item">
-                                <div class="related-item-header">
-                                    <a href="llm-debugging.html" class="related-title">LLM-Assisted Debugging for Novice Programmers</a>
-                                    <span class="related-date">Jan 2023 &ndash; Mar 2023</span>
-                                </div>
-                                <p class="related-meta">UW HCDE Research Group</p>
-                                <p class="related-summary">Built and evaluated an LLM assistant with a REPL interaction flow, studying how beginner programmers interpret, trust, and act on AI-generated error explanations.</p>
-                            </div>
-
-                            <div class="related-item">
-                                <div class="related-item-header">
-                                    <a href="isoftstone.html" class="related-title">iSoftStone Digital Asset Management</a>
-                                    <span class="related-date">Feb 2024 &ndash; Jan 2025</span>
-                                </div>
-                                <p class="related-meta">UI/UX Designer</p>
-                                <p class="related-summary">Designed an AI reverse image search workflow, rebuilt the Nuxeo DAM demo as a responsive interface, and created a 40+ component design system.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<figure class="diagram-wrapper" aria-labelledby="topology-caption">
+    <div class="agent-graph-topology">
+        <!-- Root Layer -->
+        <div class="graph-layer root-layer">
+            <div class="graph-node root">
+                <span class="flow-label">Orchestrator Layer</span>
+                <strong>Root Multi-Agent Supervisor</strong>
             </div>
         </div>
-    </main>
-    <div id="footer-container"></div>
-    <script src="loadContent.js"></script>
-</body>
-</html>
+
+        <div class="graph-connector-vertical"></div>
+
+        <!-- Specialist Cluster Layer (5 Parallel Agents) -->
+        <div class="graph-layer cluster-layer">
+            <div class="graph-node specialist">
+                <span class="flow-label">Branch 01</span>
+                <strong>Query &amp; Knowledge Agent</strong>
+                <p>Schema &amp; doc retrieval</p>
+            </div>
+            <div class="graph-node specialist">
+                <span class="flow-label">Branch 02</span>
+                <strong>Issue Triage Agent</strong>
+                <p>Duplicate ticket matching</p>
+            </div>
+            <div class="graph-node specialist">
+                <span class="flow-label">Branch 03</span>
+                <strong>Investigation Agent</strong>
+                <p>Log &amp; trace analysis</p>
+            </div>
+            <div class="graph-node specialist">
+                <span class="flow-label">Branch 04</span>
+                <strong>Coding Assistant Agent</strong>
+                <p>Patch &amp; refactoring execution</p>
+            </div>
+            <div class="graph-node specialist">
+                <span class="flow-label">Branch 05</span>
+                <strong>Workflow Agent</strong>
+                <p>Skill &amp; test automation</p>
+            </div>
+        </div>
+
+        <!-- Tool Integration Footer Bar -->
+        <div class="graph-tools-bar">
+            <span class="flow-label">Integrated Tool Layer</span>
+            <p>Issue Tracker APIs &middot; Log Search Engine &middot; Codebase Index &middot; Database Query Toolsets</p>
+        </div>
+    </div>
+    <figcaption id="topology-caption">Conceptual Architecture: Multi-tiered DAG showing parallel specialized agent branches and underlying toolset integration.</figcaption>
+</figure>
