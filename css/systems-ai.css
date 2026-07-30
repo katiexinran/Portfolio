@@ -16,7 +16,7 @@ main {
 
 .subsection-title {
     font-size: 22px;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
     color: #3d3350;
     border-bottom: 1.5px solid rgba(91, 84, 116, 0.15);
     padding-bottom: 8px;
@@ -26,19 +26,13 @@ main {
 .experience-list {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
 }
 
 .experience-item {
     background: transparent !important;
     border: none !important;
-    padding-bottom: 28px !important;
-    border-bottom: 1px solid rgba(91, 84, 116, 0.12) !important;
-}
-
-.experience-item:last-child {
-    padding-bottom: 0 !important;
-    border-bottom: none !important;
+    padding: 0 !important;
 }
 
 .experience-item-header {

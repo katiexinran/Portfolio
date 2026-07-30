@@ -89,8 +89,11 @@ main {
     margin-bottom: 0;
 }
 .subsection-title {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 22px;
+    margin-bottom: 22px;
+    color: #3d3350;
+    border-bottom: 1.5px solid rgba(91, 84, 116, 0.15);
+    padding-bottom: 8px;
 }
 
 .journey-text p {

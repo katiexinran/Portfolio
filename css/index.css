@@ -87,8 +87,17 @@ main {
 .home-section:last-child {
     margin-bottom: 0;
 }
+.home-section .section-header {
+    margin-bottom: 22px;
+}
+.home-section .section-header .section-title {
+    margin-bottom: 0;
+}
 .section-title {
-    font-size: 30px;
+    font-size: 22px;
+    color: #3d3350;
+    border-bottom: 1.5px solid rgba(91, 84, 116, 0.15);
+    padding-bottom: 8px;
 }
 
 /* Match the unboxed entries used on the Experience and Research pages. */
