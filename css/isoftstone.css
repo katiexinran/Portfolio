@@ -176,10 +176,73 @@ main {
     border-radius: 12px;
 }
 
-.visual-image-link-cropped img {
-    height: 400px;
-    object-fit: cover;
-    object-position: top;
+.color-excerpt-list {
+    display: grid;
+    gap: 18px;
+}
+
+.color-excerpt {
+    min-width: 0;
+}
+
+.color-excerpt-label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #5b5474;
+}
+
+.color-excerpt-link {
+    display: block;
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.color-excerpt-link:hover {
+    box-shadow: 0 8px 20px rgba(61, 51, 80, 0.13);
+    transform: translateY(-2px);
+}
+
+.color-excerpt-link:focus-visible {
+    outline: 2px solid #4b4566;
+    outline-offset: 4px;
+}
+
+.color-excerpt-frame {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(91, 84, 116, 0.16);
+    border-radius: 12px;
+}
+
+.color-excerpt-frame img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: auto;
+}
+
+.color-excerpt-brand {
+    aspect-ratio: 864 / 350;
+}
+
+.color-excerpt-brand img {
+    top: 0;
+}
+
+.color-excerpt-interface {
+    aspect-ratio: 864 / 405;
+}
+
+.color-excerpt-interface img {
+    top: 0;
+    transform: translateY(-19.7%);
 }
 
 .visual-item video {
@@ -245,9 +308,6 @@ main {
         font-size: 36px;
     }
 
-    .visual-image-link-cropped img {
-        height: 340px;
-    }
 }
 
 @media screen and (max-width: 480px) {
