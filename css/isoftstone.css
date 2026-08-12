@@ -139,12 +139,8 @@ main {
     margin: 22px 0 34px;
 }
 
-.visual-grid-two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.visual-grid-three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.visual-stack {
+    grid-template-columns: minmax(0, 1fr);
 }
 
 .visual-item {
@@ -152,15 +148,38 @@ main {
     margin: 0;
 }
 
-.visual-item img,
+.visual-image-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.visual-image-link:hover {
+    box-shadow: 0 8px 20px rgba(61, 51, 80, 0.13);
+    transform: translateY(-2px);
+}
+
+.visual-image-link:focus-visible {
+    outline: 2px solid #4b4566;
+    outline-offset: 4px;
+}
+
+.visual-image-link img,
 .visual-item video {
     display: block;
     width: 100%;
-    height: 240px;
+    height: auto;
     object-fit: contain;
     background: rgba(255, 255, 255, 0.34);
     border: 1px solid rgba(91, 84, 116, 0.16);
     border-radius: 12px;
+}
+
+.visual-image-link-cropped img {
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .visual-item video {
@@ -170,6 +189,11 @@ main {
 }
 
 .visual-item figcaption {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
     margin-top: 8px;
     font-family: "IBM Plex Mono", monospace;
     font-size: 12px;
@@ -177,10 +201,19 @@ main {
     color: #5b5474;
 }
 
-@media screen and (max-width: 900px) {
-    .visual-grid-three {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.visual-item figcaption a {
+    color: var(--accent-pink);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.visual-item figcaption a:hover {
+    text-decoration: underline;
+}
+
+.visual-item figcaption a:focus-visible {
+    outline: 2px solid #4b4566;
+    outline-offset: 3px;
 }
 
 @media screen and (max-width: 768px) {
@@ -212,14 +245,8 @@ main {
         font-size: 36px;
     }
 
-    .visual-grid-two,
-    .visual-grid-three {
-        grid-template-columns: 1fr;
-    }
-
-    .visual-item img {
-        height: auto;
-        max-height: 420px;
+    .visual-image-link-cropped img {
+        height: 340px;
     }
 }
 
