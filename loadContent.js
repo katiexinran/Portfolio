@@ -5,27 +5,28 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('navbar-container').innerHTML = html;
             const currentPath = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('nav ul li a');
-            let activeFound = false;
+            const activeNavByPage = {
+                '': 'index.html',
+                'index.html': 'index.html',
+                'systems-ai.html': 'systems-ai.html',
+                'google.html': 'systems-ai.html',
+                'isoftstone.html': 'systems-ai.html',
+                'research.html': 'research.html',
+                'dialect-bias.html': 'research.html',
+                'llm-debugging.html': 'research.html',
+                'about.html': 'about.html'
+            };
+            const activeNavHref = activeNavByPage[currentPath];
 
             navLinks.forEach(link => {
                 const star = link.querySelector('.star');
-                if (link.getAttribute('href') === currentPath) {
+                if (link.getAttribute('href') === activeNavHref) {
                     link.classList.add('active');
                     if (star) star.textContent = '★'; // Full star for the active page
-                    activeFound = true;
                 } else if (star) {
                     star.textContent = '☆'; // Empty star for other pages
                 }
             });
-
-            // Default the "Home" tab to active if no active tab is found
-            if (!activeFound) {
-                const homeLink = document.querySelector('nav ul li a[href="index.html"]');
-                if (homeLink) {
-                    homeLink.classList.add('active');
-                    homeLink.querySelector('.star').textContent = '★';
-                }
-            }
         })
         .catch(error => console.error('Error loading the navbar:', error));
 
