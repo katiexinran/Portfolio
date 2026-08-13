@@ -1,0 +1,327 @@
+/* Editorial case-study shell shared by the active research and design pages.
+   Page-specific styles still control charts, diagrams, and prototype grids. */
+
+.case-study-page main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.case-study-page .content-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "logo"
+        "eyebrow"
+        "title"
+        "subtitle"
+        "links"
+        "note"
+        "meta"
+        "body";
+    gap: 0;
+    margin: 0;
+}
+
+.case-study-page .sidebar,
+.case-study-page .right-column {
+    display: contents;
+}
+
+.case-study-page .logo {
+    grid-area: logo;
+    display: block;
+    width: auto;
+    max-width: 112px;
+    max-height: 72px;
+    margin: 10px 0 28px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.case-study-page .hero-eyebrow {
+    grid-area: eyebrow;
+    margin: 0 0 9px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+    color: var(--accent-pink);
+}
+
+.case-study-page .title-container {
+    grid-area: title;
+    display: block;
+    max-width: 920px;
+    margin: 0 0 10px;
+    padding: 0;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.02;
+    letter-spacing: -1px;
+    color: #4b4566;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.case-study-page .case-study-subtitle {
+    grid-area: subtitle;
+    max-width: 790px;
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--accent-pink);
+}
+
+.case-study-page .artifact-links {
+    grid-area: links;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    margin: 25px 0 0;
+}
+
+.case-study-page .artifact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 3px 0 5px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5b5474;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(91, 84, 116, 0.48);
+    border-radius: 0;
+    box-shadow: none;
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.case-study-page .artifact-links a::after {
+    content: "\2197";
+    color: currentColor;
+    opacity: 1;
+}
+
+.case-study-page .artifact-links a:hover {
+    color: #3d3350;
+    background: transparent;
+    border-color: currentColor;
+    box-shadow: none;
+    transform: translateY(-1px);
+}
+
+.case-study-page .artifact-note {
+    grid-area: note;
+    max-width: 790px;
+    margin: 14px 0 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(28, 43, 51, 0.68);
+}
+
+.case-study-page .sidebar-content {
+    grid-area: meta;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 28px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.case-study-page .sidebar-section {
+    width: auto;
+    min-width: 0;
+    margin: 0;
+}
+
+.case-study-page .sidebar-section p {
+    margin: 0;
+    padding: 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #1c2b33;
+}
+
+.case-study-page .sidebar-section strong {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--accent-pink);
+}
+
+.case-study-page .main-content {
+    grid-area: body;
+    width: 100%;
+    max-width: 960px;
+    margin: 88px auto 0;
+}
+
+.case-study-page .main-content > h2,
+.case-study-page .main-content > h3,
+.case-study-page .main-content > p,
+.case-study-page .main-content > ul {
+    max-width: 790px;
+}
+
+.case-study-page .main-content > h2,
+.case-study-page .main-content > h3 {
+    margin: 96px 0 14px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 31px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: -0.25px;
+    color: #4b4566;
+}
+
+.case-study-page .main-content > h2:first-child,
+.case-study-page .main-content > h3:first-child,
+.case-study-page .main-content > p:first-child {
+    margin-top: 0;
+}
+
+.case-study-page .main-content p,
+.case-study-page .main-content li {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #1c2b33;
+}
+
+.case-study-page .main-content p {
+    margin-bottom: 15px;
+}
+
+.case-study-page .main-content ul {
+    margin-bottom: 18px;
+    padding-left: 20px;
+}
+
+.case-study-page .main-content li {
+    margin-bottom: 8px;
+}
+
+.case-study-page .main-content strong {
+    color: #3d3350;
+}
+
+.case-study-page .poster-container,
+.case-study-page .screens-container,
+.case-study-page .persona-container,
+.case-study-page .journey-map-container,
+.case-study-page .storyboard-container,
+.case-study-page .sketches-container,
+.case-study-page .hifi-prototypes-container,
+.case-study-page .system-flow,
+.case-study-page .study-details,
+.case-study-page .stat-highlight-row,
+.case-study-page .result-chart {
+    width: 100%;
+    max-width: 790px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.case-study-page .main-content > .case-study-image,
+.case-study-page .main-content > .wireframe-image {
+    display: block;
+    width: 100%;
+    max-width: 790px;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.case-study-page .case-study-image {
+    border: 0;
+    border-radius: 0;
+}
+
+.case-study-page .caption,
+.case-study-page .persona-caption,
+.case-study-page .journey-map-caption,
+.case-study-page .storyboard-caption,
+.case-study-page .sketch-caption,
+.case-study-page .system-flow figcaption,
+.case-study-page .result-caption {
+    margin-top: 9px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.45;
+    text-align: center;
+    color: #5b5474;
+}
+
+.case-study-page .related-projects {
+    max-width: none;
+    margin-top: 108px;
+}
+
+@media screen and (max-width: 900px) {
+    .case-study-page .sidebar-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 36px;
+    }
+
+    .case-study-page .main-content {
+        margin-top: 66px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .case-study-page {
+        padding: 0;
+    }
+
+    .case-study-page main {
+        padding: 40px 20px 50px;
+    }
+
+    .case-study-page .logo {
+        display: block;
+        max-width: 100px;
+        margin-left: 0;
+    }
+
+    .case-study-page .title-container {
+        font-size: 42px;
+    }
+
+    .case-study-page .main-content > h2,
+    .case-study-page .main-content > h3 {
+        margin-top: 82px;
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .case-study-page .title-container {
+        font-size: 38px;
+    }
+
+    .case-study-page .sidebar-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .case-study-page .main-content {
+        margin-top: 56px;
+    }
+
+    .case-study-page .main-content > h2,
+    .case-study-page .main-content > h3 {
+        font-size: 25px;
+    }
+}
