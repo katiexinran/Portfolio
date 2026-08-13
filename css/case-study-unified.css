@@ -461,11 +461,7 @@
 }
 
 .llm-case-study-content .system-flow li:not(:last-child)::after {
-    top: 31px;
-    right: -30px;
-    color: #776f93;
-    font-size: 15px;
-    font-weight: 500;
+    display: none;
 }
 
 .llm-case-study-content .system-flow .flow-label {
