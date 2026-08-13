@@ -8,6 +8,8 @@
 
 .case-study-page .content-container {
     display: grid;
+    width: 100%;
+    max-width: 960px;
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
         "logo"
@@ -19,7 +21,7 @@
         "meta"
         "body";
     gap: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .case-study-page .sidebar,
