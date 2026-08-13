@@ -168,7 +168,7 @@ main {
 .case-study-body {
     width: 100%;
     max-width: none;
-    margin: 88px 0 0;
+    margin: 60px 0 0;
 }
 
 .case-study-body p {
@@ -178,9 +178,9 @@ main {
 }
 
 .overview-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px;
     margin-bottom: 0;
 }
 
@@ -201,11 +201,11 @@ main {
 }
 
 .project-chapter {
-    margin-top: 108px;
+    margin-top: 72px;
 }
 
 .chapter-header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .chapter-label {
@@ -243,7 +243,7 @@ main {
 .visual-grid {
     display: grid;
     gap: 18px;
-    margin: 28px 0 0;
+    margin: 24px 0 0;
 }
 
 .visual-stack {
@@ -422,14 +422,14 @@ main {
 }
 
 .closing-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
-    margin-top: 108px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px;
+    margin-top: 72px;
 }
 
 .related-projects {
-    margin-top: 88px;
+    margin-top: 72px;
 }
 
 @media screen and (max-width: 900px) {
@@ -455,6 +455,12 @@ main {
     .case-study-body {
         margin-top: 66px;
     }
+
+    .overview-grid,
+    .closing-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -469,7 +475,7 @@ main {
 
     .project-chapter,
     .closing-grid {
-        margin-top: 82px;
+        margin-top: 60px;
     }
 
     .chapter-header h2 {

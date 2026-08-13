@@ -274,6 +274,7 @@
 /* Compact editorial structure for shorter case studies. Related text is
    grouped into columns while workflow and evaluation artifacts retain the
    full site width. */
+.case-study-page .compact-case-study-content,
 .case-study-page .llm-case-study-content {
     margin-top: 60px;
 }
@@ -286,6 +287,10 @@
 
 .case-study-summary-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-study-summary-grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .case-study-findings-grid {
@@ -318,10 +323,77 @@
     margin-top: 60px;
 }
 
+.case-study-subsection {
+    margin-top: 46px;
+}
+
+.case-study-subsection:first-child {
+    margin-top: 0;
+}
+
+.case-study-subsection h3 {
+    margin: 0 0 13px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2;
+    color: #4b4566;
+}
+
+.case-study-media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 24px;
+}
+
+.case-study-media-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-study-media-grid-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.case-study-media-grid figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.case-study-media-grid img,
+.case-study-inline-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.case-study-media-grid figcaption,
+.case-study-inline-image figcaption {
+    margin-top: 9px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    line-height: 1.45;
+    text-align: center;
+    color: #5b5474;
+}
+
+.case-study-inline-image {
+    margin: 24px 0 0;
+}
+
+.case-study-reflection-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 56px;
+}
+
 .llm-case-study-content .system-flow {
     margin-top: 24px;
 }
 
+.compact-case-study-content .related-projects,
 .llm-case-study-content .related-projects {
     margin-top: 64px;
 }
@@ -337,9 +409,15 @@
     }
 
     .case-study-summary-grid,
-    .case-study-findings-grid {
+    .case-study-findings-grid,
+    .case-study-reflection-grid {
         grid-template-columns: 1fr;
         gap: 34px;
+    }
+
+    .case-study-media-grid-three,
+    .case-study-media-grid-four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .case-study-findings-grid {
@@ -380,6 +458,10 @@
     .case-study-chapter {
         margin-top: 50px;
     }
+
+    .case-study-subsection {
+        margin-top: 40px;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -399,5 +481,11 @@
     .case-study-page .main-content > h2,
     .case-study-page .main-content > h3 {
         font-size: 25px;
+    }
+
+    .case-study-media-grid,
+    .case-study-media-grid-three,
+    .case-study-media-grid-four {
+        grid-template-columns: 1fr;
     }
 }

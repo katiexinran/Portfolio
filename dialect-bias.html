@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" href="images/global/logocompressed.png">
     <link rel="stylesheet" href="css/global.css?v=20260813-1">
     <link rel="stylesheet" href="css/case-study.css?v=20260730-google-fix">
-    <link rel="stylesheet" href="css/case-study-unified.css?v=20260813-4">
+    <link rel="stylesheet" href="css/case-study-unified.css?v=20260813-6">
 
     <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,87 +43,108 @@
                 </div>
             </div>
             <div class="right-column">
-                <p class="hero-eyebrow">Responsible AI &middot; Fairness Evaluation</p>
                 <h1 class="title-container">Mitigating Dialect Bias in Toxicity Detection</h1>
                 <p class="case-study-subtitle">Fairness evaluation and bias mitigation for toxicity classification models</p>
                 <div class="artifact-links" role="group" aria-label="Project links">
                     <a href="https://github.com/Noman-Vadsariya/Mitigating-Dialect-Bias-Toxicity-Detection" target="_blank" rel="noopener noreferrer">View code</a>
                     <a href="pdfs/DialectBiasReport.pdf" target="_blank" rel="noopener noreferrer">View report</a>
                 </div>
-                <div class="main-content">
+                <div class="main-content compact-case-study-content">
+                    <div class="case-study-summary-grid">
+                        <section class="case-study-summary-block">
+                            <h2>Overview</h2>
+                            <p>Automated toxicity classifiers can learn to associate African American English (AAE) with toxicity, creating a higher risk that non-toxic posts by Black users are removed or penalized. We measured this disparity, tested multiple mitigation strategies, and examined whether improvements transferred to a second dataset.</p>
+                        </section>
 
-                    <h2>Overview</h2>
-                    <p>Automated toxicity classifiers can learn to associate African American English (AAE) with toxicity, creating a higher risk that non-toxic posts by Black users are removed or penalized. We measured this disparity, tested multiple mitigation strategies, and examined whether improvements transferred to a second dataset.</p>
+                        <section class="case-study-summary-block">
+                            <h2>Research Question</h2>
+                            <p>Do toxicity classification models disproportionately flag African American English (AAE) as toxic compared to Standard American English (SAE), and can this disparity be reduced without significantly harming overall model performance?</p>
+                        </section>
 
-                    <h2>Research Question</h2>
-                    <p>Do toxicity classification models disproportionately flag African American English (AAE) as toxic compared to Standard American English (SAE), and can this disparity be reduced without significantly harming overall model performance?</p>
-
-                    <h2>My Contribution</h2>
-                    <p>This was a group research project. I implemented and evaluated the XGBoost and vector-scaling mitigation approaches, contributed to the adversarial-debiasing experiments, and analyzed subgroup fairness and performance tradeoffs across all methods.</p>
-
-                    <h2>Approach</h2>
-                    <p>We used the Davidson hate-speech and offensive-language dataset as the primary toxicity data, paired it with probabilistic dialect labels from TwitterAAE, and used HateXplain to test out-of-domain generalization.</p>
-                    <ul>
-                        <li><strong>Baselines:</strong> XGBoost on BERT embeddings, ToxicBERT, and a fine-tuned BERT classifier</li>
-                        <li><strong>Vector scaling</strong> &mdash; post-hoc calibration to equalize subgroup score distributions</li>
-                        <li><strong>Reweighting</strong> &mdash; adjusting training sample weights across dialect subgroups</li>
-                        <li><strong>Adversarial debiasing</strong> &mdash; an adversarial network trained to remove dialect signal from learned representations</li>
-                    </ul>
-
-                    <h2>Evaluation</h2>
-                    <p>We compared accuracy and F1 with subgroup false-positive rate (FPR), false-negative rate (FNR), and disparate impact. Because the central harm was over-flagging non-toxic AAE text, model selection emphasized reducing the AAE&ndash;SAE FPR gap while keeping F1 near the baseline. We then applied the strongest configurations to HateXplain without retuning to test whether the gains survived distribution shift.</p>
-
-                    <h2>Results / Findings</h2>
-                    <div class="stat-highlight-row">
-                        <div class="stat-highlight">
-                            <span class="stat-value">0.233 &rarr; 0.011</span>
-                            <span class="stat-label">AAE&ndash;SAE false-positive-rate gap</span>
-                        </div>
-                        <div class="stat-highlight">
-                            <span class="stat-value">95%</span>
-                            <span class="stat-label">Reduction in FPR gap</span>
-                        </div>
+                        <section class="case-study-summary-block">
+                            <h2>My Contribution</h2>
+                            <p>This was a group research project. I implemented and evaluated the XGBoost and vector-scaling mitigation approaches, contributed to the adversarial-debiasing experiments, and analyzed subgroup fairness and performance tradeoffs across all methods.</p>
+                        </section>
                     </div>
 
-                    <figure class="result-chart" aria-labelledby="dialect-chart-caption">
-                        <div class="result-row result-head">
-                            <span class="result-label">Method</span>
-                            <span></span>
-                            <span class="result-value">Gap</span>
-                            <span class="result-f1">F1</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">XGBoost baseline</span>
-                            <span class="result-track"><span class="result-fill gap-baseline"></span></span>
-                            <span class="result-value">0.233</span>
-                            <span class="result-f1">0.84</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Re-weighting</span>
-                            <span class="result-track"><span class="result-fill gap-reweighting"></span></span>
-                            <span class="result-value">0.06</span>
-                            <span class="result-f1">0.81</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Adversarial debiasing</span>
-                            <span class="result-track"><span class="result-fill gap-adversarial"></span></span>
-                            <span class="result-value">0.03</span>
-                            <span class="result-f1">0.82</span>
-                        </div>
-                        <div class="result-row is-best">
-                            <span class="result-label">Vector scaling</span>
-                            <span class="result-track"><span class="result-fill gap-vector-scaling"></span></span>
-                            <span class="result-value">0.011</span>
-                            <span class="result-f1">0.83</span>
-                        </div>
-                        <figcaption class="result-caption" id="dialect-chart-caption">AAE&ndash;SAE false-positive-rate gap on TwitterAAE, with overall F1 alongside. Vector scaling gave the smallest gap while keeping F1 close to the 0.84 baseline.</figcaption>
-                    </figure>
+                    <div class="case-study-findings-grid">
+                        <section class="case-study-summary-block">
+                            <h2>Approach</h2>
+                            <p>We used the Davidson hate-speech and offensive-language dataset as the primary toxicity data, paired it with probabilistic dialect labels from TwitterAAE, and used HateXplain to test out-of-domain generalization.</p>
+                            <ul>
+                                <li><strong>Baselines:</strong> XGBoost on BERT embeddings, ToxicBERT, and a fine-tuned BERT classifier</li>
+                                <li><strong>Vector scaling</strong> &mdash; post-hoc calibration to equalize subgroup score distributions</li>
+                                <li><strong>Reweighting</strong> &mdash; adjusting training sample weights across dialect subgroups</li>
+                                <li><strong>Adversarial debiasing</strong> &mdash; an adversarial network trained to remove dialect signal from learned representations</li>
+                            </ul>
+                        </section>
 
-                    <p>In-domain, vector scaling produced the strongest balance: it lowered the XGBoost FPR gap from 0.233 to 0.011 while retaining an F1 of 0.83 versus the 0.84 baseline. Reweighting and adversarial debiasing also reduced the gap, but no method dominated every metric. Reducing false positives for AAE often increased false negatives, making the result a <em>fairness&ndash;performance tradeoff rather than a single optimal solution</em>.</p>
-                    <p>The improvement did not transfer cleanly to HateXplain. Without retuning, vector scaling's FPR gap rose to 0.18 and F1 fell to 0.64, showing that the in-domain calibration was highly dataset-specific.</p>
+                        <section class="case-study-summary-block">
+                            <h2>Evaluation</h2>
+                            <p>We compared accuracy and F1 with subgroup false-positive rate (FPR), false-negative rate (FNR), and disparate impact. Because the central harm was over-flagging non-toxic AAE text, model selection emphasized reducing the AAE&ndash;SAE FPR gap while keeping F1 near the baseline. We then applied the strongest configurations to HateXplain without retuning to test whether the gains survived distribution shift.</p>
+                        </section>
+                    </div>
 
-                    <h2>Limitations</h2>
-                    <p>Dialect was inferred with probabilistic labels rather than self-reported speaker identity, and the experiments covered a limited set of English-language datasets and model families. Group-specific calibration also assumes access to a dialect label at inference time and degraded substantially under distribution shift. Future work should use more representative dialect-labeled data and test interventions designed to remain robust across domains, languages, and intersecting identities.</p>
+                    <section class="case-study-chapter">
+                        <h2>Results / Findings</h2>
+                        <div class="stat-highlight-row">
+                            <div class="stat-highlight">
+                                <span class="stat-value">0.233 &rarr; 0.011</span>
+                                <span class="stat-label">AAE&ndash;SAE false-positive-rate gap</span>
+                            </div>
+                            <div class="stat-highlight">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">Reduction in FPR gap</span>
+                            </div>
+                        </div>
+
+                        <figure class="result-chart" aria-labelledby="dialect-chart-caption">
+                            <div class="result-row result-head">
+                                <span class="result-label">Method</span>
+                                <span></span>
+                                <span class="result-value">Gap</span>
+                                <span class="result-f1">F1</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">XGBoost baseline</span>
+                                <span class="result-track"><span class="result-fill gap-baseline"></span></span>
+                                <span class="result-value">0.233</span>
+                                <span class="result-f1">0.84</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Re-weighting</span>
+                                <span class="result-track"><span class="result-fill gap-reweighting"></span></span>
+                                <span class="result-value">0.06</span>
+                                <span class="result-f1">0.81</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Adversarial debiasing</span>
+                                <span class="result-track"><span class="result-fill gap-adversarial"></span></span>
+                                <span class="result-value">0.03</span>
+                                <span class="result-f1">0.82</span>
+                            </div>
+                            <div class="result-row is-best">
+                                <span class="result-label">Vector scaling</span>
+                                <span class="result-track"><span class="result-fill gap-vector-scaling"></span></span>
+                                <span class="result-value">0.011</span>
+                                <span class="result-f1">0.83</span>
+                            </div>
+                            <figcaption class="result-caption" id="dialect-chart-caption">AAE&ndash;SAE false-positive-rate gap on TwitterAAE, with overall F1 alongside. Vector scaling gave the smallest gap while keeping F1 close to the 0.84 baseline.</figcaption>
+                        </figure>
+
+                        <div class="case-study-findings-grid">
+                            <section class="case-study-summary-block">
+                                <h2>What We Found</h2>
+                                <p>In-domain, vector scaling produced the strongest balance: it lowered the XGBoost FPR gap from 0.233 to 0.011 while retaining an F1 of 0.83 versus the 0.84 baseline. Reweighting and adversarial debiasing also reduced the gap, but no method dominated every metric. Reducing false positives for AAE often increased false negatives, making the result a <em>fairness&ndash;performance tradeoff rather than a single optimal solution</em>.</p>
+                                <p>The improvement did not transfer cleanly to HateXplain. Without retuning, vector scaling's FPR gap rose to 0.18 and F1 fell to 0.64, showing that the in-domain calibration was highly dataset-specific.</p>
+                            </section>
+
+                            <section class="case-study-summary-block">
+                                <h2>Limitations</h2>
+                                <p>Dialect was inferred with probabilistic labels rather than self-reported speaker identity, and the experiments covered a limited set of English-language datasets and model families. Group-specific calibration also assumes access to a dialect label at inference time and degraded substantially under distribution shift. Future work should use more representative dialect-labeled data and test interventions designed to remain robust across domains, languages, and intersecting identities.</p>
+                            </section>
+                        </div>
+                    </section>
 
                     <div class="related-projects">
                         <h2>Related Work</h2>
