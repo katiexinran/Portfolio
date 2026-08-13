@@ -248,6 +248,15 @@ main {
     margin: 0;
 }
 
+/* Static design artifacts read more like editorial figures at a slightly
+   narrower measure; comparison videos stay full-width for legibility. */
+.visual-item:not(.visual-item-video) {
+    width: 100%;
+    max-width: 820px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .visual-image-link {
     display: block;
     transition: opacity 0.2s ease;
