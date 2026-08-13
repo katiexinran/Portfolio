@@ -465,11 +465,13 @@
 }
 
 .llm-case-study-content .system-flow .flow-label {
+    display: block;
     margin-bottom: 7px;
     font-size: 11px;
 }
 
 .llm-case-study-content .system-flow strong {
+    display: block;
     font-size: 15px;
     line-height: 1.55;
 }
