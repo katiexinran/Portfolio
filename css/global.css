@@ -1,6 +1,7 @@
 :root {
     --accent-pink: #96496d;
-    --nav-purple: #4b4566;
+    --dark-purple: #4b4566;
+    --nav-purple: var(--dark-purple);
 }
 
 * {
@@ -159,7 +160,20 @@ main {
     font-size: 44px;
     letter-spacing: -0.5px;
     margin-bottom: 20px;
-    color: #4b4566;
+    color: var(--dark-purple);
+}
+
+/* Keep navigational and content hierarchy in the same dark-purple family.
+   Page-specific type rules still control size and weight. */
+body .section-title,
+body .subsection-title,
+body .featured-project h3,
+body .experience-title,
+body .research-title,
+body .related-title,
+body .main-content .related-projects > h2,
+body .main-content .related-projects > h3 {
+    color: var(--dark-purple) !important;
 }
 
 
