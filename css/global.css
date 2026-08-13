@@ -346,15 +346,16 @@ footer {
 }
 .related-title {
     font-family: "Bricolage Grotesque", sans-serif;
-    font-size: 17.5px;
+    font-size: 18px;
     font-weight: 700;
-    color: #1c2b33;
+    line-height: 1.35;
+    color: #4b4566;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 .related-title:hover {
-    color: #5b5474;
-    text-decoration: underline;
+    color: #3d3350;
+    text-decoration: none;
 }
 .related-date {
     font-family: "IBM Plex Mono", monospace;

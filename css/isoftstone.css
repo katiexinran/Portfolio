@@ -187,7 +187,7 @@ main {
 .overview-block,
 .closing-block,
 .chapter-header {
-    max-width: 790px;
+    max-width: 100%;
 }
 
 .overview-block h2,
@@ -237,7 +237,7 @@ main {
 }
 
 .chapter-header p:last-child {
-    max-width: 790px;
+    max-width: 100%;
 }
 
 .visual-grid {
@@ -259,7 +259,7 @@ main {
    narrower measure; comparison videos stay full-width for legibility. */
 .visual-item:not(.visual-item-video) {
     width: 100%;
-    max-width: 790px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: 0;
 }

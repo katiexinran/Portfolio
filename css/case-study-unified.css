@@ -173,7 +173,7 @@
 .case-study-page .main-content > h3,
 .case-study-page .main-content > p,
 .case-study-page .main-content > ul {
-    max-width: 790px;
+    max-width: 100%;
 }
 
 .case-study-page .main-content > h2,
@@ -230,7 +230,7 @@
 .case-study-page .stat-highlight-row,
 .case-study-page .result-chart {
     width: 100%;
-    max-width: 790px;
+    max-width: 100%;
     margin-right: 0;
     margin-left: 0;
 }
@@ -239,7 +239,7 @@
 .case-study-page .main-content > .wireframe-image {
     display: block;
     width: 100%;
-    max-width: 790px;
+    max-width: 100%;
     height: auto;
     margin-right: 0;
     margin-left: 0;
