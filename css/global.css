@@ -1,5 +1,6 @@
 :root {
     --accent-pink: #96496d;
+    --nav-purple: #4b4566;
 }
 
 * {
@@ -67,18 +68,18 @@ nav ul li a {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    color: #4b4566;
+    color: var(--nav-purple);
     font-size: 15px;
     font-weight: 500;
     padding: 4px 2px;
     transition: color 0.2s ease;
 }
 nav ul li a:hover {
-    color: #3d3350;
+    color: var(--nav-purple);
     text-shadow: -0.2px 0 currentColor, 0.2px 0 currentColor;
 }
 nav ul li a.active {
-    color: #3d3350;
+    color: var(--nav-purple);
     text-shadow: -0.2px 0 currentColor, 0.2px 0 currentColor;
 }
 /* The star stays in the DOM on every tab so its width is always reserved.

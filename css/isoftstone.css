@@ -78,15 +78,18 @@ main {
 .artifact-links a {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 3px 0 5px;
+    gap: 6px;
+    padding: 4px 10px;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    color: #5b5474;
+    line-height: 1;
+    color: #fff;
     text-decoration: none;
-    border-bottom: 1px solid rgba(91, 84, 116, 0.48);
-    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    background: #776f93;
+    border: 0;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
 .artifact-links a::after {
@@ -95,14 +98,14 @@ main {
 }
 
 .artifact-links a:hover {
-    color: #3d3350;
-    border-color: currentColor;
-    transform: translateY(-1px);
+    color: #fff;
+    background: #635d7c;
 }
 
-.artifact-links a:focus-visible {
+.artifact-links a:focus-visible,
+.related-project-link:focus-visible {
     outline: 2px solid #4b4566;
-    outline-offset: 4px;
+    outline-offset: 3px;
 }
 
 .hero-visual {
@@ -430,6 +433,34 @@ main {
 
 .related-projects {
     margin-top: 72px;
+}
+
+.related-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.related-project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: #776f93;
+    color: #fff;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.related-project-link:hover {
+    background-color: #635d7c;
+    color: #fff;
 }
 
 @media screen and (max-width: 900px) {
