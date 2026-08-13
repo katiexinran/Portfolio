@@ -9,7 +9,7 @@ main {
 
 .case-study {
     width: 100%;
-    max-width: 960px;
+    max-width: none;
     margin: 0 auto;
 }
 
@@ -167,7 +167,7 @@ main {
 
 .case-study-body {
     width: 100%;
-    max-width: 960px;
+    max-width: none;
     margin: 88px 0 0;
 }
 
