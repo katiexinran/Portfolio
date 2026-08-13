@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" href="images/global/logocompressed.png">
     <link rel="stylesheet" href="css/global.css?v=20260813-1">
     <link rel="stylesheet" href="css/case-study.css?v=20260730-google-fix">
-    <link rel="stylesheet" href="css/case-study-unified.css?v=20260813-4">
+    <link rel="stylesheet" href="css/case-study-unified.css?v=20260813-5">
 
     <!-- Bricolage Grotesque, Manrope, and IBM Plex Mono fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,74 +43,90 @@
                 </div>
             </div>
             <div class="right-column">
-                <p class="hero-eyebrow">Human&ndash;AI Interaction &middot; Developer Tools</p>
                 <h1 class="title-container">LLM-Assisted Debugging for Novice Programmers</h1>
                 <p class="case-study-subtitle">A Python REPL assistant that helps beginners understand errors and AI-generated explanations</p>
                 <div class="artifact-links" role="group" aria-label="Project links">
                     <a href="https://github.com/katiexh-0751413/CodeHelp" target="_blank" rel="noopener noreferrer">View code</a>
                     <a href="pdfs/CodeHelp.pdf" target="_blank" rel="noopener noreferrer">View slides</a>
                 </div>
-                <div class="main-content">
+                <div class="main-content llm-case-study-content">
+                    <div class="case-study-summary-grid">
+                        <section class="case-study-summary-block">
+                            <h2>Overview</h2>
+                            <p>CodeHelp is a terminal-based Python application that uses a large language model to help novice programmers debug code, understand errors, and review plain-language explanations without leaving their development environment.</p>
+                        </section>
 
-                    <h2>Overview</h2>
-                    <p>CodeHelp is a terminal-based Python application that uses a large language model to help novice programmers debug code, understand errors, and review plain-language explanations without leaving their development environment.</p>
+                        <section class="case-study-summary-block">
+                            <h2>Problem / Research Question</h2>
+                            <p>Novice programmers often struggle to interpret cryptic error messages and do not always know how to use general-purpose AI assistants productively for debugging. This project explored whether a <em>purpose-built, terminal-based tool</em> could make errors and AI-generated guidance more understandable and actionable for beginners.</p>
+                        </section>
 
-                    <h2>Problem / Research Question</h2>
-                    <p>Novice programmers often struggle to interpret cryptic error messages and do not always know how to use general-purpose AI assistants productively for debugging. This project explored whether a <em>purpose-built, terminal-based tool</em> could make errors and AI-generated guidance more understandable and actionable for beginners.</p>
+                        <section class="case-study-summary-block">
+                            <h2>My Contribution</h2>
+                            <p>I helped define the tool's core features, built the REPL (read-eval-print loop) that structured the terminal interaction, and initiated usability testing with novice programmers.</p>
+                        </section>
+                    </div>
 
-                    <h2>My Contribution</h2>
-                    <p>I helped define the tool's core features, built the REPL (read-eval-print loop) that structured the terminal interaction, and initiated usability testing with novice programmers.</p>
+                    <section class="case-study-chapter">
+                        <h2>How It Worked</h2>
+                        <figure class="system-flow" aria-labelledby="codehelp-flow-caption">
+                            <ol>
+                                <li>
+                                    <span class="flow-label">Input</span>
+                                    <strong>Choose a code file</strong>
+                                </li>
+                                <li>
+                                    <span class="flow-label">Inspect</span>
+                                    <strong>Run it and collect errors</strong>
+                                </li>
+                                <li>
+                                    <span class="flow-label">Select</span>
+                                    <strong>Debug, optimize, or explain</strong>
+                                </li>
+                                <li>
+                                    <span class="flow-label">Review</span>
+                                    <strong>Read model-generated guidance</strong>
+                                </li>
+                            </ol>
+                            <figcaption id="codehelp-flow-caption">The REPL interaction loop implemented for CodeHelp.</figcaption>
+                        </figure>
+                        <p>CodeHelp ran as a Python script in the VS Code terminal. It attempted to run the selected file, aggregated error logs, and opened a REPL with three actions: <em>Debug</em> for non-functional code, <em>Optimize</em> for suggested improvements, and <em>Explain</em> for a simpler account of what working code did.</p>
+                    </section>
 
-                    <h2>How It Worked</h2>
-                    <figure class="system-flow" aria-labelledby="codehelp-flow-caption">
-                        <ol>
-                            <li>
-                                <span class="flow-label">Input</span>
-                                <strong>Choose a code file</strong>
-                            </li>
-                            <li>
-                                <span class="flow-label">Inspect</span>
-                                <strong>Run it and collect errors</strong>
-                            </li>
-                            <li>
-                                <span class="flow-label">Select</span>
-                                <strong>Debug, optimize, or explain</strong>
-                            </li>
-                            <li>
-                                <span class="flow-label">Review</span>
-                                <strong>Read model-generated guidance</strong>
-                            </li>
-                        </ol>
-                        <figcaption id="codehelp-flow-caption">The REPL interaction loop implemented for CodeHelp.</figcaption>
-                    </figure>
-                    <p>CodeHelp ran as a Python script in the VS Code terminal. It attempted to run the selected file, aggregated error logs, and opened a REPL with three actions: <em>Debug</em> for non-functional code, <em>Optimize</em> for suggested improvements, and <em>Explain</em> for a simpler account of what working code did.</p>
+                    <section class="case-study-chapter">
+                        <h2>Evaluation</h2>
+                        <p class="study-source-note">The details below reflect what is documented in the 2023 project slides; undocumented study details are identified directly.</p>
+                        <dl class="study-details">
+                            <div>
+                                <dt>Participants</dt>
+                                <dd>Novice programmers with varying experience levels. Two participants are quoted in the slides; the total sample size is not documented.</dd>
+                            </div>
+                            <div>
+                                <dt>Format</dt>
+                                <dd>Early usability tests and a survey. Moderation format and session length are not documented.</dd>
+                            </div>
+                            <div>
+                                <dt>Tasks</dt>
+                                <dd>Evaluate CodeHelp's debugging explanations and proposed solutions. The slides do not preserve a detailed task script.</dd>
+                            </div>
+                            <div>
+                                <dt>Data collected</dt>
+                                <dd>Survey responses, self-reported debugging time, recommendation intent, and qualitative participant comments.</dd>
+                            </div>
+                        </dl>
+                    </section>
 
-                    <h2>Evaluation</h2>
-                    <p class="study-source-note">The details below reflect what is documented in the 2023 project slides; undocumented study details are identified directly.</p>
-                    <dl class="study-details">
-                        <div>
-                            <dt>Participants</dt>
-                            <dd>Novice programmers with varying experience levels. Two participants are quoted in the slides; the total sample size is not documented.</dd>
-                        </div>
-                        <div>
-                            <dt>Format</dt>
-                            <dd>Early usability tests and a survey. Moderation format and session length are not documented.</dd>
-                        </div>
-                        <div>
-                            <dt>Tasks</dt>
-                            <dd>Evaluate CodeHelp's debugging explanations and proposed solutions. The slides do not preserve a detailed task script.</dd>
-                        </div>
-                        <div>
-                            <dt>Data collected</dt>
-                            <dd>Survey responses, self-reported debugging time, recommendation intent, and qualitative participant comments.</dd>
-                        </div>
-                    </dl>
+                    <div class="case-study-findings-grid">
+                        <section class="case-study-summary-block">
+                            <h2>Early Observations</h2>
+                            <p>The surviving study summary reports that participants appreciated CodeHelp's clear explanations and efficient solutions and would recommend the tool to other novice programmers. The two included comments describe the guidance as <em>helpful, directly actionable, and especially useful when a language does not provide a clear error</em>. These are preliminary usability signals, not generalizable findings.</p>
+                        </section>
 
-                    <h2>Early Observations</h2>
-                    <p>The surviving study summary reports that participants appreciated CodeHelp's clear explanations and efficient solutions and would recommend the tool to other novice programmers. The two included comments describe the guidance as <em>helpful, directly actionable, and especially useful when a language does not provide a clear error</em>. These are preliminary usability signals, not generalizable findings.</p>
-
-                    <h2>Limitations</h2>
-                    <p>This was an early prototype evaluation. The surviving materials do not document the full sample size, participant demographics, session length, detailed task protocol, or analysis method, so the observations should not be treated as statistically robust. The study also did not establish how the tool would perform in students' day-to-day coding workflows or how reliably its generated guidance avoided errors.</p>
+                        <section class="case-study-summary-block">
+                            <h2>Limitations</h2>
+                            <p>This was an early prototype evaluation. The surviving materials do not document the full sample size, participant demographics, session length, detailed task protocol, or analysis method, so the observations should not be treated as statistically robust. The study also did not establish how the tool would perform in students' day-to-day coding workflows or how reliably its generated guidance avoided errors.</p>
+                        </section>
+                    </div>
 
                     <div class="related-projects">
                         <h2>Related Work</h2>
